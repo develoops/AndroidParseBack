@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1002865874181",
+    "firebase_url": "https://proyectito-2db07.firebaseio.com",
+    "project_id": "proyectito-2db07",
+    "storage_bucket": "proyectito-2db07.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1002865874181:android:a29b57b36ca11246",
+        "android_client_info": {
+          "package_name": "mc.nefro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1002865874181-gt899van0obrou10af31b9m9potm4k56.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCntNhKXAuWqVNARt5yTp7i4_h2cduMMWU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
