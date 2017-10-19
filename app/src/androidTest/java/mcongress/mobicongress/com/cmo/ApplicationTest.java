@@ -1,4 +1,4 @@
-package mc.nefro;
+package mc.nefro2017;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

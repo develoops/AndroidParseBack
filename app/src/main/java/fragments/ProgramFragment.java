@@ -1,8 +1,6 @@
 package fragments;
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -33,16 +31,13 @@ import java.util.List;
 import java.util.Map;
 
 
-import adapters.DirectiveListViewAdapter2;
 import adapters.HetpinProgramListViewAdapter;
 import adapters.PagerViewAdapter;
-import mc.nefro.R;
+import mc.nefro2017.R;
 
 import model.ActContAct;
 import model.Actividad;
 import model.PersonaRolAct;
-
-import static fragments.ChildPagerMeetingsFragment.anidateEvents;
 
 
 public class ProgramFragment extends Fragment {
@@ -156,8 +151,6 @@ public class ProgramFragment extends Fragment {
                         queryContenido.fromPin("ActconAct2");
                         queryContenido.fromLocalDatastore();
                         queryContenido.whereEqualTo("contenedor", evento);
-
-
                         queryContenido.findInBackground(new FindCallback<ActContAct>() {
                             @Override
                             public void done(List<ActContAct> objects, ParseException e) {

@@ -24,8 +24,6 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.parse.ParseFile;
 import com.parse.ParseImageView;
 
 import java.util.ArrayList;
@@ -33,8 +31,8 @@ import java.util.List;
 import java.util.Locale;
 
 import adapters.SocietyLogoAdapter;
-import mc.nefro.R;
-import mc.nefro.MainActivity;
+import mc.nefro2017.R;
+import mc.nefro2017.MainActivity;
 import model.Org;
 
 /**

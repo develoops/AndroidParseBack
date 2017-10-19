@@ -22,8 +22,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-import mc.nefro.R;
-import mc.nefro.myApp;
+import mc.nefro2017.R;
+import mc.nefro2017.myApp;
 import model.Actividad;
 
 /**

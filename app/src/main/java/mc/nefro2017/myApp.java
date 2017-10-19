@@ -1,4 +1,4 @@
-package mc.nefro;
+package mc.nefro2017;
 
 import android.app.Application;
 import android.content.Context;
@@ -101,7 +101,7 @@ public class myApp extends Application {
 
 
 
-        ParsePush.subscribeInBackground("nefro", new SaveCallback() {
+        ParsePush.subscribeInBackground("nefro2017", new SaveCallback() {
             @Override
             public void done(ParseException e) {
 

@@ -21,16 +21,15 @@ import fragments.ChildPagerMeetingsFragment;
 import fragments.CurrentEventsFragment;
 import fragments.DirectiveFragment;
 import fragments.FavouritesFragment;
-import fragments.LoadDataFragment;
 import fragments.MoreFragment;
 import fragments.SpeakersFragment;
 import fragments.SponsorsFragment;
 
-import mc.nefro.myApp;
+import mc.nefro2017.myApp;
 import model.Actividad;
+import model.Media;
 import model.Org;
 import model.Persona;
-import model.PersonaRolAct;
 import model.PersonaRolOrg;
 import views.CustomViewPager;
 
@@ -43,9 +42,11 @@ public class EventsFragmentAdapter extends FragmentStatePagerAdapter
     private CustomViewPager custom_pager;
     public static Actividad mApp;
     public static Long time;
-    public static List<Actividad> events = new ArrayList<>();
+    public static List<Actividad> events, eventos = new ArrayList<>();
     public static List<Org> organizaciones = new ArrayList<>();
     public static List<Persona> speakers = new ArrayList<>();
+    public static List<Media> media = new ArrayList<>();
+
     public static List<PersonaRolOrg> academic = new ArrayList<>();
 
 
@@ -55,26 +56,29 @@ public class EventsFragmentAdapter extends FragmentStatePagerAdapter
     List<String> tabUIs; // This will Store the Titles of the Tabs which are Going to be passed when ViewPagerAdapter is created
     int NumbOfTabs; // Store the number of tabs, this will also be passed when the ViewPagerAdapter is created
 
-    public EventsFragmentAdapter(FragmentManager fm, List<String> mTitles, int mNumbOfTabsumb, Actividad meetingApp, List<Actividad> actividades, List<Persona> personas, List <Org> orgs, List<PersonaRolOrg> comite, CustomViewPager pager, myApp app) {
+    public EventsFragmentAdapter(FragmentManager fm, List<String> mTitles, int mNumbOfTabsumb, Actividad meetingApp, List<Actividad> actividades, List<Persona> personas, List <Org> orgs, List<PersonaRolOrg> comite, List<Media> doc,CustomViewPager pager, myApp app) {
         super(fm);
         events = actividades;
         organizaciones= orgs;
         mApp=meetingApp;
         speakers = personas;
         academic=comite;
+        media=doc;
         Log.i("EVENTOOOOOOOOOsANTES", String.valueOf(events));
         //this.events = LoadDataFragment.eventos;
         this.tabUIs= mTitles;
         this.NumbOfTabs = mNumbOfTabsumb;
         this.custom_pager = pager;
-        //events.clear();
+        eventos.clear();
+        Log.i("MOBIFILE2", String.valueOf(media));
+
         this.app = app;
 
 
 
 
         Log.i("EVENTOOOOOOOOOs", String.valueOf(mApp));
-       // Log.i("EVENTOOOOOOOOOs", String.valueOf(LoadDataFragment.actividades));
+        // Log.i("EVENTOOOOOOOOOs", String.valueOf(LoadDataFragment.actividades));
         Log.i("EVENTOOOOOOOOOs22222222", String.valueOf(events));
 
         Log.i("SPEAKERSADAPTER", String.valueOf(speakers.size()));
@@ -132,45 +136,31 @@ public class EventsFragmentAdapter extends FragmentStatePagerAdapter
 //		        Calendar c = Calendar.getInstance();
 //		        c.set(Calendar.DAY_OF_MONTH, 18);
 //		        now = c.getTime();
+                List<Actividad> list = events;
+                for (int i = 0; i <list.size(); i++) {
+                    Actividad event = list.get(i);
+                    if(event.getStartDate().getTime()<=time
+                            && time<=event.getEndDate().getTime() ) {
 
-//                ParseQuery<Actividad> queryContenido = ParseQuery.getQuery(Actividad.class);
-//                queryContenido.include("lugar");
-//                queryContenido.fromLocalDatastore();
-//                queryContenido.findInBackground(new FindCallback<Actividad>() {
-//                    @Override
-//                    public void done(List<Actividad> objects, ParseException e) {
-//
-//                        List<Actividad> list = events;
-//                        Log.e("THANHNXNOW1", "Added " + list);
-////                        for (int i = 0; i <list.size(); i++) {
-////                            Actividad event = list.get(i);
-////                            if(event.getStartDate().getTime()<=time
-////                                    && time<=event.getEndDate().getTime() ) {
-////
-////                                if(event.getType().equals("Curso")){
-////
-////                                }
-////                                else {
-////                                    events.add(event);
-////                                }
-////
-////                                Log.e("THANHNXNOW1", "Added " + event.getStartDate().toString());
-////                            }
-////                        }
-//
-//                    }
-//                });
+                        if(event.getType().equals("Curso")){
 
+                        }
+                        else {
+                            eventos.add(event);
+                        }
+
+                        Log.e("THANHNXNOW1", "Added " + event.getStartDate().toString());
+                    }
+                }
             } catch (NullPointerException e){
                 Log.e("THANHNX events.add()", e.toString());
             }
-//            Log.e("Thanhnx", "events size " + events.size());
+            Log.e("Thanhnx", "events size " + eventos.size());
             Log.i("NOWLOCO", String.valueOf(app.getNow()));
             if (app.getNow())
-                return CurrentEventsFragment.newInstance(mApp, events);
+                return CurrentEventsFragment.newInstance(mApp, eventos);
             else
-                Log.i("OOOOOOOOOs22222222333", String.valueOf(events));
-                return ChildPagerMeetingsFragment.newInstance(mApp, events, this.custom_pager);
+                return ChildPagerMeetingsFragment.newInstance(mApp, events,this.custom_pager);
         }
         else if(tabUIs.get(position).equals("Ponentes")){
             return SpeakersFragment.newInstance(mApp, speakers);
@@ -185,7 +175,7 @@ public class EventsFragmentAdapter extends FragmentStatePagerAdapter
             return  DirectiveFragment.newInstance(academic);
         }
         else {
-            return MoreFragment.newInstance(mApp);
+            return MoreFragment.newInstance(mApp,media);
         }
     }
 
@@ -210,7 +200,7 @@ public class EventsFragmentAdapter extends FragmentStatePagerAdapter
 
 
 
-                return tabUIs.get(position);
+        return tabUIs.get(position);
 
 
 

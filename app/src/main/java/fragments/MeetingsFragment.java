@@ -20,9 +20,9 @@ import java.util.List;
 
 
 import adapters.MeetingAppsListViewAdapter;
-import mc.nefro.MainActivity;
-import mc.nefro.R;
-import mc.nefro.myApp;
+import mc.nefro2017.MainActivity;
+import mc.nefro2017.R;
+import mc.nefro2017.myApp;
 
 import model.Actividad;
 

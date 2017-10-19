@@ -10,9 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -27,13 +25,11 @@ import java.util.List;
 
 import adapters.HetpinProgramListViewAdapter;
 
-import mc.nefro.R;
-import mc.nefro.myApp;
+import mc.nefro2017.R;
+import mc.nefro2017.myApp;
 import model.ActFavUser;
 import model.Actividad;
-import model.Persona;
 import model.PersonaRolAct;
-import model.Rating;
 
 /**
  * Created by Alvaro on 2/25/15.

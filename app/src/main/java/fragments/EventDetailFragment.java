@@ -34,7 +34,6 @@ import android.widget.Toast;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.parse.FindCallback;
 import com.parse.GetCallback;
-import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseFile;
 import com.parse.ParseImageView;
@@ -49,21 +48,18 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
 
-import adapters.DirectiveListViewAdapter;
-
 import adapters.DirectiveListViewAdapter2;
 import adapters.GridDocumentsAdapter;
 import adapters.HetpinProgramListViewAdapter;
 
-import mc.nefro.BroadcastAlarma;
-import mc.nefro.R;
-import mc.nefro.myApp;
+import mc.nefro2017.BroadcastAlarma;
+import mc.nefro2017.R;
+import mc.nefro2017.myApp;
 import model.ActContAct;
 import model.ActFavUser;
 import model.Actividad;
 import model.Persona;
 import model.PersonaRolAct;
-import model.PersonaRolOrg;
 import model.Rating;
 
 /**
@@ -82,9 +78,9 @@ public class EventDetailFragment extends Fragment {
     public static List <Actividad> eventosSpeaker = new ArrayList<>();
     public static List <Persona> speakers = new ArrayList<>();
     public static Persona personars;
+    public static Actividad evento;
     public static List <PersonaRolAct> roles,roles2 = new ArrayList<>();
-
-
+   // public static Integer counter=0;
     public myApp myapp;
     public static Actividad mApp;
     GridDocumentsAdapter docsadapter;
@@ -174,7 +170,7 @@ public class EventDetailFragment extends Fragment {
 
             }
         });
-        if(eventosAnidados==null || eventosAnidados.isEmpty()){
+
             if(selectedEvent.getType().equals("conferencia")){
                 toolbar.setBackgroundColor(getResources().getColor(R.color.conferencia));
 
@@ -191,10 +187,9 @@ public class EventDetailFragment extends Fragment {
             else {
                 toolbar.setBackgroundColor(getResources().getColor(R.color.conferencia));
             }
-        }
-        else {
-            footer.setVisibility(View.GONE);
-        }
+
+
+
 
         List<Button> buttons = new ArrayList<>();
 
@@ -324,6 +319,7 @@ public class EventDetailFragment extends Fragment {
 
 
         if(eventosAnidados!=null || eventosAnidados.size()>0 ){
+            footer.setVisibility(View.GONE);
 
 
             List<Actividad> anidateEvents = eventosAnidados;
@@ -345,7 +341,7 @@ public class EventDetailFragment extends Fragment {
                 }
             });
             if(roles!=null){
-                Log.i("objects2003030", String.valueOf(speakers.size()));
+                Log.i("roles", String.valueOf(roles.size()));
                 speaker_adapter = new DirectiveListViewAdapter2(getActivity(),roles,false);
             }
             else {
@@ -361,10 +357,8 @@ public class EventDetailFragment extends Fragment {
 
                     ParseObject object = (ParseObject) (events_listview.getItemAtPosition(position));
                     Actividad event = ParseObject.createWithoutData(Actividad.class, object.getObjectId());
-                    final List <Actividad> eventosAnidados2 = new ArrayList<>();
-
-
-
+                    //final List <Actividad> eventosAnidados2 = new ArrayList<>();
+                    roles2.clear();
                     ParseQuery<PersonaRolAct> personaRolActParseQuery = ParseQuery.getQuery(PersonaRolAct.class);
                     personaRolActParseQuery.include("persona.pais");
                     personaRolActParseQuery.include("actividad.lugar");
@@ -375,33 +369,57 @@ public class EventDetailFragment extends Fragment {
                         @Override
                         public void done(List<PersonaRolAct> objects, ParseException e) {
                             if(objects!=null){
+                                Log.i("roles2", String.valueOf(roles2.size()));
 
-                                roles2=objects;
+                                List <String> ids = new ArrayList<>();
+                                for(PersonaRolAct personaRolAct:objects){
+                                    Integer count = 0;
+                                    ids.add(personaRolAct.getPerson().getObjectId());
+                                    for(String id:ids){
+                                        if(id.equals(personaRolAct.getPerson().getObjectId())){
+                                            count++;
+                                        }
+                                    }
+                                    if(count==1){
+                                        roles2.add(personaRolAct);
+                                    }
+                                }
                             }
 
                         }
                     });
+                    evento = event;
                     ParseQuery<ActContAct> queryContenido = ParseQuery.getQuery(ActContAct.class);
                     queryContenido.include("contenido.lugar");
                     queryContenido.include ("contenedor");
+                    queryContenido.fromPin("ActConAct2");
                     queryContenido.fromLocalDatastore();
-                    queryContenido.fromPin("ActConAct");
-
-                    queryContenido.whereEqualTo("contenedor", event);
-
+                    queryContenido.whereEqualTo("contenedor", evento);
                     queryContenido.findInBackground(new FindCallback<ActContAct>() {
                         @Override
                         public void done(List<ActContAct> objects, ParseException e) {
+                            List<Actividad> eventosAnidados2 = new ArrayList<>();
+
                             for(ActContAct actContAct:objects){
                                 eventosAnidados2.add(actContAct.getContenido());
+                                Log.i("eventosanidados", String.valueOf(eventosAnidados2.size()));
+
                             }
+
+
+                            Fragment fragment = EventDetailFragment2.newInstance(evento, mApp,roles2,eventosAnidados2);
+                            final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                            ft.replace(R.id.container, fragment);
+                            ft.addToBackStack(null);
+                            ft.commit();
                         }
                     });
-                    Fragment fragment = EventDetailFragment.newInstance(event, mApp,roles2,eventosAnidados2);
-                    final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                    ft.replace(R.id.container, fragment);
-                    ft.addToBackStack(null);
-                    ft.commit();
+
+
+
+
+
+
                 }
             });
         }
@@ -758,7 +776,6 @@ public class EventDetailFragment extends Fragment {
     @Override
     public void onStop() {
         super.onStop();
-
 //        roles.clear();
     }
 

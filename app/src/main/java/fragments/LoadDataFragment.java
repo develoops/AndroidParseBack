@@ -17,7 +17,6 @@ import android.widget.ProgressBar;
 
 import com.parse.FindCallback;
 import com.parse.GetCallback;
-import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseImageView;
 import com.parse.ParseObject;
@@ -25,8 +24,8 @@ import com.parse.ParseQuery;
 
 import java.util.List;
 
-import mc.nefro.R;
-import mc.nefro.myApp;
+import mc.nefro2017.R;
+import mc.nefro2017.myApp;
 import model.ActContAct;
 import model.Actividad;
 
@@ -194,6 +193,10 @@ public class LoadDataFragment extends Fragment {
 			@Override
 			public void done(List<PersonaRolOrg> objects, ParseException e) {
 				if(objects!=null){
+
+					for(PersonaRolOrg personaRolOrg:objects){
+						personaRolOrg.getPerson().getImage().getDataInBackground();
+					}
 					academic = objects;
 				}
 
@@ -223,6 +226,9 @@ public class LoadDataFragment extends Fragment {
 			public void done(List<Org> objects, ParseException e) {
 				if(objects!=null){
 
+					for(Org org:objects){
+						org.getimgPerfil().getDataInBackground();
+					}
 					orgs= objects;
 					Log.i("CANTIDADPATR", String.valueOf(orgs.size()));
 					ParseObject.pinAllInBackground("patrocinadores",objects);
@@ -240,6 +246,9 @@ public class LoadDataFragment extends Fragment {
 			@Override
 			public void done(List<PersonaRolAct> objects, ParseException e) {
 				if(objects!=null){
+					for(PersonaRolAct personaRolOrg:objects){
+						personaRolOrg.getPerson().getImage().getDataInBackground();
+					}
 					ParseObject.pinAllInBackground("personasRol",objects);
 				}
 				else {
@@ -271,6 +280,7 @@ public class LoadDataFragment extends Fragment {
 
 
 							for (Actividad actividad : actividades) {
+								actividad.getParseFileV1().getDataInBackground();
 								ParseQuery<ActContAct> queryCont = ParseQuery.getQuery(ActContAct.class);
 								queryCont.include("contenido.lugar");
 								queryCont.include("contenedor");
@@ -338,7 +348,7 @@ public class LoadDataFragment extends Fragment {
 								 newFragment();
 							   }
 
-						},6000);
+						},5000);
 
 					}
 				}

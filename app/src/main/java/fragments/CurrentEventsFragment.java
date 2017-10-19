@@ -24,8 +24,8 @@ import java.util.Locale;
 
 import adapters.HetpinProgramListViewAdapter;
 
-import mc.nefro.R;
-import mc.nefro.myApp;
+import mc.nefro2017.R;
+import mc.nefro2017.myApp;
 import model.ActContAct;
 import model.Actividad;
 import model.PersonaRolAct;

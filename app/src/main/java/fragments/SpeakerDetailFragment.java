@@ -31,12 +31,11 @@ import java.util.List;
 
 import adapters.HetpinProgramListViewAdapter;
 import adapters.SpeakerDetailAdapter;
-import mc.nefro.R;
+import mc.nefro2017.R;
 import model.ActContAct;
 import model.Actividad;
 import model.Persona;
 import model.PersonaRolAct;
-import model.PersonaRolOrg;
 
 /**
  * Created by Alvaro on 3/1/15.
@@ -131,6 +130,7 @@ public class SpeakerDetailFragment extends Fragment {
                     ParseObject object = (ParseObject)(eventsofSpeaker.getItemAtPosition(position));
                     Actividad event = ParseObject.createWithoutData(Actividad.class, object.getObjectId());
                     evento = event;
+                    roles.clear();
                     ParseQuery<PersonaRolAct> personaRolActParseQuery = ParseQuery.getQuery(PersonaRolAct.class);
                     personaRolActParseQuery.include("persona.pais");
                     personaRolActParseQuery.include("actividad.lugar");
@@ -142,7 +142,19 @@ public class SpeakerDetailFragment extends Fragment {
                         public void done(List<PersonaRolAct> objects, ParseException e) {
                             if(objects!=null){
 
-                                roles=objects;
+                                List <String> ids = new ArrayList<>();
+                                for(PersonaRolAct personaRolAct:objects){
+                                    Integer count = 0;
+                                    ids.add(personaRolAct.getPerson().getObjectId());
+                                    for(String id:ids){
+                                        if(id.equals(personaRolAct.getPerson().getObjectId())){
+                                            count++;
+                                        }
+                                    }
+                                    if(count==1){
+                                        roles.add(personaRolAct);
+                                    }
+                                }
                             }
 
                         }

@@ -22,15 +22,15 @@ import java.util.List;
 
 import adapters.EventsFragmentAdapter;
 import fragments.sliding_tab.SlidingTabLayout;
-import mc.nefro.MainActivity;
-import mc.nefro.R;
-import mc.nefro.myApp;
+import mc.nefro2017.MainActivity;
+import mc.nefro2017.R;
+import mc.nefro2017.myApp;
 import model.Actividad;
 import model.Info;
 
+import model.Media;
 import model.Org;
 import model.Persona;
-import model.PersonaRolAct;
 import model.PersonaRolOrg;
 import utils.MUtil;
 import views.CustomViewPager;
@@ -49,6 +49,7 @@ public class MeetingAppViewPagerFragment extends Fragment {
     public static List<Org> organizaciones = new ArrayList<>();
    // public static List<Actividad> actividades = new ArrayList<>();
    public static List<PersonaRolOrg> comite = new ArrayList<>();
+    public static List<Media> media = new ArrayList<>();
 
     myApp app;
     public static List<Persona> speakers = new ArrayList<>();
@@ -89,6 +90,8 @@ public class MeetingAppViewPagerFragment extends Fragment {
                 news = objects;
             }
         });
+
+
 
 //
 
@@ -200,13 +203,13 @@ public class MeetingAppViewPagerFragment extends Fragment {
                 }
 
                 if (menuItem.getItemId() == R.id.now) {
-//                    if (app.getNowClickable()) {
-//                        app.setNowClickable(false);
-//                        menuItem.setChecked(!menuItem.isChecked());
-//                        menuItem.setIcon(menuItem.isChecked() ? R.drawable.program : R.drawable.emm);
-//                        app.setNow(menuItem.isChecked());
-//                        reloadView();
-//                    }
+                 /*   if (app.getNowClickable()) {
+                        app.setNowClickable(false);
+                        menuItem.setChecked(!menuItem.isChecked());
+                        menuItem.setIcon(menuItem.isChecked() ? R.drawable.program : R.drawable.emm);
+                        app.setNow(menuItem.isChecked());
+                        reloadView();
+                    }*/
                 }
 
                 return false;
@@ -244,14 +247,14 @@ public class MeetingAppViewPagerFragment extends Fragment {
 //            });
 
 
-            Log.i("CANTIDADSPEAKR2", String.valueOf(speakers.size()));
-
             pager.setOffscreenPageLimit(4);
             Log.i("ACTIVIDADESSSSS222222", String.valueOf(events));
             pager.setMaxChildProgramId(MUtil.divideEventByGroupSize(events) - 1);
-            pageAdapter = new EventsFragmentAdapter(getChildFragmentManager(), Titles, Numboftabs, meetingApp, events, speakers, organizaciones, comite,pager, app);
+            pageAdapter = new EventsFragmentAdapter(getChildFragmentManager(), Titles, Numboftabs, meetingApp, events, speakers, organizaciones, comite, media,pager, app);
             pager.setAdapter(pageAdapter);
             mSlidingTabLayout.setViewPager(pager);
+
+
         }
 
         else {
@@ -276,7 +279,7 @@ public class MeetingAppViewPagerFragment extends Fragment {
 
             pager.setOffscreenPageLimit(4);
             pager.setMaxChildProgramId(MUtil.divideEventByGroupSize(events) - 1);
-            pageAdapter = new EventsFragmentAdapter(getChildFragmentManager(), Titles, Numboftabs, meetingApp, events, speakers,organizaciones,comite,pager, app);
+            pageAdapter = new EventsFragmentAdapter(getChildFragmentManager(), Titles, Numboftabs, meetingApp, events, speakers,organizaciones,comite,media,pager, app);
             pager.setAdapter(pageAdapter);
             mSlidingTabLayout.setViewPager(pager);
         }

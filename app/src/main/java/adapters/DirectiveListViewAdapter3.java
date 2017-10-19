@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import imageTreatment.RoundedImageView;
-import mc.nefro.R;
-import mc.nefro.myApp;
+import mc.nefro2017.R;
+import mc.nefro2017.myApp;
 import model.PersonaRolOrg;
 
 /**

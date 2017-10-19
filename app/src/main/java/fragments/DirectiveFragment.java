@@ -16,7 +16,7 @@ import java.util.List;
 
 import adapters.DirectiveListViewAdapter;
 
-import mc.nefro.R;
+import mc.nefro2017.R;
 import model.PersonaRolOrg;
 
 /**

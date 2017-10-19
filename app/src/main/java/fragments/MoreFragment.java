@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,10 +18,11 @@ import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import adapters.GridDocumentsAdapter;
-import mc.nefro.R;
+import mc.nefro2017.R;
 import model.Actividad;
 import model.Media;
 
@@ -34,13 +36,15 @@ public class MoreFragment extends Fragment {
     public static ListView listView;
     //ArrayList<MobiFile> mFiles = new ArrayList<>();
     GridDocumentsAdapter adapter;
+    public static List<Media> docs = new ArrayList<>();
 
-    public static MoreFragment newInstance(Actividad meetingApp) {
+
+    public static MoreFragment newInstance(Actividad meetingApp,List<Media> media) {
 
         // Instantiate a new fragment
         mApp= meetingApp; //Alfonso
         MoreFragment fragment = new MoreFragment();
-
+        docs=media;
         fragment.setRetainInstance(true);
         return fragment;
 
@@ -65,8 +69,41 @@ public class MoreFragment extends Fragment {
         //final Button button = (Button) RootView.findViewById(R.id.comercialmap);
 
         //button.setText("Mapa Comercial");
+        if(mApp!=null){
+
+        }
+
+        ParseQuery<Media> query = ParseQuery.getQuery(Media.class);
+
+        query.whereEqualTo("congreso",mApp);
+        query.fromLocalDatastore();
+        query.fromPin("media");
+        query.findInBackground(new FindCallback<Media>() {
+            @Override
+            public void done(List<Media> mobiFiles, ParseException e) {
+
+                adapter = new GridDocumentsAdapter(getActivity(),R.layout.cell_document,mobiFiles);
+                listView.setAdapter(adapter);
+
+                listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        ParseObject object = (ParseObject)(listView.getItemAtPosition(position));
+                        Media mobiFile= ParseObject.createWithoutData(Media.class, object.getObjectId());
+                        Fragment fragment = DocumentDetailFragment.newInstance(mobiFile);
+                        final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                        ft.replace(R.id.container,fragment);
+                        ft.addToBackStack(null);
+                        ft.commit();
+                    }
+                });
 
 
+
+
+            }
+        });
+        Log.i("MOBIFILE1", String.valueOf(docs));
 
 
 
@@ -83,32 +120,7 @@ public class MoreFragment extends Fragment {
 */
 
 
-        ParseQuery<Media> query = ParseQuery.getQuery(Media.class);
-        query.fromLocalDatastore();
-        query.fromPin("media");
-        query.whereEqualTo("congreso",mApp);
-        query.findInBackground(new FindCallback<Media>() {
-              @Override
-              public void done(List<Media> mobiFiles, ParseException e) {
 
-                  adapter = new GridDocumentsAdapter(getActivity(),R.layout.cell_document,mobiFiles);
-                  listView.setAdapter(adapter);
-
-                  listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                      @Override
-                      public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                          ParseObject object = (ParseObject)(listView.getItemAtPosition(position));
-                          Media mobiFile= ParseObject.createWithoutData(Media.class, object.getObjectId());
-                          Fragment fragment = DocumentDetailFragment.newInstance(mobiFile);
-                          final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                          ft.replace(R.id.container,fragment);
-                          ft.addToBackStack(null);
-                          ft.commit();
-                      }
-                  });
-
-              }
-         });
         /*
         query.whereEqualTo("subtype","gallery");
         query.findInBackground(new FindCallback<MobiFile>() {

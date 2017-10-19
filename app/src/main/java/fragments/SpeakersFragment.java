@@ -22,13 +22,13 @@ import com.parse.ParseQuery;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashSet;
 import java.util.List;
 
 import adapters.SpeakersListViewAdapter;
 
-import mc.nefro.R;
+import mc.nefro2017.R;
 
-import model.ActContAct;
 import model.Actividad;
 
 import model.Persona;
@@ -187,9 +187,19 @@ public class SpeakersFragment extends Fragment implements SearchView.OnQueryText
                     @Override
                     public void done(List<PersonaRolAct> objects, ParseException e) {
                         if(objects!=null){
+                            List <String> nombre = new ArrayList<>();
                             for(PersonaRolAct personaRolAct:objects){
                                 if(personaRolAct.getAct()!=null){
-                                    eventosSpeaker.add(personaRolAct.getAct());
+                                    Integer count = 0;
+                                    nombre.add(personaRolAct.getAct().getTitle());
+                                    for(String id:nombre){
+                                        if(id.equals(personaRolAct.getAct().getTitle())){
+                                            count++;
+                                        }
+                                    }
+                                    if(count==1){
+                                        eventosSpeaker.add(personaRolAct.getAct());
+                                    }
                                 }
 
                             }

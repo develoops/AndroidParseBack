@@ -36,6 +36,37 @@
           "status": 2
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1002865874181:android:9e157b21922fb373",
+        "android_client_info": {
+          "package_name": "mc.nefro2017"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1002865874181-gt899van0obrou10af31b9m9potm4k56.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCntNhKXAuWqVNARt5yTp7i4_h2cduMMWU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
     }
   ],
   "configuration_version": "1"

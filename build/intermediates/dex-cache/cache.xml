@@ -29,40 +29,13 @@
         <dex dex="/Users/Alvaro/Downloads/AndroidParseBack/app/build/intermediates/transforms/dex/debug/folders/1000/2/universal-image-loader-1.9.3_c8af92bbd9817460ce4ba5f50dc8ae05e19b15e9/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="/Users/Alvaro/Downloads/AndroidParseBack/app/libs/universal-image-loader-1.9.3.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="a85588bec3e2c4584d593d3f15df1677321bca72">
-        <dex dex="/Users/Alvaro/Downloads/AndroidParseBack/app/build/intermediates/pre-dexed/release/universal-image-loader-1.9.3_c8af92bbd9817460ce4ba5f50dc8ae05e19b15e9.jar" />
-    </item>
-    <item
         is-multidex="true"
-        jar="/Users/Alvaro/.android/build-cache/869648a3af6834264752672f1b4302340d96fb39/output/jars/classes.jar"
+        jar="/Users/Alvaro/Downloads/AndroidParseBack/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="6addaba208e21c6da776d0ca75b6b23a6ccd5499">
-        <dex dex="/Users/Alvaro/Downloads/AndroidParseBack/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_1ef9c491a61c33c7d5ba58e940d317e0d0549ed0/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Alvaro/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-applinks/1.4.0/8ad21bf21784dacce5f2043afb97218cc377e835/bolts-applinks-1.4.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="8ad21bf21784dacce5f2043afb97218cc377e835">
-        <dex dex="/Users/Alvaro/Downloads/AndroidParseBack/app/build/intermediates/transforms/dex/debug/folders/1000/10/bolts-applinks-1.4.0_1cf8b90b3d34acc6d8a492e8011eb6b662dde4fb/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Alvaro/.android/build-cache/af27802198d17fe4b9ae9381fce7f864c65e64bb/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="756f6297eef79784f5e356dcd4f39865028b2bd0">
-        <dex dex="/Users/Alvaro/Downloads/AndroidParseBack/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_fc2189565cc3c193d66b7ea4821a527fcca3ccb3/classes.dex" />
+        sha1="d4dffef56532cfdb3a31b2a33cd305402a8088cb">
+        <dex dex="/Users/Alvaro/Downloads/AndroidParseBack/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_0f1562292cdde4206cf3ae9026e9463cd4d364f9/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -74,67 +47,13 @@
         <dex dex="/Users/Alvaro/Downloads/AndroidParseBack/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_7145c87f914936f2393b38f6e6eadce445612d19/classes.dex" />
     </item>
     <item
-        is-multidex="true"
-        jar="/Users/Alvaro/.android/build-cache/3b3dad3e691438791d21a045913cc62b35fe6df0/output/jars/classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/Users/Alvaro/Downloads/AndroidParseBack/app/libs/universal-image-loader-1.9.3.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="433f4d6aa5f21f19552afe0e6c5eff0fedba73ad">
-        <dex dex="/Users/Alvaro/Downloads/AndroidParseBack/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_0faa648485697c1f4e66410e09075869341c2d45/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Alvaro/.android/build-cache/ef9ee6644ac2d2af371fbe338e5e7c3848a54ee6/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="eb0d830e3eabb9deb9ec44869cf7ac7ea1ad794c">
-        <dex dex="/Users/Alvaro/Downloads/AndroidParseBack/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8e80ed9982cae05a52f75a589fc003f0ffb2da8a/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Alvaro/.android/build-cache/e1dc1fb1131c67a9be09be1af2da634559751a5b/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="fdd698cb1ac201f2bbe227fd5ea4af662f6f9dd0">
-        <dex dex="/Users/Alvaro/Downloads/AndroidParseBack/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_80daf07247214ad26d8d03c80b85eb75798fac79/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Alvaro/.android/build-cache/b25f6267a461746b848e52a89fc877a702f67646/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="6116e0e7069de7fc259aac8e08b84f32c2038231">
-        <dex dex="/Users/Alvaro/Downloads/AndroidParseBack/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e5b6f35d237a1cb64848818212ae9c826811afcf/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Alvaro/Downloads/AndroidParseBack/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="530608261cc71463202255a08eaf7e575157de5d">
-        <dex dex="/Users/Alvaro/Downloads/AndroidParseBack/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_0f1562292cdde4206cf3ae9026e9463cd4d364f9/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Alvaro/.android/build-cache/c0d7d50dd7496ab7bf510c4199fded03fbed2b25/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="486371f97baad8e607f332f20fee1d3dd00a731a">
-        <dex dex="/Users/Alvaro/Downloads/AndroidParseBack/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4582f4c0a7248d400253d5c6643d7659baad87ce/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Alvaro/.android/build-cache/e2116fd6156618088a999d7a8d6276db4ec4f95d/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="4b17463c814bdc562fb0392fa3494063623a0904">
-        <dex dex="/Users/Alvaro/Downloads/AndroidParseBack/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_48aeab354e532e1360d9bf3588015891bd1f7352/classes.dex" />
+        sha1="a85588bec3e2c4584d593d3f15df1677321bca72">
+        <dex dex="/Users/Alvaro/Downloads/AndroidParseBack/app/build/intermediates/pre-dexed/release/universal-image-loader-1.9.3_c8af92bbd9817460ce4ba5f50dc8ae05e19b15e9.jar" />
     </item>
 
 </items>

@@ -17,15 +17,12 @@ import android.widget.ProgressBar;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseImageView;
-import com.parse.ParseObject;
 import com.parse.ParseQuery;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
-import mc.nefro.R;
+import mc.nefro2017.R;
 import model.ActContAct;
 import model.Actividad;
 import model.Org;

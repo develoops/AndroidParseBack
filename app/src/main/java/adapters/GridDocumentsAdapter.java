@@ -10,14 +10,12 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.parse.ParseFile;
 import com.parse.ParseImageView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import mc.nefro.R;
+import mc.nefro2017.R;
 import model.Media;
 
 /**
@@ -80,9 +78,15 @@ public class GridDocumentsAdapter extends ArrayAdapter<Media> {
 
         else {
             Log.i("NO HAY FOTITO","NOFOTO");
+
         }*/
-        holder.txtTitle.setText(mobiFile.getNombre());
-        holder.imageItem.setVisibility(View.GONE);
+        if(mobiFile!=null){
+            holder.txtTitle.setText(mobiFile.getNombre());
+
+        }
+        Log.i("MOBIFILE",mobiFile.getObjectId());
+
+        //holder.imageItem.setVisibility(View.GONE);
      /*   holder.size.setText(mobiFile.getSize() + " MB");
 
 

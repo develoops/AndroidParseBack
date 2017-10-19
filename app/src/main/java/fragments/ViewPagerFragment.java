@@ -19,7 +19,7 @@ import java.util.Locale;
 
 import adapters.PagerFragmentAdapter;
 import fragments.sliding_tab.SlidingTabLayout;
-import mc.nefro.R;
+import mc.nefro2017.R;
 
 /**
  * Created by Alvaro on 3/3/15.
