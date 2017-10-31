@@ -25,8 +25,8 @@ import java.util.List;
 
 import adapters.HetpinProgramListViewAdapter;
 
-import mc.nefro2017.R;
-import mc.nefro2017.myApp;
+import mc.sms2017.R;
+import mc.sms2017.myApp;
 import model.ActFavUser;
 import model.Actividad;
 import model.PersonaRolAct;

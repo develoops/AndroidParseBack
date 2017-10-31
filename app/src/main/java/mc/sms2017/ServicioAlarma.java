@@ -1,4 +1,4 @@
-package mc.nefro2017;
+package mc.sms2017;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;

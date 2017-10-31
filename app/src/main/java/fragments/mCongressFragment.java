@@ -14,7 +14,7 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.parse.ParseFile;
 import com.parse.ParseImageView;
 
-import mc.nefro2017.R;
+import mc.sms2017.R;
 import model.Org;
 
 /**

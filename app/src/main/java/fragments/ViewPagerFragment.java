@@ -19,7 +19,7 @@ import java.util.Locale;
 
 import adapters.PagerFragmentAdapter;
 import fragments.sliding_tab.SlidingTabLayout;
-import mc.nefro2017.R;
+import mc.sms2017.R;
 
 /**
  * Created by Alvaro on 3/3/15.
@@ -56,10 +56,10 @@ public class ViewPagerFragment extends Fragment {
         ((ActionBarActivity)getActivity()).setSupportActionBar(toolbar);
 
         if (Locale.getDefault().getLanguage().equals("en")){
-            toolbar.setTitle("Sociedad Chilena de Nefrología");
+            toolbar.setTitle("Sociedad Chilena de Medicina Interna");
         }
         else {
-            toolbar.setTitle("Sociedad Chilena de Nefrología");
+            toolbar.setTitle("Sociedad Chilena de Medicina Interna");
         }
 
         toolbar.setTitleTextColor(Color.WHITE);

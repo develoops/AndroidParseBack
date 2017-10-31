@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,8 +25,8 @@ import java.util.Locale;
 
 import adapters.HetpinProgramListViewAdapter;
 
-import mc.nefro2017.R;
-import mc.nefro2017.myApp;
+import mc.sms2017.R;
+import mc.sms2017.myApp;
 import model.ActContAct;
 import model.Actividad;
 import model.PersonaRolAct;
@@ -47,13 +48,27 @@ public class CurrentEventsFragment extends Fragment {
         CurrentEventsFragment fragment = new CurrentEventsFragment();
         eventList = events;
         meetingApp = mApp;
+        //fragment.setRetainInstance(true);
+        Log.e("SIZEEVENTCURENTE", "events size " + eventList.size());
+
         return fragment;
+
     }
+
 
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
     }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // Retain this fragment across configuration changes.
+        setRetainInstance(true);
+
+    }
+
     //current_event_toolbar
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

@@ -1,4 +1,4 @@
-package mc.nefro2017;
+package mc.sms2017;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.KeyEvent;
 
 import fragments.LoadDataFragment;
+import fragments.LoadDataFragment2;
 import utils.MUtil;
 
 
@@ -25,13 +26,13 @@ public class MainActivity extends ActionBarActivity {
         this.myapp = (myApp) getApplicationContext();
         //Start Timer:
         MUtil.startTimer();
-        Bundle recieveParams = getIntent().getExtras();
+        //Bundle recieveParams = getIntent().getExtras();
         if (savedInstanceState == null) {
-                myapp.setSecondPass();
+                //myapp.setSecondPass();
                 if(myapp.isFirstPass()){
                     if(myapp.checkConnection()){
                         myapp.setSecondPass();
-                        LoadDataFragment loadDataFragment = LoadDataFragment.newInstance();
+                        LoadDataFragment2 loadDataFragment = LoadDataFragment2.newInstance();
                         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
                         ft.replace(R.id.container, loadDataFragment,"Load");
                         ft.commitAllowingStateLoss();
@@ -40,8 +41,8 @@ public class MainActivity extends ActionBarActivity {
                     else {
                         new AlertDialog.Builder(this)
                                 .setIcon(android.R.drawable.ic_dialog_alert)
-                                .setTitle("Warning")
-                                .setMessage("You need to connect to internet at least one time ")
+                                .setTitle("Advertencia")
+                                .setMessage("Necesitas conectarte a Internet")
                                 .setPositiveButton("OK", new DialogInterface.OnClickListener()
                                 {
                                     @Override
@@ -57,19 +58,19 @@ public class MainActivity extends ActionBarActivity {
 
                 }
                 else {
-                    if(myapp.checkConnection()){
-                        myapp.setSecondPass();
-                        LoadDataFragment loadDataFragment = LoadDataFragment.newInstance();
+//                    if(myapp.checkConnection()){
+                       //myapp.setSecondPass();
+                        LoadDataFragment2 loadDataFragment = LoadDataFragment2.newInstance();
                         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
                         ft.replace(R.id.container, loadDataFragment,"Load");
                         ft.commitAllowingStateLoss();
 
-                    }
-                    else {
+//                    }
+                   /* else {
                         new AlertDialog.Builder(this)
                                 .setIcon(android.R.drawable.ic_dialog_alert)
-                                .setTitle("Warning")
-                                .setMessage("You need to connect to internet")
+                                .setTitle("Advertencia")
+                                .setMessage("Necesitas conectarte a Internet")
                                 .setPositiveButton("OK", new DialogInterface.OnClickListener()
                                 {
                                     @Override
@@ -80,7 +81,7 @@ public class MainActivity extends ActionBarActivity {
                                 })
                                 .show();
 
-                    }
+                    }*/
                 }
 
 
@@ -91,6 +92,11 @@ public class MainActivity extends ActionBarActivity {
 
 
 
+    @Override
+    public void onStart(){
+        super.onStart();
+
+    }
 
 
     @Override
@@ -136,7 +142,7 @@ public class MainActivity extends ActionBarActivity {
         }
         return super.onKeyDown(keyCode, event);
     }
-
+/*
     public void setBackButton(){
 
         if (getSupportFragmentManager().getBackStackEntryCount() == 1){
@@ -156,7 +162,7 @@ public class MainActivity extends ActionBarActivity {
 
         }
 
-    }
+    }*/
 
 
 

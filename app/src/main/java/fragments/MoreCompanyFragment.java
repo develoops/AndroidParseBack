@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import adapters.GridMediaAdapter;
-import mc.nefro2017.R;
+import mc.sms2017.R;
 import model.Media;
 
 /**

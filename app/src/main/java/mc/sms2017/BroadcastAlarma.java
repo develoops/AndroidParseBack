@@ -1,4 +1,4 @@
-package mc.nefro2017;
+package mc.sms2017;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

@@ -24,16 +24,24 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.parse.FindCallback;
+import com.parse.GetCallback;
+import com.parse.ParseException;
 import com.parse.ParseImageView;
+import com.parse.ParseQuery;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
 import adapters.SocietyLogoAdapter;
-import mc.nefro2017.R;
-import mc.nefro2017.MainActivity;
+import bolts.Continuation;
+import bolts.Task;
+import mc.sms2017.R;
+import mc.sms2017.MainActivity;
+import model.Actividad;
 import model.Org;
+import model.PersonaRolOrg;
 
 /**
  * Created by Alvaro on 2/19/15.
@@ -53,40 +61,56 @@ public class CompanyDirectoryFragment extends Fragment{
     public TextView description;
 
 
-    public static CompanyDirectoryFragment newInstance(Org company,boolean b) {
+    public static CompanyDirectoryFragment newInstance() {
 
         // Instantiate a new fragment
-        bool = b;
 
         CompanyDirectoryFragment fragment = new CompanyDirectoryFragment();
 
 
 
-        com= company;
         Log.i("FRAGMENTID", String.valueOf(fragment.getId()));
 
         return fragment;
 
     }
 
+
+
     @Override
-    public void onAttach(Activity activity) {
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // Retain this fragment across configuration changes.
+        setRetainInstance(true);
 
+        ParseQuery<Org> queryOrg = ParseQuery.getQuery(Org.class);
+        queryOrg.whereEqualTo("tipo","sociedad");
+        queryOrg.fromLocalDatastore().getFirstInBackground().continueWithTask(new Continuation<Org, Task<Org>>() {
+            @Override
+            public Task<Org> then(Task<Org> task) throws Exception {
+                com = task.getResult();
+                return task;
+            }
+        });
 
-        super.onAttach(activity);
-
-        //Log.i("COMPANYFRAGMENT2", String.valueOf(MainActivity.stand.getDescription()));
+       /* ParseQuery<Org> queryOrg = ParseQuery.getQuery(Org.class);
+        queryOrg.whereEqualTo("tipo","sociedad");
+        queryOrg.fromLocalDatastore().getFirstInBackground(new GetCallback<Org>() {
+            @Override
+            public void done(Org object, ParseException e) {
+                com = object;
+            }
+        });*/
 
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         if(com!=null) {
 
-            RootView = inflater.inflate(R.layout.eventdetail_layout, container, false);
+            RootView = inflater.inflate(R.layout.eventdetail_layout2, container, false);
 
 
-            hdr = (ParseImageView) RootView.findViewById(R.id.header);
+           // hdr = (ParseImageView) RootView.findViewById(R.id.header);
             Toolbar toolbar = (Toolbar) RootView.findViewById(R.id.event_detail_toolbar);
             description = (TextView) RootView.findViewById(R.id.content);
             listview = (ListView) RootView.findViewById(R.id.speakers_list_view);
@@ -168,7 +192,8 @@ public class CompanyDirectoryFragment extends Fragment{
 
 
         if (com != null) {
-            hdr.setVisibility(View.GONE);
+
+          //  hdr.setVisibility(View.GONE);
 
             /*if(com.getimgFondo()!=null){
                 hdr.setVisibility(View.GONE);
@@ -205,7 +230,7 @@ public class CompanyDirectoryFragment extends Fragment{
             int width = displayMetrics.widthPixels;
             int height = displayMetrics.heightPixels;
 
-            hdr.getLayoutParams().height = (height / 4) - dpToPx(55);
+           // hdr.getLayoutParams().height = (height / 4) - dpToPx(55);
 
             footer.setBackgroundColor(getResources().getColor(R.color.companySecundario));
 
@@ -370,7 +395,7 @@ public class CompanyDirectoryFragment extends Fragment{
 
     }
 
-    public Fragment getVisibleFragment(){
+  /*  public Fragment getVisibleFragment(){
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
         List<Fragment> fragments = fragmentManager.getFragments();
         for(Fragment fragment : fragments){
@@ -378,7 +403,7 @@ public class CompanyDirectoryFragment extends Fragment{
                 return fragment;
         }
         return null;
-    }
+    }*/
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

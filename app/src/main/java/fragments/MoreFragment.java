@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import adapters.GridDocumentsAdapter;
-import mc.nefro2017.R;
+import mc.sms2017.R;
 import model.Actividad;
 import model.Media;
 
@@ -37,6 +37,8 @@ public class MoreFragment extends Fragment {
     //ArrayList<MobiFile> mFiles = new ArrayList<>();
     GridDocumentsAdapter adapter;
     public static List<Media> docs = new ArrayList<>();
+    public static List<Media> medias = new ArrayList<>();
+
 
 
     public static MoreFragment newInstance(Actividad meetingApp,List<Media> media) {
@@ -45,7 +47,7 @@ public class MoreFragment extends Fragment {
         mApp= meetingApp; //Alfonso
         MoreFragment fragment = new MoreFragment();
         docs=media;
-        fragment.setRetainInstance(true);
+        //fragment.setRetainInstance(true);
         return fragment;
 
     }
@@ -62,6 +64,32 @@ public class MoreFragment extends Fragment {
     }
 
     @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // Retain this fragment across configuration changes.
+        setRetainInstance(true);
+        ParseQuery<Media> query = ParseQuery.getQuery(Media.class);
+
+        query.whereEqualTo("congreso",mApp);
+
+        query.findInBackground(new FindCallback<Media>() {
+            @Override
+            public void done(List<Media> mobiFiles, ParseException e) {
+
+                medias=mobiFiles;
+
+
+
+            }
+        });
+
+        Log.i("MEDIAMORE", String.valueOf(medias));
+
+    }
+
+
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View RootView = inflater.inflate(R.layout.common_list_layout, container , false);
         listView = (ListView) RootView.findViewById(R.id.commonListView);/// crear el
@@ -73,37 +101,23 @@ public class MoreFragment extends Fragment {
 
         }
 
-        ParseQuery<Media> query = ParseQuery.getQuery(Media.class);
 
-        query.whereEqualTo("congreso",mApp);
-        query.fromLocalDatastore();
-        query.fromPin("media");
-        query.findInBackground(new FindCallback<Media>() {
+
+        adapter = new GridDocumentsAdapter(getActivity(),R.layout.cell_document,medias);
+        listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void done(List<Media> mobiFiles, ParseException e) {
-
-                adapter = new GridDocumentsAdapter(getActivity(),R.layout.cell_document,mobiFiles);
-                listView.setAdapter(adapter);
-
-                listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        ParseObject object = (ParseObject)(listView.getItemAtPosition(position));
-                        Media mobiFile= ParseObject.createWithoutData(Media.class, object.getObjectId());
-                        Fragment fragment = DocumentDetailFragment.newInstance(mobiFile);
-                        final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                        ft.replace(R.id.container,fragment);
-                        ft.addToBackStack(null);
-                        ft.commit();
-                    }
-                });
-
-
-
-
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                ParseObject object = (ParseObject)(listView.getItemAtPosition(position));
+                Media mobiFile= ParseObject.createWithoutData(Media.class, object.getObjectId());
+                Fragment fragment = DocumentDetailFragment.newInstance(mobiFile);
+                final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.container,fragment);
+                ft.addToBackStack(null);
+                ft.commit();
             }
         });
-        Log.i("MOBIFILE1", String.valueOf(docs));
 
 
 

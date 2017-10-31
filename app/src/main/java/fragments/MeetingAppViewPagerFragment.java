@@ -22,9 +22,9 @@ import java.util.List;
 
 import adapters.EventsFragmentAdapter;
 import fragments.sliding_tab.SlidingTabLayout;
-import mc.nefro2017.MainActivity;
-import mc.nefro2017.R;
-import mc.nefro2017.myApp;
+import mc.sms2017.MainActivity;
+import mc.sms2017.R;
+import mc.sms2017.myApp;
 import model.Actividad;
 import model.Info;
 
@@ -66,7 +66,7 @@ public class MeetingAppViewPagerFragment extends Fragment {
         organizaciones = orgs;
         speakers = spk;
         comite=academic;
-        fragment.setRetainInstance(true);
+        //fragment.setRetainInstance(true);
         return fragment;
 
     }
@@ -203,13 +203,13 @@ public class MeetingAppViewPagerFragment extends Fragment {
                 }
 
                 if (menuItem.getItemId() == R.id.now) {
-                 /*   if (app.getNowClickable()) {
+                    if (app.getNowClickable()) {
                         app.setNowClickable(false);
                         menuItem.setChecked(!menuItem.isChecked());
                         menuItem.setIcon(menuItem.isChecked() ? R.drawable.program : R.drawable.emm);
                         app.setNow(menuItem.isChecked());
                         reloadView();
-                    }*/
+                    }
                 }
 
                 return false;

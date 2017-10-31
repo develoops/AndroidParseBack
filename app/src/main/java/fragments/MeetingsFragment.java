@@ -14,15 +14,20 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.support.annotation.Nullable;
 
+import com.parse.FindCallback;
+import com.parse.ParseException;
 import com.parse.ParseObject;
+import com.parse.ParseQuery;
 
 import java.util.List;
 
 
 import adapters.MeetingAppsListViewAdapter;
-import mc.nefro2017.MainActivity;
-import mc.nefro2017.R;
-import mc.nefro2017.myApp;
+import bolts.Continuation;
+import bolts.Task;
+import mc.sms2017.MainActivity;
+import mc.sms2017.R;
+import mc.sms2017.myApp;
 
 import model.Actividad;
 
@@ -39,28 +44,16 @@ public class MeetingsFragment extends Fragment {
 
 
 
-    public static MeetingsFragment newInstance(List<Actividad> meetingApps) {
+    public static MeetingsFragment newInstance() {
 
         // Instantiate a new fragment
 
         MeetingsFragment fragment = new MeetingsFragment();
-        Log.i("meetings", String.valueOf(meetingApps));
-        meetingAppList = meetingApps;
 
-
-        fragment.setRetainInstance(true);
         return fragment;
 
     }
 
-
-    @Override
-    public void onAttach(Activity activity) {
-
-        super.onAttach(activity);
-
-
-    }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
@@ -74,12 +67,36 @@ public class MeetingsFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        setRetainInstance(true);
+
         if (savedInstanceState != null) {
             Log.i("CHAO", "rer");
 
         } else {
             Log.i("HOLA", "rer");
         }
+        ParseQuery<Actividad> query = ParseQuery.getQuery(Actividad.class);
+        query.include("lugar");
+        query.whereEqualTo("tipo","congreso");
+        query.fromLocalDatastore().findInBackground().continueWithTask(new Continuation<List<Actividad>, Task<List<Actividad>>>() {
+            @Override
+            public Task<List<Actividad>> then(Task<List<Actividad>> task) throws Exception {
+                meetingAppList=task.getResult();
+                return task;
+            }
+        });
+
+      /*  ParseQuery<Actividad> query = ParseQuery.getQuery(Actividad.class);
+        query.include("lugar");
+        query.whereEqualTo("tipo","congreso");
+        query.fromLocalDatastore().findInBackground(new FindCallback<Actividad>() {
+            @Override
+            public void done(List<Actividad> objects, ParseException e) {
+                    meetingAppList=objects;
+            }
+
+        });*/
+
 
     }
 

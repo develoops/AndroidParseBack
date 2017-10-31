@@ -25,7 +25,7 @@ import fragments.MoreFragment;
 import fragments.SpeakersFragment;
 import fragments.SponsorsFragment;
 
-import mc.nefro2017.myApp;
+import mc.sms2017.myApp;
 import model.Actividad;
 import model.Media;
 import model.Org;
@@ -171,9 +171,9 @@ public class EventsFragmentAdapter extends FragmentStatePagerAdapter
         else if(tabUIs.get(position).equals("Patrocinadores")){
             return  SponsorsFragment.newInstance(mApp,organizaciones);
         }
-        else if(tabUIs.get(position).equals("Comité Académico")){
-            return  DirectiveFragment.newInstance(academic);
-        }
+//        else if(tabUIs.get(position).equals("Comité Académico")){
+//            return  DirectiveFragment.newInstance(academic);
+//        }
         else {
             return MoreFragment.newInstance(mApp,media);
         }

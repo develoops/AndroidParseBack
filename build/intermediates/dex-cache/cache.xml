@@ -2,15 +2,6 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="/Users/Alvaro/Downloads/AndroidParseBack/app/libs/YouTubeAndroidPlayerApi.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="78b8f6e37921559ed21c1fae1f30f9f713494db8">
-        <dex dex="/Users/Alvaro/Downloads/AndroidParseBack/app/build/intermediates/transforms/dex/debug/folders/1000/2/YouTubeAndroidPlayerApi_5bfce5dc45fdc28d97af36da8d0260b4b72b2803/classes.dex" />
-    </item>
-    <item
         is-multidex="false"
         jar="/Users/Alvaro/Downloads/AndroidParseBack/app/libs/YouTubeAndroidPlayerApi.jar"
         jumboMode="false"
@@ -18,33 +9,6 @@
         revision="25.0.0"
         sha1="78b8f6e37921559ed21c1fae1f30f9f713494db8">
         <dex dex="/Users/Alvaro/Downloads/AndroidParseBack/app/build/intermediates/pre-dexed/release/YouTubeAndroidPlayerApi_5bfce5dc45fdc28d97af36da8d0260b4b72b2803.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Alvaro/Downloads/AndroidParseBack/app/libs/universal-image-loader-1.9.3.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="a85588bec3e2c4584d593d3f15df1677321bca72">
-        <dex dex="/Users/Alvaro/Downloads/AndroidParseBack/app/build/intermediates/transforms/dex/debug/folders/1000/2/universal-image-loader-1.9.3_c8af92bbd9817460ce4ba5f50dc8ae05e19b15e9/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Alvaro/Downloads/AndroidParseBack/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="d4dffef56532cfdb3a31b2a33cd305402a8088cb">
-        <dex dex="/Users/Alvaro/Downloads/AndroidParseBack/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_0f1562292cdde4206cf3ae9026e9463cd4d364f9/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Alvaro/Downloads/AndroidParseBack/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="/Users/Alvaro/Downloads/AndroidParseBack/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_7145c87f914936f2393b38f6e6eadce445612d19/classes.dex" />
     </item>
     <item
         is-multidex="false"

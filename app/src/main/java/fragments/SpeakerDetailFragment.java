@@ -31,7 +31,7 @@ import java.util.List;
 
 import adapters.HetpinProgramListViewAdapter;
 import adapters.SpeakerDetailAdapter;
-import mc.nefro2017.R;
+import mc.sms2017.R;
 import model.ActContAct;
 import model.Actividad;
 import model.Persona;

@@ -22,7 +22,7 @@ import com.parse.ParseQuery;
 import java.util.ArrayList;
 import java.util.List;
 
-import mc.nefro2017.R;
+import mc.sms2017.R;
 import model.ActContAct;
 import model.Actividad;
 import model.Org;
@@ -37,7 +37,7 @@ import model.PersonaRolOrg;
 public class SplashEventFragment extends Fragment {
 
     public static Actividad meetingApp;
-    //public static List <Actividad> actividades;
+    public static List <Actividad> actividades;
     public static View RootView;
     public static ParseImageView splash;
 
@@ -164,10 +164,10 @@ public class SplashEventFragment extends Fragment {
                 queryOrg2.findInBackground(new FindCallback<Org>() {
                     @Override
                     public void done(List<Org> objects, ParseException e) {
-                        for(Org org:objects){
+                      /*  for(Org org:objects){
                             org.getimgFondo().getDataInBackground();
                             org.getimgPerfil().getDataInBackground();
-                        }
+                        }*/
 
                         organizaciones = objects;
                         Log.i("CANTIDADPATR2", String.valueOf(organizaciones.size()));
@@ -194,7 +194,7 @@ public class SplashEventFragment extends Fragment {
                         Log.i("CANTIDADPATR2", String.valueOf(organizaciones.size()));
                         Log.i("CANTIDADSPEAKR", String.valueOf(persons.size()));
                         bar.setVisibility(View.INVISIBLE);
-
+                        actividades=actividads;
                         Fragment fragment = MeetingAppViewPagerFragment.newInstance(meetingApp,actividads, persons, organizaciones,comite);
                         final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
                         ft.replace(R.id.container, fragment);

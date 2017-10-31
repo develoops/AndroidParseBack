@@ -34,8 +34,8 @@ import java.util.List;
 import java.util.Locale;
 
 import adapters.SocietyLogoAdapter;
-import mc.nefro2017.MainActivity;
-import mc.nefro2017.R;
+import mc.sms2017.MainActivity;
+import mc.sms2017.R;
 import model.Actividad;
 import model.Org;
 
@@ -74,16 +74,7 @@ public class CompanyFragment extends Fragment{
 
     }
 
-    @Override
-    public void onAttach(Activity activity) {
 
-
-        super.onAttach(activity);
-
-
-        //Log.i("COMPANYFRAGMENT2", String.valueOf(MainActivity.stand.getDescription()));
-
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

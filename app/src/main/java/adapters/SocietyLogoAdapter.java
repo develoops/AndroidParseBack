@@ -18,8 +18,8 @@ import com.parse.ParseImageView;
 import java.util.ArrayList;
 import java.util.List;
 
-import mc.nefro2017.R;
-import mc.nefro2017.myApp;
+import mc.sms2017.R;
+import mc.sms2017.myApp;
 
 import model.Org;
 

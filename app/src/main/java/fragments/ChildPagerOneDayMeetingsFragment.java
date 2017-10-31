@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import mc.nefro2017.R;
+import mc.sms2017.R;
 import model.Actividad;
 
 /**

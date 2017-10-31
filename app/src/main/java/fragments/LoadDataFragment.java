@@ -24,8 +24,8 @@ import com.parse.ParseQuery;
 
 import java.util.List;
 
-import mc.nefro2017.R;
-import mc.nefro2017.myApp;
+import mc.sms2017.R;
+import mc.sms2017.myApp;
 import model.ActContAct;
 import model.Actividad;
 
@@ -226,9 +226,7 @@ public class LoadDataFragment extends Fragment {
 			public void done(List<Org> objects, ParseException e) {
 				if(objects!=null){
 
-					for(Org org:objects){
-						org.getimgPerfil().getDataInBackground();
-					}
+
 					orgs= objects;
 					Log.i("CANTIDADPATR", String.valueOf(orgs.size()));
 					ParseObject.pinAllInBackground("patrocinadores",objects);
@@ -246,9 +244,9 @@ public class LoadDataFragment extends Fragment {
 			@Override
 			public void done(List<PersonaRolAct> objects, ParseException e) {
 				if(objects!=null){
-					for(PersonaRolAct personaRolOrg:objects){
+					/*for(PersonaRolAct personaRolOrg:objects){
 						personaRolOrg.getPerson().getImage().getDataInBackground();
-					}
+					}*/
 					ParseObject.pinAllInBackground("personasRol",objects);
 				}
 				else {
@@ -280,7 +278,7 @@ public class LoadDataFragment extends Fragment {
 
 
 							for (Actividad actividad : actividades) {
-								actividad.getParseFileV1().getDataInBackground();
+								//actividad.getParseFileV1().getDataInBackground();
 								ParseQuery<ActContAct> queryCont = ParseQuery.getQuery(ActContAct.class);
 								queryCont.include("contenido.lugar");
 								queryCont.include("contenedor");

@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import mc.nefro2017.R;
+import mc.sms2017.R;
 import model.Media;
 
 /**

@@ -22,12 +22,11 @@ import com.parse.ParseQuery;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.HashSet;
 import java.util.List;
 
 import adapters.SpeakersListViewAdapter;
 
-import mc.nefro2017.R;
+import mc.sms2017.R;
 
 import model.Actividad;
 
@@ -66,15 +65,6 @@ public class SpeakersFragment extends Fragment implements SearchView.OnQueryText
     }
 
 
-    @Override
-    public void onAttach(Activity activity) {
-
-        super.onAttach(activity);
-
-
-
-
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

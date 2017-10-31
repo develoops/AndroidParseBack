@@ -52,9 +52,9 @@ import adapters.DirectiveListViewAdapter2;
 import adapters.GridDocumentsAdapter;
 import adapters.HetpinProgramListViewAdapter;
 
-import mc.nefro2017.BroadcastAlarma;
-import mc.nefro2017.R;
-import mc.nefro2017.myApp;
+import mc.sms2017.BroadcastAlarma;
+import mc.sms2017.R;
+import mc.sms2017.myApp;
 import model.ActContAct;
 import model.ActFavUser;
 import model.Actividad;
@@ -98,7 +98,6 @@ public class EventDetailFragment extends Fragment {
         mApp = meetingApp; //para Alfonso
         eventosAnidados=anidados;
         roles= rols;
-        fragment.setRetainInstance(true);
         return fragment;
 
     }
@@ -170,7 +169,7 @@ public class EventDetailFragment extends Fragment {
 
             }
         });
-
+        if(eventosAnidados==null || eventosAnidados.isEmpty()){
             if(selectedEvent.getType().equals("conferencia")){
                 toolbar.setBackgroundColor(getResources().getColor(R.color.conferencia));
 
@@ -187,9 +186,11 @@ public class EventDetailFragment extends Fragment {
             else {
                 toolbar.setBackgroundColor(getResources().getColor(R.color.conferencia));
             }
+        }
+        else {
 
-
-
+            footer.setVisibility(View.GONE);
+        }
 
         List<Button> buttons = new ArrayList<>();
 
@@ -319,7 +320,6 @@ public class EventDetailFragment extends Fragment {
 
 
         if(eventosAnidados!=null || eventosAnidados.size()>0 ){
-            footer.setVisibility(View.GONE);
 
 
             List<Actividad> anidateEvents = eventosAnidados;
@@ -743,17 +743,17 @@ public class EventDetailFragment extends Fragment {
                     Log.i("AMAAAA", "BACKKK");
                     Log.i("AMAAA",String.valueOf(myapp.getFromDetail()));
                     getActivity().onBackPressed();
-//                    if(myapp.getFromDetail()){
-//                        getActivity().onBackPressed();
-//                    }
-//                    else {
-//                        myapp.setFromDetail(true);
-//                        Fragment fragment = MeetingAppViewPagerFragment.newInstance(mApp,LoadDataFragment.eventos, LoadDataFragment.orgs);
-//                        final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-//                        ft.replace(R.id.container, fragment);
-//                        ft.addToBackStack(null);
-//                        ft.commitAllowingStateLoss();
-//                    }
+                    if(myapp.getFromDetail()){
+                        getActivity().onBackPressed();
+                    }
+                    else {
+                        myapp.setFromDetail(true);
+                        Fragment fragment = MeetingAppViewPagerFragment.newInstance(mApp,SplashEventFragment.actividades, SplashEventFragment.persons,SplashEventFragment.organizaciones,SplashEventFragment.comite);
+                        final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                        ft.replace(R.id.container, fragment);
+                        ft.addToBackStack(null);
+                        ft.commitAllowingStateLoss();
+                    }
 
                     return true;
                 }

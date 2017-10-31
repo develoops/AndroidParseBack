@@ -1,6 +1,5 @@
 package fragments;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -12,11 +11,17 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.parse.FindCallback;
+import com.parse.ParseException;
+import com.parse.ParseQuery;
+
 import java.util.List;
 
 import adapters.DirectiveListViewAdapter;
 
-import mc.nefro2017.R;
+import bolts.Continuation;
+import bolts.Task;
+import mc.sms2017.R;
 import model.PersonaRolOrg;
 
 /**
@@ -27,33 +32,51 @@ public class DirectiveFragment extends Fragment {
     ListView listview;
     SwipeDetector swipeDetector;
     DirectiveListViewAdapter adapter;
-    public static List<PersonaRolOrg> actors;
+    public static List<PersonaRolOrg> staff;
 
 
-    public static DirectiveFragment newInstance(List<PersonaRolOrg> staff) {
+    public static DirectiveFragment newInstance() {
 
         // Instantiate a new fragment
 
         DirectiveFragment fragment = new DirectiveFragment();
 
-        actors = staff;
 
-        fragment.setRetainInstance(true);
         return fragment;
 
     }
 
 
     @Override
-    public void onAttach(Activity activity) {
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // Retain this fragment across configuration changes.
+        setRetainInstance(true);
 
-        super.onAttach(activity);
 
+        ParseQuery<PersonaRolOrg> queryPersonaRolOrg = ParseQuery.getQuery(PersonaRolOrg.class);
+        queryPersonaRolOrg.include("persona.pais");
+        queryPersonaRolOrg.include("org");
+        queryPersonaRolOrg.whereEqualTo("tipo", "sociedad");
+        queryPersonaRolOrg.fromLocalDatastore().findInBackground().continueWithTask(new Continuation<List<PersonaRolOrg>, Task<List<PersonaRolOrg>>>() {
+            @Override
+            public Task<List<PersonaRolOrg>> then(Task<List<PersonaRolOrg>> task) throws Exception {
+                staff=task.getResult();
+                return task;
+            }
+        });
 
-
-
+       /* ParseQuery<PersonaRolOrg> queryPersonaRolOrg = ParseQuery.getQuery(PersonaRolOrg.class);
+        queryPersonaRolOrg.include("persona.pais");
+        queryPersonaRolOrg.include("org");
+        queryPersonaRolOrg.whereEqualTo("tipo", "sociedad");
+        queryPersonaRolOrg.fromLocalDatastore().findInBackground(new FindCallback<PersonaRolOrg>() {
+            @Override
+            public void done(List<PersonaRolOrg> objects, ParseException e) {
+                staff = objects;
+            }
+        });*/
     }
-
 
 
     @Override
@@ -73,14 +96,14 @@ public class DirectiveFragment extends Fragment {
     public void onStart() {
         super.onStart();
 
-        if(actors!=null){
+        if(staff!=null){
 //            Collections.sort(actors,new Comparator<PersonaRolOrg>() {
 //                @Override
 //                public int compare(PersonaRolOrg lhs, PersonaRolOrg rhs) {
 //                    return lhs.getPerson().getLastName().compareTo(rhs.getPerson().getLastName());
 //                }
 //            });
-            adapter = new DirectiveListViewAdapter(getActivity(),actors, true);
+            adapter = new DirectiveListViewAdapter(getActivity(),staff, true);
         }
         else {
 

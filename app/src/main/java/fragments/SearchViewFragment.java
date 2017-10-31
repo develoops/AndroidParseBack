@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import adapters.HetpinProgramListViewAdapter;
-import mc.nefro2017.R;
+import mc.sms2017.R;
 import model.ActContAct;
 import model.Actividad;
 import model.PersonaRolAct;

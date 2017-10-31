@@ -1,4 +1,4 @@
-package mc.nefro2017;
+package mc.sms2017;
 
 import android.app.Application;
 import android.content.Context;
@@ -62,14 +62,14 @@ public class myApp extends Application {
         ParseObject.registerSubclass(PersonaRolOrg.class);
         ParseObject.registerSubclass(Rating.class);
         Parse.initialize(new Parse.Configuration.Builder(this)
-                .applicationId("7HdRvQNLc5PS3NQ4gTRUAeTMrgaTkKdx7T1G4rZR")
-                .clientKey("rxSe7SYEgYprtm0i1jy1cxpNwT8gGqkBVbuH75j1")
+                .applicationId("ClUXXsCBfTmS6E9zxXKck1oX4hYSC2pyHarv4U8E")
+                .clientKey("IZ08jbbJwcLnDlEh79edrsxNIcU0iM9FG6Uwpj92")
                 .server("https://parseapi.back4app.com/").enableLocalDataStore().build()
 
         );
 
         ParseInstallation parseInstallation = ParseInstallation.getCurrentInstallation();
-        parseInstallation.put("GCMSenderId",getString(R.string.google_project_number));
+        //parseInstallation.put("GCMSenderId",getString(R.string.google_project_number));
         parseInstallation.saveInBackground();
 
 
@@ -101,7 +101,7 @@ public class myApp extends Application {
 
 
 
-        ParsePush.subscribeInBackground("nefro2017", new SaveCallback() {
+        ParsePush.subscribeInBackground("sms2017", new SaveCallback() {
             @Override
             public void done(ParseException e) {
 
