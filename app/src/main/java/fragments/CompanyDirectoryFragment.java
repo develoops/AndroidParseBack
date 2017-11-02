@@ -164,73 +164,25 @@ public class CompanyDirectoryFragment extends Fragment{
 
         }
         else {
-            Intent intent = new Intent(getActivity(),
-                    MainActivity.class);
 
-            startActivity(intent);
         }
 
         return RootView;
     }
 
     @Override
-    public void onStart() {
-        super.onStart();
-
-    }
-    @Override
-    public void onResume() {
-        super.onResume();
-        /*
-        View v = mTabHost.getTabWidget().getChildAt(0);
-        v.setBackgroundResource(R.drawable.programa);
-
-
-
-*/
-
+    public void onViewCreated(View view, Bundle savedInstanceState) {
 
 
         if (com != null) {
 
-          //  hdr.setVisibility(View.GONE);
-
-            /*if(com.getimgFondo()!=null){
-                hdr.setVisibility(View.GONE);
-
-                ParseFile header = com.getimgFondo();
-                if (header != null) {
-                    //Get singleton instance of ImageLoader
-                    ImageLoader imageLoader = ImageLoader.getInstance();
-                    //Load the image from the url into the ImageView.
-                    imageLoader.displayImage(header.getUrl(), hdr);
-                }
-                else{
-                    Log.i("NO HAY HEADER1","LOG");
-                    Log.i("LOG","LOG");
-                }
-            }
-
-            else{
-                hdr.setVisibility(View.GONE);
-                //hdr.setImageDrawable(null);
-                Log.i("NO HAY HEADER0","LOG");
-            }*/
-
-            //ParseFile logo = com.getLogo().getParseFileV1();
-
-            //lgo.setParseFile(logo);
-            //lgo.loadInBackground();
 
             description.setText(com.getDetails()+"\n"+"\n"+"\n"+"\n");
             description.setMovementMethod(new ScrollingMovementMethod());
-            //companyName.setText(company.getCompany().getName());
 
             DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
             int width = displayMetrics.widthPixels;
             int height = displayMetrics.heightPixels;
-
-           // hdr.getLayoutParams().height = (height / 4) - dpToPx(55);
 
             footer.setBackgroundColor(getResources().getColor(R.color.companySecundario));
 
@@ -238,7 +190,7 @@ public class CompanyDirectoryFragment extends Fragment{
             call.setTextColor(Color.WHITE);
             web.setTextColor(Color.WHITE);
             mail.setTextColor(Color.WHITE);
-           // map.setTextColor(Color.WHITE);
+            // map.setTextColor(Color.WHITE);
             makeFavourite.setTextColor(Color.WHITE);
 
 
@@ -246,7 +198,7 @@ public class CompanyDirectoryFragment extends Fragment{
                 call.setText("Call");
                 web.setText("Web");
                 mail.setText("Mail");
-            //    map.setText("Map");
+                //    map.setText("Map");
 
             }
             else {
@@ -261,7 +213,7 @@ public class CompanyDirectoryFragment extends Fragment{
             call.getLayoutParams().width = (width / 4);
             web.getLayoutParams().width = (width / 4);
             mail.getLayoutParams().width = (width / 4);
-           // map.getLayoutParams().width = (width / 4);
+            // map.getLayoutParams().width = (width / 4);
 
 
 
@@ -270,22 +222,7 @@ public class CompanyDirectoryFragment extends Fragment{
             final String phone = com.getPhone();
 
             final String email = com.getMail();
-            /*
-            if(com.getLocation()==null){
-                Log.i("LOG","LOG");
-            }
 
-            else{
-                if(com.getLocation().getGooglemaps()==null){
-
-                }
-                else {
-                    gmaps = com.getLocation().getGooglemaps();
-
-                }
-
-            }
-            */
             call.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -327,43 +264,32 @@ public class CompanyDirectoryFragment extends Fragment{
                 }
             });
 
-            /*
-            map.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if(gmaps!=null){
-                        Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
-                                Uri.parse( ""+gmaps+""));
-                        intent.setPackage("com.google.android.apps.maps");
-                        startActivity(intent);
-                    }
-                }
-            });
-            */
+
         }
         else{
             Log.i("NO HAY HEADER2","LOG");
             Log.i("LOG","LOG");
 
         }
+    }
 
+    @Override
+    public void onStart() {
+        super.onStart();
 
-        if(com!=null){
+    }
+    @Override
+    public void onResume() {
+        super.onResume();
+        if(getView()!=null){
             getView().setFocusableInTouchMode(true);
             getView().requestFocus();
             getView().setOnKeyListener(new View.OnKeyListener() {
                 @Override
                 public boolean onKey(View v, int keyCode, KeyEvent event) {
 
-                    if (event.getAction() == KeyEvent.ACTION_UP && keyCode == KeyEvent.KEYCODE_BACK){
+                    if (event.getAction() == KeyEvent.ACTION_UP && keyCode == KeyEvent.KEYCODE_BACK) {
                         // handle back button's click listener
-                        if(bool){
-                            //((ActionBarActivity)getActivity()).getSupportActionBar().setHomeAsUpIndicator(R.drawable.directorio);
-                            getActivity().onBackPressed();
-                        }
-                        else {
-                            return  true;
-                        }
 
 
                         return true;
@@ -371,10 +297,6 @@ public class CompanyDirectoryFragment extends Fragment{
                     return false;
                 }
             });
-        }
-
-        else{
-            Log.i("LOG","LOG");
         }
 
 

@@ -55,13 +55,7 @@ public class MeetingsFragment extends Fragment {
     }
 
 
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        // Restore State Here
 
-
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -101,6 +95,7 @@ public class MeetingsFragment extends Fragment {
     }
 
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View RootView = inflater.inflate(R.layout.common_list_layout, container, false);
@@ -111,8 +106,8 @@ public class MeetingsFragment extends Fragment {
     }
 
     @Override
-    public void onStart() {
-        super.onStart();
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
         if (meetingAppList != null) {
             adapter = new MeetingAppsListViewAdapter(getActivity(), meetingAppList);
             listview.setAdapter(adapter);
@@ -120,18 +115,8 @@ public class MeetingsFragment extends Fragment {
         }
 
         else {
-            Intent intent = new Intent(getActivity(),
-                    MainActivity.class);
 
-            startActivity(intent);
         }
-
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-
 
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -146,6 +131,26 @@ public class MeetingsFragment extends Fragment {
                 ft.commit();
             }
         });
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        // Restore State Here
+
+
+    }
+    @Override
+    public void onStart() {
+        super.onStart();
+
+
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
 
         getView().setFocusableInTouchMode(true);
         getView().requestFocus();

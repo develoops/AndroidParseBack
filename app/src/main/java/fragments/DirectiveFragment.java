@@ -93,9 +93,7 @@ public class DirectiveFragment extends Fragment {
     }
 
     @Override
-    public void onStart() {
-        super.onStart();
-
+    public void onViewCreated(View view, Bundle savedInstanceState) {
         if(staff!=null){
 //            Collections.sort(actors,new Comparator<PersonaRolOrg>() {
 //                @Override
@@ -112,16 +110,6 @@ public class DirectiveFragment extends Fragment {
         // Binds the Adapter to the ListView
         listview.setAdapter(adapter);
         Log.i("HOLA", "HOLA");
-
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        /*
-        View v = mTabHost.getTabWidget().getChildAt(0);
-        v.setBackgroundResource(R.drawable.programa);
-*/
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -143,6 +131,23 @@ public class DirectiveFragment extends Fragment {
 
             }
         });
+
+    }
+    @Override
+    public void onStart() {
+        super.onStart();
+
+
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        /*
+        View v = mTabHost.getTabWidget().getChildAt(0);
+        v.setBackgroundResource(R.drawable.programa);
+*/
+
         getView().setFocusableInTouchMode(true);
         getView().requestFocus();
         getView().setOnKeyListener(new View.OnKeyListener() {
