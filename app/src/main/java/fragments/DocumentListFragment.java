@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Locale;
 
 import adapters.GridDocumentsAdapter;
-import mc.sms2017.R;
+import mc.sms.R;
 import model.Media;
 
 /**

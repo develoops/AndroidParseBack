@@ -19,7 +19,7 @@ import java.util.List;
 import java.util.Map;
 
 import adapters.ChildPagerMeetingsAdapter;
-import mc.sms2017.R;
+import mc.sms.R;
 import model.ActContAct;
 import model.Actividad;
 import utils.MUtil;

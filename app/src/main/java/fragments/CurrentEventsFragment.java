@@ -25,8 +25,8 @@ import java.util.Locale;
 
 import adapters.HetpinProgramListViewAdapter;
 
-import mc.sms2017.R;
-import mc.sms2017.myApp;
+import mc.sms.R;
+import mc.sms.myApp;
 import model.ActContAct;
 import model.Actividad;
 import model.PersonaRolAct;

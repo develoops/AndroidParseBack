@@ -19,7 +19,7 @@ import java.util.Locale;
 
 import adapters.PagerFragmentAdapter;
 import fragments.sliding_tab.SlidingTabLayout;
-import mc.sms2017.R;
+import mc.sms.R;
 
 /**
  * Created by Alvaro on 3/3/15.

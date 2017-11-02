@@ -22,7 +22,7 @@ import com.parse.ParseQuery;
 import java.util.ArrayList;
 import java.util.List;
 
-import mc.sms2017.R;
+import mc.sms.R;
 import model.ActContAct;
 import model.Actividad;
 import model.Org;

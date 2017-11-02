@@ -25,7 +25,7 @@ import fragments.MoreFragment;
 import fragments.SpeakersFragment;
 import fragments.SponsorsFragment;
 
-import mc.sms2017.myApp;
+import mc.sms.myApp;
 import model.Actividad;
 import model.Media;
 import model.Org;

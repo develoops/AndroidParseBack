@@ -1,4 +1,4 @@
-package mc.sms2017;
+package mc.sms;
 
 import android.app.Application;
 import android.content.Context;
@@ -101,7 +101,7 @@ public class myApp extends Application {
 
 
 
-        ParsePush.subscribeInBackground("sms2017", new SaveCallback() {
+        ParsePush.subscribeInBackground("sms", new SaveCallback() {
             @Override
             public void done(ParseException e) {
 

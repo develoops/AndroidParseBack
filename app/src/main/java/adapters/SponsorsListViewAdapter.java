@@ -1,14 +1,11 @@
 package adapters;
 
 import android.content.Context;
-import android.media.Image;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Filter;
-import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,12 +15,9 @@ import com.parse.ParseFile;
 import java.util.ArrayList;
 import java.util.List;
 
-import imageTreatment.RoundedImageView;
-import mc.sms2017.R;
-import mc.sms2017.myApp;
+import mc.sms.R;
 import model.Actividad;
 import model.Org;
-import model.Persona;
 
 /**
  * Created by Alvaro on 2/21/15.

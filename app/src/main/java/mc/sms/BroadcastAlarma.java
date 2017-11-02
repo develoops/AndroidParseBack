@@ -1,4 +1,4 @@
-package mc.sms2017;
+package mc.sms;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

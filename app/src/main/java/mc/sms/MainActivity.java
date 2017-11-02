@@ -1,4 +1,4 @@
-package mc.sms2017;
+package mc.sms;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;

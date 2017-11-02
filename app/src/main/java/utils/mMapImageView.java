@@ -10,8 +10,8 @@ import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.widget.ImageView;
 
-import mc.sms2017.R;
-import mc.sms2017.myApp;
+import mc.sms.R;
+import mc.sms.myApp;
 
 
 /**

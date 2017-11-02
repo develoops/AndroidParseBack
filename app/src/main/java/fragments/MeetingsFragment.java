@@ -1,7 +1,6 @@
 package fragments;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -20,9 +19,8 @@ import java.util.List;
 
 
 import adapters.MeetingAppsListViewAdapter;
-import mc.sms2017.MainActivity;
-import mc.sms2017.R;
-import mc.sms2017.myApp;
+import mc.sms.R;
+import mc.sms.myApp;
 
 import model.Actividad;
 

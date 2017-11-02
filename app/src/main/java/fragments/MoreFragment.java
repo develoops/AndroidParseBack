@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import adapters.GridDocumentsAdapter;
-import mc.sms2017.R;
+import mc.sms.R;
 import model.Actividad;
 import model.Media;
 

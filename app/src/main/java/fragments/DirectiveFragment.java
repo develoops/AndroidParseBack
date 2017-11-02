@@ -18,7 +18,7 @@ import java.util.List;
 
 import adapters.DirectiveListViewAdapter;
 
-import mc.sms2017.R;
+import mc.sms.R;
 import model.PersonaRolOrg;
 
 /**

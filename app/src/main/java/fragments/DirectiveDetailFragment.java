@@ -22,7 +22,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import adapters.DirectiveListViewAdapter3;
-import mc.sms2017.R;
+import mc.sms.R;
 import model.PersonaRolOrg;
 
 /**

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="mc.sms2017" >
+    package="mc.sms" >
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -11,10 +11,10 @@
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 
-    <permission android:name="mc.sms2017.permission.C2D_MESSAGE"
+    <permission android:name="mc.sms.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="mc.nefro.permission.C2D_MESSAGE" />
+    <uses-permission android:name="mc.sms.permission.C2D_MESSAGE" />
     <uses-feature android:name="android.hardware.telephony"  android:required="false" />
     <supports-screens
         android:anyDensity="true"
@@ -30,10 +30,10 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme"
-        android:name="mc.sms2017.myApp"
+        android:name="mc.sms.myApp"
         >
         <activity
-            android:name="mc.sms2017.MainActivity"
+            android:name="mc.sms.MainActivity"
 
             android:alwaysRetainTaskState="true"
             android:configChanges="keyboardHidden|orientation"
@@ -74,7 +74,7 @@
                 <!--
                   IMPORTANT: Change "com.parse.tutorials.pushnotifications" to match your app's package name.
                 -->
-                <category android:name="mc.sms2017" />
+                <category android:name="mc.sms" />
             </intent-filter>
         </receiver>
         <receiver android:name="utils.Receiver" android:exported="false">
@@ -86,15 +86,15 @@
         </receiver>
 
         <service
-            android:name="mc.sms2017.ServicioAlarma"
+            android:name="mc.sms.ServicioAlarma"
             android:enabled="true" />
 
-        <receiver android:name="mc.sms2017.BroadcastAlarma" />
+        <receiver android:name="mc.sms.BroadcastAlarma" />
 
         <meta-data android:name="com.parse.push.gcm_sender_id"
-            android:value="id:1002865874181" />;
+            android:value="id:712456314512" />;
 
-        <meta-data android:name="com.parse.push.notification_icon" android:resource="@drawable/iconoparse"/>
+        <meta-data android:name="com.parse.push.notification_icon" android:resource="@drawable/iconparse"/>
     </application>
 
 </manifest>

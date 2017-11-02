@@ -1,58 +1,27 @@
 {
   "project_info": {
-    "project_number": "1002865874181",
-    "firebase_url": "https://proyectito-2db07.firebaseio.com",
-    "project_id": "proyectito-2db07",
-    "storage_bucket": "proyectito-2db07.appspot.com"
+    "project_number": "712456314512",
+    "firebase_url": "https://otro-proyecto-4484e.firebaseio.com",
+    "project_id": "otro-proyecto-4484e",
+    "storage_bucket": "otro-proyecto-4484e.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1002865874181:android:a29b57b36ca11246",
+        "mobilesdk_app_id": "1:712456314512:android:31d0e72be780685a",
         "android_client_info": {
-          "package_name": "mc.nefro"
+          "package_name": "mc.sms"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1002865874181-gt899van0obrou10af31b9m9potm4k56.apps.googleusercontent.com",
+          "client_id": "712456314512-u1cl1pnvl8vpvbn8jj4rrbuvdk8vvmg4.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCntNhKXAuWqVNARt5yTp7i4_h2cduMMWU"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:1002865874181:android:9e157b21922fb373",
-        "android_client_info": {
-          "package_name": "mc.sms2017"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "1002865874181-gt899van0obrou10af31b9m9potm4k56.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCntNhKXAuWqVNARt5yTp7i4_h2cduMMWU"
+          "current_key": "AIzaSyAYYkptTVNYp91TxkWv8mHp3ZY7tod0d0M"
         }
       ],
       "services": {

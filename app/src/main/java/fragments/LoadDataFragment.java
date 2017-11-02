@@ -2,8 +2,6 @@ package fragments;
 
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
@@ -21,12 +19,11 @@ import com.parse.ParseException;
 import com.parse.ParseImageView;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
-import com.parse.SaveCallback;
 
 import java.util.List;
 
-import mc.sms2017.R;
-import mc.sms2017.myApp;
+import mc.sms.R;
+import mc.sms.myApp;
 import model.ActContAct;
 import model.Actividad;
 

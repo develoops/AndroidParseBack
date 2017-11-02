@@ -52,9 +52,9 @@ import adapters.DirectiveListViewAdapter2;
 import adapters.GridDocumentsAdapter;
 import adapters.HetpinProgramListViewAdapter;
 
-import mc.sms2017.BroadcastAlarma;
-import mc.sms2017.R;
-import mc.sms2017.myApp;
+import mc.sms.BroadcastAlarma;
+import mc.sms.R;
+import mc.sms.myApp;
 import model.ActContAct;
 import model.ActFavUser;
 import model.Actividad;

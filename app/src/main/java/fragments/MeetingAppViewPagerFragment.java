@@ -22,9 +22,9 @@ import java.util.List;
 
 import adapters.EventsFragmentAdapter;
 import fragments.sliding_tab.SlidingTabLayout;
-import mc.sms2017.MainActivity;
-import mc.sms2017.R;
-import mc.sms2017.myApp;
+import mc.sms.MainActivity;
+import mc.sms.R;
+import mc.sms.myApp;
 import model.Actividad;
 import model.Info;
 
