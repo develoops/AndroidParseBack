@@ -37,10 +37,7 @@
 
             android:alwaysRetainTaskState="true"
             android:configChanges="keyboardHidden|orientation"
-            android:screenOrientation="portrait"
-            android:launchMode="singleTask"
-
-            >
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -94,8 +91,8 @@
 
         <receiver android:name="mc.sms2017.BroadcastAlarma" />
 
-        <!--<meta-data android:name="com.parse.push.gcm_sender_id"-->
-            <!--android:value="id:1002865874181" />;-->
+        <meta-data android:name="com.parse.push.gcm_sender_id"
+            android:value="id:1002865874181" />;
 
         <meta-data android:name="com.parse.push.notification_icon" android:resource="@drawable/iconoparse"/>
     </application>

@@ -80,8 +80,8 @@ public class MeetingAppViewPagerFragment extends Fragment {
         Titles.add("Ponentes");
         Titles.add("Favoritos");
         Titles.add("Patrocinadores");
-        Titles.add("Materiales");
-        Titles.add("Comité Académico");
+      /*  Titles.add("Materiales");
+        Titles.add("Comité Académico");*/
         setRetainInstance(true);
         ParseQuery<Info> noticias = ParseQuery.getQuery(Info.class);
         noticias.findInBackground(new FindCallback<Info>() {

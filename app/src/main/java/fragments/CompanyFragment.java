@@ -74,7 +74,16 @@ public class CompanyFragment extends Fragment{
 
     }
 
+    @Override
+    public void onAttach(Activity activity) {
 
+
+        super.onAttach(activity);
+
+
+        //Log.i("COMPANYFRAGMENT2", String.valueOf(MainActivity.stand.getDescription()));
+
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

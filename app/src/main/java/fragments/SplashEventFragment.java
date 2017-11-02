@@ -60,6 +60,12 @@ public class SplashEventFragment extends Fragment {
 
     }
 
+    @Override
+    public void onAttach(Activity activity) {
+
+        super.onAttach(activity);
+
+    }
 
 
     @Override
@@ -94,10 +100,8 @@ public class SplashEventFragment extends Fragment {
 //        }
 
 
-        final Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
+
+
                 //Do something after 100ms
                 //ParseQuery<ActContAct>
 
@@ -189,19 +193,25 @@ public class SplashEventFragment extends Fragment {
                         Log.i("CANTIDADSPEAKR", String.valueOf(persons.size()));
                         bar.setVisibility(View.INVISIBLE);
                         actividades=actividads;
-                        Fragment fragment = MeetingAppViewPagerFragment.newInstance(meetingApp,actividads, persons, organizaciones,comite);
-                        final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                        ft.replace(R.id.container, fragment);
-                        ft.addToBackStack(null);
-                        ft.commit();
+                        final Handler handler = new Handler();
+                        handler.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                Fragment fragment = MeetingAppViewPagerFragment.newInstance(meetingApp,actividades, persons, organizaciones,comite);
+                                final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                                ft.replace(R.id.container, fragment);
+                                ft.addToBackStack(null);
+                                ft.commit();
+                            }
+                        }, 5000);
+
 
 
                     }
                 });
 
 
-            }
-        }, 5000);
+
 
 
         return RootView;

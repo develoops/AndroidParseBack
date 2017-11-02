@@ -56,13 +56,13 @@ public class PagerFragmentAdapter extends FragmentStatePagerAdapter
 
 
         if(tabUIs.get(position).equals("Congresos")){
-            return MeetingsFragment.newInstance();
+            return MeetingsFragment.newInstance(LoadDataFragment.actividades);
         }
         else if(tabUIs.get(position).equals("Sociedad")){
-            return CompanyDirectoryFragment.newInstance();
+            return CompanyDirectoryFragment.newInstance(LoadDataFragment.com, false);
         }
         else if(tabUIs.get(position).equals("Directiva")){
-            return DirectiveFragment.newInstance();
+            return DirectiveFragment.newInstance(LoadDataFragment.staff);
         }
 //        else if(tabUIs.get(position).equals("navAbout")){
 //            return mCongressFragment.newInstance(LoadDataFragment.mobiCongress);

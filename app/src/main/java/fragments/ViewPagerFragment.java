@@ -56,10 +56,10 @@ public class ViewPagerFragment extends Fragment {
         ((ActionBarActivity)getActivity()).setSupportActionBar(toolbar);
 
         if (Locale.getDefault().getLanguage().equals("en")){
-            toolbar.setTitle("Sociedad Chilena de Medicina Interna");
+            toolbar.setTitle("SMS2017");
         }
         else {
-            toolbar.setTitle("Sociedad Chilena de Medicina Interna");
+            toolbar.setTitle("SMS2017");
         }
 
         toolbar.setTitleTextColor(Color.WHITE);

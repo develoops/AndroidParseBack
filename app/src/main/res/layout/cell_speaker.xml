@@ -31,7 +31,7 @@
             android:textColor="#343434"
             android:typeface="sans"
             android:textSize="15dip"
-            android:paddingLeft="5dip"
+            android:paddingLeft="15dip"
             android:textStyle="bold"
             android:layout_toRightOf="@+id/icon_speaker"
 
@@ -45,7 +45,7 @@
             android:gravity="left"
             android:textSize="12dip"
 
-            android:paddingLeft="5dip"
+            android:paddingLeft="15dip"
 
             android:textColor="#000000"
             android:textStyle="bold"
@@ -61,7 +61,7 @@
             android:gravity="left"
             android:textSize="12dip"
 
-            android:paddingLeft="5dip"
+            android:paddingLeft="15dip"
 
             android:textColor="#000000"
             android:textStyle="bold"
@@ -76,7 +76,7 @@
             android:gravity="left"
             android:textSize="12dip"
 
-            android:paddingLeft="5dip"
+            android:paddingLeft="15dip"
 
             android:textColor="#000000"
             android:textStyle="bold"

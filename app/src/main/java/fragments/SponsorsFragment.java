@@ -12,11 +12,13 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
+import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import adapters.GridImageAdapter;
+import adapters.SponsorsListViewAdapter;
 import mc.sms2017.R;
 import model.Actividad;
 import model.Org;
@@ -26,10 +28,10 @@ import model.Org;
  */
 public class SponsorsFragment extends Fragment {
 
-
+    ListView listview;
     public static Actividad mApp;
     //public static MobiFile map;
-    public static GridView gridview;
+    //public static GridView gridview;
     public static List<Org> organizaciones = new ArrayList<>();
 
 
@@ -58,12 +60,31 @@ public class SponsorsFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        final View RootView = inflater.inflate(R.layout.sponsors_layout, container , false);
-        gridview = (GridView) RootView.findViewById(R.id.gridView);// crear el
+        final View RootView = inflater.inflate(R.layout.common_list_layout, container , false);
+        listview = (ListView)RootView.findViewById(R.id.commonListView);
         // gridview a partir del elemento del xml gridview
-        final Button button = (Button) RootView.findViewById(R.id.comercialmap);
-        button.setVisibility(View.GONE);
 
+
+        if(mApp!=null){
+            if(organizaciones!=null){
+
+
+
+
+                listview.setAdapter(new SponsorsListViewAdapter(getActivity(),organizaciones));
+                listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+                    public void onItemClick(AdapterView<?> parent, View v,
+                                            int position, long id) {
+
+
+
+
+
+                    }
+                });
+            }
+        }
 
 
   /*      ParseQuery<MobiFile> query = ParseQuery.getQuery(MobiFile.class);
@@ -149,32 +170,7 @@ public class SponsorsFragment extends Fragment {
         View v = mTabHost.getTabWidget().getChildAt(0);
         v.setBackgroundResource(R.drawable.programa);
 */
-        if(mApp!=null){
-            if(organizaciones!=null){
 
-
-                ArrayList<Org> facade1 = new ArrayList<>();
-                for(Org facade:organizaciones){
-
-                        facade1.add(facade);
-
-                }
-                Log.i("MAPP",String.valueOf(facade1));
-
-                gridview.setAdapter(new GridImageAdapter(getActivity(),facade1));
-                gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-                    public void onItemClick(AdapterView<?> parent, View v,
-                                            int position, long id) {
-
-
-
-
-
-                    }
-                });
-            }
-        }
 
 
         getView().setFocusableInTouchMode(true);

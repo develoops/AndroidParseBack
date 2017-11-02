@@ -171,9 +171,9 @@ public class EventsFragmentAdapter extends FragmentStatePagerAdapter
         else if(tabUIs.get(position).equals("Patrocinadores")){
             return  SponsorsFragment.newInstance(mApp,organizaciones);
         }
-//        else if(tabUIs.get(position).equals("Comité Académico")){
-//            return  DirectiveFragment.newInstance(academic);
-//        }
+        else if(tabUIs.get(position).equals("Comité Académico")){
+            return  DirectiveFragment.newInstance(academic);
+        }
         else {
             return MoreFragment.newInstance(mApp,media);
         }

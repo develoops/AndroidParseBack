@@ -69,7 +69,7 @@ public class myApp extends Application {
         );
 
         ParseInstallation parseInstallation = ParseInstallation.getCurrentInstallation();
-        //parseInstallation.put("GCMSenderId",getString(R.string.google_project_number));
+        parseInstallation.put("GCMSenderId",getString(R.string.google_project_number));
         parseInstallation.saveInBackground();
 
 

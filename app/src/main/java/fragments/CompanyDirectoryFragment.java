@@ -24,24 +24,16 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.parse.FindCallback;
-import com.parse.GetCallback;
-import com.parse.ParseException;
 import com.parse.ParseImageView;
-import com.parse.ParseQuery;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
 import adapters.SocietyLogoAdapter;
-import bolts.Continuation;
-import bolts.Task;
 import mc.sms2017.R;
 import mc.sms2017.MainActivity;
-import model.Actividad;
 import model.Org;
-import model.PersonaRolOrg;
 
 /**
  * Created by Alvaro on 2/19/15.
@@ -61,56 +53,40 @@ public class CompanyDirectoryFragment extends Fragment{
     public TextView description;
 
 
-    public static CompanyDirectoryFragment newInstance() {
+    public static CompanyDirectoryFragment newInstance(Org company,boolean b) {
 
         // Instantiate a new fragment
+        bool = b;
 
         CompanyDirectoryFragment fragment = new CompanyDirectoryFragment();
 
 
 
+        com= company;
         Log.i("FRAGMENTID", String.valueOf(fragment.getId()));
 
         return fragment;
 
     }
 
-
-
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // Retain this fragment across configuration changes.
-        setRetainInstance(true);
+    public void onAttach(Activity activity) {
 
-        ParseQuery<Org> queryOrg = ParseQuery.getQuery(Org.class);
-        queryOrg.whereEqualTo("tipo","sociedad");
-        queryOrg.fromLocalDatastore().getFirstInBackground().continueWithTask(new Continuation<Org, Task<Org>>() {
-            @Override
-            public Task<Org> then(Task<Org> task) throws Exception {
-                com = task.getResult();
-                return task;
-            }
-        });
 
-       /* ParseQuery<Org> queryOrg = ParseQuery.getQuery(Org.class);
-        queryOrg.whereEqualTo("tipo","sociedad");
-        queryOrg.fromLocalDatastore().getFirstInBackground(new GetCallback<Org>() {
-            @Override
-            public void done(Org object, ParseException e) {
-                com = object;
-            }
-        });*/
+        super.onAttach(activity);
+
+        //Log.i("COMPANYFRAGMENT2", String.valueOf(MainActivity.stand.getDescription()));
 
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         if(com!=null) {
 
-            RootView = inflater.inflate(R.layout.eventdetail_layout2, container, false);
+            RootView = inflater.inflate(R.layout.eventdetail_layout, container, false);
 
 
-           // hdr = (ParseImageView) RootView.findViewById(R.id.header);
+            hdr = (ParseImageView) RootView.findViewById(R.id.header);
             Toolbar toolbar = (Toolbar) RootView.findViewById(R.id.event_detail_toolbar);
             description = (TextView) RootView.findViewById(R.id.content);
             listview = (ListView) RootView.findViewById(R.id.speakers_list_view);
@@ -171,18 +147,62 @@ public class CompanyDirectoryFragment extends Fragment{
     }
 
     @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
+    public void onStart() {
+        super.onStart();
+
+    }
+    @Override
+    public void onResume() {
+        super.onResume();
+        /*
+        View v = mTabHost.getTabWidget().getChildAt(0);
+        v.setBackgroundResource(R.drawable.programa);
+
+
+
+*/
+
 
 
         if (com != null) {
+            hdr.setVisibility(View.GONE);
 
+            /*if(com.getimgFondo()!=null){
+                hdr.setVisibility(View.GONE);
+
+                ParseFile header = com.getimgFondo();
+                if (header != null) {
+                    //Get singleton instance of ImageLoader
+                    ImageLoader imageLoader = ImageLoader.getInstance();
+                    //Load the image from the url into the ImageView.
+                    imageLoader.displayImage(header.getUrl(), hdr);
+                }
+                else{
+                    Log.i("NO HAY HEADER1","LOG");
+                    Log.i("LOG","LOG");
+                }
+            }
+
+            else{
+                hdr.setVisibility(View.GONE);
+                //hdr.setImageDrawable(null);
+                Log.i("NO HAY HEADER0","LOG");
+            }*/
+
+            //ParseFile logo = com.getLogo().getParseFileV1();
+
+            //lgo.setParseFile(logo);
+            //lgo.loadInBackground();
 
             description.setText(com.getDetails()+"\n"+"\n"+"\n"+"\n");
             description.setMovementMethod(new ScrollingMovementMethod());
+            //companyName.setText(company.getCompany().getName());
 
             DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
             int width = displayMetrics.widthPixels;
             int height = displayMetrics.heightPixels;
+
+            hdr.getLayoutParams().height = (height / 4) - dpToPx(55);
 
             footer.setBackgroundColor(getResources().getColor(R.color.companySecundario));
 
@@ -190,7 +210,7 @@ public class CompanyDirectoryFragment extends Fragment{
             call.setTextColor(Color.WHITE);
             web.setTextColor(Color.WHITE);
             mail.setTextColor(Color.WHITE);
-            // map.setTextColor(Color.WHITE);
+           // map.setTextColor(Color.WHITE);
             makeFavourite.setTextColor(Color.WHITE);
 
 
@@ -198,7 +218,7 @@ public class CompanyDirectoryFragment extends Fragment{
                 call.setText("Call");
                 web.setText("Web");
                 mail.setText("Mail");
-                //    map.setText("Map");
+            //    map.setText("Map");
 
             }
             else {
@@ -213,7 +233,7 @@ public class CompanyDirectoryFragment extends Fragment{
             call.getLayoutParams().width = (width / 4);
             web.getLayoutParams().width = (width / 4);
             mail.getLayoutParams().width = (width / 4);
-            // map.getLayoutParams().width = (width / 4);
+           // map.getLayoutParams().width = (width / 4);
 
 
 
@@ -222,7 +242,22 @@ public class CompanyDirectoryFragment extends Fragment{
             final String phone = com.getPhone();
 
             final String email = com.getMail();
+            /*
+            if(com.getLocation()==null){
+                Log.i("LOG","LOG");
+            }
 
+            else{
+                if(com.getLocation().getGooglemaps()==null){
+
+                }
+                else {
+                    gmaps = com.getLocation().getGooglemaps();
+
+                }
+
+            }
+            */
             call.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -264,32 +299,43 @@ public class CompanyDirectoryFragment extends Fragment{
                 }
             });
 
-
+            /*
+            map.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(gmaps!=null){
+                        Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
+                                Uri.parse( ""+gmaps+""));
+                        intent.setPackage("com.google.android.apps.maps");
+                        startActivity(intent);
+                    }
+                }
+            });
+            */
         }
         else{
             Log.i("NO HAY HEADER2","LOG");
             Log.i("LOG","LOG");
 
         }
-    }
 
-    @Override
-    public void onStart() {
-        super.onStart();
 
-    }
-    @Override
-    public void onResume() {
-        super.onResume();
-        if(getView()!=null){
+        if(com!=null){
             getView().setFocusableInTouchMode(true);
             getView().requestFocus();
             getView().setOnKeyListener(new View.OnKeyListener() {
                 @Override
                 public boolean onKey(View v, int keyCode, KeyEvent event) {
 
-                    if (event.getAction() == KeyEvent.ACTION_UP && keyCode == KeyEvent.KEYCODE_BACK) {
+                    if (event.getAction() == KeyEvent.ACTION_UP && keyCode == KeyEvent.KEYCODE_BACK){
                         // handle back button's click listener
+                        if(bool){
+                            //((ActionBarActivity)getActivity()).getSupportActionBar().setHomeAsUpIndicator(R.drawable.directorio);
+                            getActivity().onBackPressed();
+                        }
+                        else {
+                            return  true;
+                        }
 
 
                         return true;
@@ -297,6 +343,10 @@ public class CompanyDirectoryFragment extends Fragment{
                     return false;
                 }
             });
+        }
+
+        else{
+            Log.i("LOG","LOG");
         }
 
 
@@ -317,7 +367,7 @@ public class CompanyDirectoryFragment extends Fragment{
 
     }
 
-  /*  public Fragment getVisibleFragment(){
+    public Fragment getVisibleFragment(){
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
         List<Fragment> fragments = fragmentManager.getFragments();
         for(Fragment fragment : fragments){
@@ -325,7 +375,7 @@ public class CompanyDirectoryFragment extends Fragment{
                 return fragment;
         }
         return null;
-    }*/
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

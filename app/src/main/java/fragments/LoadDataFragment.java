@@ -21,6 +21,7 @@ import com.parse.ParseException;
 import com.parse.ParseImageView;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
+import com.parse.SaveCallback;
 
 import java.util.List;
 
@@ -29,7 +30,6 @@ import mc.sms2017.myApp;
 import model.ActContAct;
 import model.Actividad;
 
-import model.Media;
 import model.Org;
 import model.PersonaRolAct;
 import model.PersonaRolOrg;
@@ -76,15 +76,21 @@ public class LoadDataFragment extends Fragment {
 		setRetainInstance(true);
 		if (myapp.isFirstTime()) {
 			if (!myapp.checkConnection()) {
-				//TODO Alert no internet.
+
 				return;
 			}
-			Log.e(getClass().getName(), "first time load data");
-			loadDataAndUpdateLocal();
-			myapp.setFirstTime();
-		} else {
-			Log.e(getClass().getName(), "> 1 time load data");
-			loadDataAndUpdateLocal();
+			else {
+
+				Log.e(getClass().getName(), "first time load data");
+				loadDataAndUpdateLocal();
+				myapp.setFirstTime();
+			}
+
+		}
+		else {
+
+				loadDataAndUpdateLocal();
+
 		}
 	}
 
@@ -108,28 +114,16 @@ public class LoadDataFragment extends Fragment {
 		Log.e(getClass().getName(), "call loadServerDataAndSaveLocal");
 
 		MUtil.isUpdateLocal = true;
-		if (!myapp.checkConnection()) {
-			//If no internet connection, query local.
-			//MUtil.isUpdateLocal = false;//Load from local, so dont need to update.
-			//query.fromLocalDatastore();
-			new AlertDialog.Builder(getActivity())
-					.setIcon(android.R.drawable.ic_dialog_alert)
-					.setTitle("Warning")
-					.setMessage("You need to connect to internet")
-					.setPositiveButton("OK", new DialogInterface.OnClickListener()
-					{
-						@Override
-						public void onClick(DialogInterface dialog, int which) {
-							getActivity().finish();
-						}
 
-					})
-					.show();
-		}
 
 		ParseQuery<Actividad> queryContenido = ParseQuery.getQuery(Actividad.class);
+
 		queryContenido.include("lugar");
 		queryContenido.setLimit(1000);
+		if (!myapp.checkConnection()) {
+			queryContenido.fromLocalDatastore();
+
+		}
 		queryContenido.whereNotEqualTo("congreso","tipo");
 		queryContenido.findInBackground(new FindCallback<Actividad>() {
 			@Override
@@ -148,10 +142,15 @@ public class LoadDataFragment extends Fragment {
 		});
 
 		ParseQuery<ActContAct> queryCont = ParseQuery.getQuery(ActContAct.class);
+		if (!myapp.checkConnection()) {
+			queryCont.fromLocalDatastore();
+
+		}
 		queryCont.include("contenido.lugar");
 		queryCont.include("contenedor");
 		queryCont.setLimit(1000);
 		//queryCont.whereEqualTo("contenedor", actividad);
+
 		queryCont.findInBackground(new FindCallback<ActContAct>() {
 			@Override
 			public void done(List<ActContAct> objects, ParseException e) {
@@ -169,23 +168,30 @@ public class LoadDataFragment extends Fragment {
 
 
 		ParseQuery<PersonaRolOrg> queryPersonaRolOrg = ParseQuery.getQuery(PersonaRolOrg.class);
+
 		queryPersonaRolOrg.include("persona.pais");
 		queryPersonaRolOrg.include("org");
+		if (!myapp.checkConnection()) {
+			queryPersonaRolOrg.fromLocalDatastore();
+
+		}
 		queryPersonaRolOrg.whereEqualTo("tipo","sociedad");
+
 		queryPersonaRolOrg.findInBackground(new FindCallback<PersonaRolOrg>() {
 			@Override
 			public void done(List<PersonaRolOrg> objects, ParseException e) {
 				if(objects!=null){
 					staff = objects;
+					ParseObject.pinAllInBackground("sociedad",objects);
 				}
 				else {
-					Log.i("NULO3","NULO");
+					Log.i("DIRECTIVA","NULO");
 				}
 
 			}
 		});
 
-		ParseQuery<PersonaRolOrg> queryPersonaRolOrg2 = ParseQuery.getQuery(PersonaRolOrg.class);
+	/*	ParseQuery<PersonaRolOrg> queryPersonaRolOrg2 = ParseQuery.getQuery(PersonaRolOrg.class);
 		queryPersonaRolOrg2.include("persona.pais");
 		queryPersonaRolOrg2.include("org");
 		queryPersonaRolOrg2.whereEqualTo("tipo","congreso");
@@ -203,30 +209,43 @@ public class LoadDataFragment extends Fragment {
 				ParseObject.pinAllInBackground("comite",objects);
 
 			}
-		});
+		});*/
 
 		ParseQuery<Org> queryOrg = ParseQuery.getQuery(Org.class);
+		if (!myapp.checkConnection()) {
+			queryOrg.fromLocalDatastore();
+
+		}
 		queryOrg.whereEqualTo("tipo","sociedad");
+
 		queryOrg.getFirstInBackground(new GetCallback<Org>() {
 			@Override
 			public void done(Org object, ParseException e) {
 				if(object!=null){
 					com= object;
+					object.pinInBackground("sociedad");
 				}
 				else {
-					Log.i("NULO3","NULO");
+					Log.i("SOCIEDAD","NULO");
 				}
 			}
 		});
 
 		ParseQuery<Org> queryOrg2 = ParseQuery.getQuery(Org.class);
+		if (!myapp.checkConnection()) {
+			queryOrg2.fromLocalDatastore();
+
+		}
 		queryOrg2.whereEqualTo("tipo","patrocinador");
+
 		queryOrg2.findInBackground(new FindCallback<Org>() {
 			@Override
 			public void done(List<Org> objects, ParseException e) {
 				if(objects!=null){
 
-
+					/*for(Org org:objects){
+						org.getimgPerfil().getDataInBackground();
+					}*/
 					orgs= objects;
 					Log.i("CANTIDADPATR", String.valueOf(orgs.size()));
 					ParseObject.pinAllInBackground("patrocinadores",objects);
@@ -240,6 +259,10 @@ public class LoadDataFragment extends Fragment {
 		queryPersonaRolAct.include("act.lugar");
 		queryPersonaRolAct.include("congreso.lugar");
 		queryPersonaRolAct.include("persona.pais");
+		if (!myapp.checkConnection()) {
+			queryPersonaRolAct.fromLocalDatastore();
+
+		}
 		queryPersonaRolAct.findInBackground(new FindCallback<PersonaRolAct>() {
 			@Override
 			public void done(List<PersonaRolAct> objects, ParseException e) {
@@ -256,17 +279,21 @@ public class LoadDataFragment extends Fragment {
 		});
 
 
-
+/*
 		ParseQuery<Media> queryMedia = ParseQuery.getQuery(Media.class);
 		queryMedia.findInBackground(new FindCallback<Media>() {
 			@Override
 			public void done(List<Media> objects, ParseException e) {
 				ParseObject.pinAllInBackground("media",objects);
 			}
-		});
+		});*/
 
 		ParseQuery<Actividad> query = ParseQuery.getQuery(Actividad.class);
 		query.include("lugar");
+		if (!myapp.checkConnection()) {
+			query.fromLocalDatastore();
+
+		}
 		query.whereEqualTo("tipo","congreso");
 		query.findInBackground(
 				new FindCallback<Actividad>() {
@@ -278,10 +305,14 @@ public class LoadDataFragment extends Fragment {
 
 
 							for (Actividad actividad : actividades) {
-								//actividad.getParseFileV1().getDataInBackground();
+								actividad.getParseFileV1().getDataInBackground();
 								ParseQuery<ActContAct> queryCont = ParseQuery.getQuery(ActContAct.class);
 								queryCont.include("contenido.lugar");
 								queryCont.include("contenedor");
+								if (!myapp.checkConnection()) {
+									queryCont.fromLocalDatastore();
+
+								}
 								queryCont.whereEqualTo("contenedor", actividad);
 								queryCont.findInBackground(new FindCallback<ActContAct>() {
 									@Override
