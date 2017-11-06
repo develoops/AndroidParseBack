@@ -58,6 +58,7 @@ import mc.sms.myApp;
 import model.ActContAct;
 import model.ActFavUser;
 import model.Actividad;
+import model.Emision;
 import model.Persona;
 import model.PersonaRolAct;
 import model.Rating;
@@ -595,11 +596,13 @@ public class EventDetailFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                Fragment fragment = PreguntasListFragment.newInstance(selectedEvent);
-                final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.container, fragment);
-                ft.addToBackStack(null);
-                ft.commit();
+
+                        Fragment fragment = PreguntasListFragment.newInstance(selectedEvent);
+                        final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                        ft.replace(R.id.container, fragment);
+                        ft.addToBackStack(null);
+                        ft.commit();
+
 
             }
         });

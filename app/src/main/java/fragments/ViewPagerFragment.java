@@ -53,7 +53,7 @@ public class ViewPagerFragment extends Fragment {
         toolbar.setTitleTextColor(Color.WHITE);
         toolbar.setBackgroundColor(getResources().getColor(R.color.companySecundario));
 
-        ((ActionBarActivity)getActivity()).setSupportActionBar(toolbar);
+        //((ActionBarActivity)getActivity()).setSupportActionBar(toolbar);
 
         if (Locale.getDefault().getLanguage().equals("en")){
             toolbar.setTitle("SMS2017");

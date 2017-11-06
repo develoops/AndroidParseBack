@@ -1,13 +1,16 @@
 package fragments;
 
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.support.design.widget.FloatingActionButton;
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -29,13 +32,14 @@ import java.util.List;
 import java.util.Locale;
 
 import adapters.PreguntasListViewAdapter;
-import adapters.SponsorsListViewAdapter;
+
+import adapters.PreguntasRecyclerViewAdapter;
 import mc.sms.R;
-import model.ActContAct;
+
 import model.Actividad;
 import model.Emision;
-import model.Org;
-import model.Rating;
+
+
 
 /**
  * Created by Alvaro on 2/25/15.
@@ -46,16 +50,15 @@ public class PreguntasListFragment extends Fragment {
     public static Actividad activity;
     //public static MobiFile map;
     //public static GridView gridview;
-    public static List<Emision> emisiones = new ArrayList<>();
-    ImageButton pregunta;
+    public static List<Emision> emisiones;
+    //ImageButton pregunta;
 
 
 
     public static PreguntasListFragment newInstance(Actividad actividad) {
 
         // Instantiate a new fragment
-       activity = actividad; //Alfonso
-
+        activity = actividad; //Alfonso
         PreguntasListFragment fragment = new PreguntasListFragment();
 
         fragment.setRetainInstance(true);
@@ -74,9 +77,10 @@ public class PreguntasListFragment extends Fragment {
         queryEmision.findInBackground(new FindCallback<Emision>() {
             @Override
             public void done(List<Emision> objects, ParseException e) {
-                    emisiones=objects;
+                emisiones=objects;
             }
         });
+
 
 
     }
@@ -84,8 +88,8 @@ public class PreguntasListFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View RootView = inflater.inflate(R.layout.preguntaslistlayout, container , false);
-        listview = (ListView)RootView.findViewById(R.id.commonListView);
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        listview = (ListView) RootView.findViewById(R.id.commonListView);
+        FloatingActionButton fab = (FloatingActionButton) RootView.findViewById(R.id.fab);
 
         // gridview a partir del elemento del xml gridview
 
@@ -127,25 +131,18 @@ public class PreguntasListFragment extends Fragment {
         if(activity!=null){
             if(emisiones!=null){
 
-
-
-
                 listview.setAdapter(new PreguntasListViewAdapter(getActivity(),emisiones));
-                listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
-                    public void onItemClick(AdapterView<?> parent, View v,
-                                            int position, long id) {
-
-
-
-
-
-                    }
-                });
+               /* PreguntasRecyclerViewAdapter adapter = new PreguntasRecyclerViewAdapter(emisiones);
+                RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
+                listview.setLayoutManager(mLayoutManager);
+                listview.setItemAnimator(new DefaultItemAnimator());
+                listview.setAdapter(adapter);
+*/
             }
         }
 
-        pregunta.setOnClickListener(new View.OnClickListener() {
+        fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 LayoutInflater li = LayoutInflater.from(getActivity());
@@ -305,5 +302,7 @@ public class PreguntasListFragment extends Fragment {
             }
 
         }).start();
+
+        
     }
 }

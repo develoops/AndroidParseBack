@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.support.v7.widget.RecyclerView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -33,8 +34,6 @@ public class PreguntasListViewAdapter extends BaseAdapter  {
 
     public PreguntasListViewAdapter(Context context,
                                     List<Emision> emisiones) {
-
-
 
 
         this.context = context;
@@ -77,7 +76,7 @@ public class PreguntasListViewAdapter extends BaseAdapter  {
             holder = new ViewHolder();
 
 
-            view = inflater.inflate(R.layout.cell_sponsor, null);
+            view = inflater.inflate(R.layout.cell_pregunta, null);
 
             // Locate the TextViews in listview_item.xml
             holder.name_sponsor = (TextView) view.findViewById(R.id.charge);
