@@ -98,9 +98,9 @@ public class CompanyDirectoryFragment extends Fragment{
             //description.setMovementMethod(new ScrollingMovementMethod());
             //TextView companyName = (TextView) RootView.findViewById(R.id.companyname);
             makeFavourite = (Button) RootView.findViewById(R.id.makefavourite);
-            call = (Button) RootView.findViewById(R.id.rate);
-            web = (Button) RootView.findViewById(R.id.checkin);
-            mail = (Button) RootView.findViewById(R.id.map);
+            call = (Button) RootView.findViewById(R.id.map);
+            web = (Button) RootView.findViewById(R.id.rate);
+            mail = (Button) RootView.findViewById(R.id.ask);
             //map = (Button) RootView.findViewById(R.id.checkin);
 //            map.setVisibility(View.GONE);
 
@@ -227,8 +227,8 @@ public class CompanyDirectoryFragment extends Fragment{
                 //map.setText("Map");
 
             }
-            makeFavourite.setVisibility(View.GONE);
-            call.setVisibility(View.GONE);
+            makeFavourite.setVisibility(View.INVISIBLE);
+            call.setVisibility(View.INVISIBLE);
             call.getLayoutParams().width = (width / 4);
             web.getLayoutParams().width = (width / 4);
             mail.getLayoutParams().width = (width / 4);

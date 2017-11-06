@@ -25,6 +25,7 @@ import com.parse.SaveCallback;
 import model.ActContAct;
 import model.ActFavUser;
 import model.Actividad;
+import model.Emision;
 import model.Info;
 import model.Lugar;
 import model.Media;
@@ -53,6 +54,7 @@ public class myApp extends Application {
         ParseObject.registerSubclass(ActContAct.class);
         ParseObject.registerSubclass(ActFavUser.class);
         ParseObject.registerSubclass(Actividad.class);
+        ParseObject.registerSubclass(Emision.class);
         ParseObject.registerSubclass(Info.class);
         ParseObject.registerSubclass(Lugar.class);
         ParseObject.registerSubclass(Media.class);

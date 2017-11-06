@@ -73,7 +73,7 @@ public class EventDetailFragment extends Fragment {
     private RatingBar ratingBar;
     RelativeLayout footer;
     DirectiveListViewAdapter2 speaker_adapter;
-    Button makeFavourite,rate,ask,map,checkin,resumenes;
+    Button makeFavourite,rate,ask,map,resumenes;
     public static List <Actividad> events, eventosAnidados, eventsSpeaker;
     public static List <Actividad> eventosSpeaker = new ArrayList<>();
     public static List <Persona> speakers = new ArrayList<>();
@@ -138,7 +138,7 @@ public class EventDetailFragment extends Fragment {
         rate = (Button) RootView.findViewById(R.id.rate);
         ask = (Button) RootView.findViewById(R.id.ask);
         map = (Button) RootView.findViewById(R.id.map);
-        checkin = (Button) RootView.findViewById(R.id.checkin);
+        //checkin = (Button) RootView.findViewById(R.id.checkin);
         resumenes = (Button) RootView.findViewById(R.id.resumenes);
         this.myapp = (myApp) getActivity().getApplicationContext();
         listview = (ListView)RootView.findViewById(R.id.commonListView);
@@ -227,10 +227,10 @@ public class EventDetailFragment extends Fragment {
         rate.setTextColor(Color.WHITE);
         ask.setTextColor(Color.WHITE);
         map.setTextColor(Color.WHITE);
-        checkin.setTextColor(Color.WHITE);
+        //checkin.setTextColor(Color.WHITE);
         makeFavourite.setTextColor(Color.WHITE);
-        ask.setVisibility(View.INVISIBLE);
-        checkin.setVisibility(View.INVISIBLE);
+        ask.setVisibility(View.VISIBLE);
+        //checkin.setVisibility(View.INVISIBLE);
 
         if(selectedEvent.getPlace()!=null) {
             if (selectedEvent.getPlace().getGeoPoint() != null) {
@@ -254,11 +254,11 @@ public class EventDetailFragment extends Fragment {
         int width = displayMetrics.widthPixels;
         int height = displayMetrics.heightPixels;
 
-        rate.getLayoutParams().width = (width/5);
-        ask.getLayoutParams().width = (width/5);
-        map.getLayoutParams().width = (width/5);
-        checkin.getLayoutParams().width = (width/5);
-        makeFavourite.getLayoutParams().width = (width/5);
+        rate.getLayoutParams().width = (width/4);
+        ask.getLayoutParams().width = (width/4);
+        map.getLayoutParams().width = (width/4);
+        //checkin.getLayoutParams().width = (width/5);
+        makeFavourite.getLayoutParams().width = (width/4);
 
 
         TextView description = (TextView) RootView.findViewById(R.id.content);
@@ -318,7 +318,10 @@ public class EventDetailFragment extends Fragment {
 //
 //        }
 
-
+        //checkin.setVisibility(View.VISIBLE);
+        //checkin.setText("Preguntas");
+        map.setVisibility(View.VISIBLE);
+        map.setText("Mapa");
         if(eventosAnidados!=null || eventosAnidados.size()>0 ){
 
 
@@ -592,6 +595,12 @@ public class EventDetailFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
+                Fragment fragment = PreguntasListFragment.newInstance(selectedEvent);
+                final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.container, fragment);
+                ft.addToBackStack(null);
+                ft.commit();
+
             }
         });
 
@@ -747,12 +756,7 @@ public class EventDetailFragment extends Fragment {
                         getActivity().onBackPressed();
                     }
                     else {
-                        myapp.setFromDetail(true);
-                        Fragment fragment = MeetingAppViewPagerFragment.newInstance(mApp,SplashEventFragment.actividades, SplashEventFragment.persons,SplashEventFragment.organizaciones,SplashEventFragment.comite);
-                        final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                        ft.replace(R.id.container, fragment);
-                        ft.addToBackStack(null);
-                        ft.commitAllowingStateLoss();
+
                     }
 
                     return true;

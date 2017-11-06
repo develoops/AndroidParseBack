@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee">
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/commonListView"
+        android:listSelector="#00000000"
+        android:divider="#fff"
+        android:dividerHeight="0dp"
+        android:focusable="true"
+
+        />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/preguntastoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/botonPregunta"
+            android:layout_gravity="right"
+            android:drawable="@drawable/edit_icon"
+            android:clickable="true"/>
+
+    </android.support.v7.widget.Toolbar>
+
+
+
+
+    <Button
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonpregunta"
+        android:layout_above="@+id/commonListView"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/modulo"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_gravity="center"
+        android:shadowColor="@android:color/holo_blue_light"
+        android:textColor="@android:color/white"
+        android:visibility="gone"/>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|start"
+        android:src="@drawable/ic_add_black_24dp"
+        />
+
+</LinearLayout>

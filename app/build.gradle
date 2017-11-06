@@ -37,6 +37,7 @@ dependencies {
     compile 'com.parse:parse-android:1.+'
     compile 'com.google.firebase:firebase-core:10.0.1'
     compile 'com.google.firebase:firebase-messaging:10.0.1'
+    compile 'com.android.support:design:21.1.0'
 
     //update version to the latest one
     // compile files('libs/Parse-1.9.1/Parse-1.9.1.jar')
