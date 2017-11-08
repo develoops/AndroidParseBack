@@ -37,7 +37,7 @@ public class PreguntasListViewAdapter extends BaseAdapter  {
     private List<Emision> emisions= null;
     private ArrayList<Emision> arraylist;
     public Actividad meetingApp;
-    public static String emisionID;
+    //public static String emisionID;
     myApp myapp;
 
     public PreguntasListViewAdapter(Context context,
@@ -109,13 +109,13 @@ public class PreguntasListViewAdapter extends BaseAdapter  {
         }
 
 
-        emisionID = emisions.get(position).getObjectId();
+        //emisionID = emisions.get(position).getObjectId();
         String firstName = emisions.get(position).getMensajeTexto();
 
         holder.name_sponsor.setText(firstName);
 
         holder.numeroDeLikes.setText(emisions.get(position).getLikes().toString());
-
+        //Log.i("numerolikes",holder.numeroDeLikes.toString());
         holder.numeroDeLikes.setStrokeWidth(1);
         holder.numeroDeLikes.setStrokeColor("#ff0000");
         holder.numeroDeLikes.setSolidColor("#ff0000");
@@ -133,16 +133,56 @@ public class PreguntasListViewAdapter extends BaseAdapter  {
                if(!myapp.getPreguntaBoolean(emisions.get(position).getObjectId())){
                    myapp.setPreguntaBooleanTrue(emisions.get(position).getObjectId());
                    holder.votoPregunta.setImageResource(R.drawable.btn_favorito_marcado);
-                   Integer likes = emisions.get(position).getLikes().intValue() + 1;
-                   holder.numeroDeLikes.setText(likes.toString());
-                   sumarLikes();
+                   //Log.i("likes0",emisions.get(position).getLikes().toString());
+                   //final Number[] likes = new Number[1];
+                   ParseQuery<Emision> query = ParseQuery.getQuery(Emision.class);
+                   query.whereEqualTo("objectId",emisions.get(position).getObjectId());
+                   query.getFirstInBackground(new GetCallback<Emision>() {
+                       @Override
+                       public void done(Emision object, ParseException e) {
+                           if(object!=null){
+                               Number likes;
+                               Log.i("likes00",object.getLikes().toString());
+                               likes = object.getLikes().intValue()+1;
+                               Log.i("likes0",likes.toString());
+                               holder.numeroDeLikes.setText(likes.toString());
+                               sumarLikes(emisions.get(position).getObjectId());
+                           }
+
+                       }
+                   });
+
+
+                   
+                   //Log.i("likes1",likes.toString());
+
+                   //holder.numeroDeLikes.setText(likes.toString());
+                   //notifyDataSetChanged();
+
                }
                else{
                    myapp.setPreguntaBooleanFalse(emisions.get(position).getObjectId());
                    holder.votoPregunta.setImageResource(R.drawable.btnfavorito);
-                   Integer likes = emisions.get(position).getLikes().intValue() - 1;
-                   holder.numeroDeLikes.setText(likes.toString());
-                   quitarLikes();
+
+                   ParseQuery<Emision> query = ParseQuery.getQuery(Emision.class);
+                   query.whereEqualTo("objectId",emisions.get(position).getObjectId());
+                   query.getFirstInBackground(new GetCallback<Emision>() {
+                       @Override
+                       public void done(Emision object, ParseException e) {
+                           if(object!=null){
+                               Number likes2;
+                               Log.i("likes1",object.getLikes().toString());
+                               likes2 = object.getLikes().intValue() -1;
+                               Log.i("likes11",likes2.toString());
+                               holder.numeroDeLikes.setText(likes2.toString());
+                               quitarLikes(emisions.get(position).getObjectId());
+                           }
+
+                       }
+                   });
+
+                   //notifyDataSetChanged();
+
                }
             }
         });
@@ -152,15 +192,15 @@ public class PreguntasListViewAdapter extends BaseAdapter  {
         return view;
     }
 
-    public void sumarLikes(){
+    public void sumarLikes(String emisionID){
         ParseQuery<Emision> query = ParseQuery.getQuery(Emision.class);
         query.whereEqualTo("objectId",emisionID);
         query.getFirstInBackground(new GetCallback<Emision>() {
             @Override
             public void done(final Emision object, ParseException e) {
                 if(object!=null){
-                    Number newLikes = object.getLikes().intValue() + 1;
-                    object.setLikes(newLikes);
+                    Number newLikes1 = object.getLikes().intValue() + 1;
+                    object.setLikes(newLikes1);
                     new Thread(new Runnable() {
                         public void run() {
                             object.saveEventually();
@@ -178,7 +218,7 @@ public class PreguntasListViewAdapter extends BaseAdapter  {
 
     }
 
-    public void quitarLikes(){
+    public void quitarLikes(String emisionID){
         ParseQuery<Emision> query = ParseQuery.getQuery(Emision.class);
         query.whereEqualTo("objectId",emisionID);
         query.getFirstInBackground(new GetCallback<Emision>() {
