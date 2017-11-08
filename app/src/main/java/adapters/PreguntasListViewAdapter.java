@@ -11,15 +11,21 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
+import com.parse.FindCallback;
+import com.parse.GetCallback;
+import com.parse.ParseException;
 import com.parse.ParseFile;
+import com.parse.ParseQuery;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import mc.sms.R;
+import mc.sms.myApp;
 import model.Actividad;
 import model.Emision;
 import model.Org;
+import utils.CircularTextView;
 
 /**
  * Created by Alvaro on 2/21/15.
@@ -31,6 +37,8 @@ public class PreguntasListViewAdapter extends BaseAdapter  {
     private List<Emision> emisions= null;
     private ArrayList<Emision> arraylist;
     public Actividad meetingApp;
+    public static String emisionID;
+    myApp myapp;
 
     public PreguntasListViewAdapter(Context context,
                                     List<Emision> emisiones) {
@@ -41,6 +49,7 @@ public class PreguntasListViewAdapter extends BaseAdapter  {
         inflater = LayoutInflater.from(context);
         this.arraylist = new ArrayList<>();
         this.arraylist.addAll(emisions);
+        myapp = (myApp) context.getApplicationContext();
 
     }
 
@@ -51,6 +60,8 @@ public class PreguntasListViewAdapter extends BaseAdapter  {
 
     public class ViewHolder {
         TextView name_sponsor;
+        CircularTextView numeroDeLikes;
+        ImageView votoPregunta;
 
 
     }
@@ -80,8 +91,9 @@ public class PreguntasListViewAdapter extends BaseAdapter  {
 
             // Locate the TextViews in listview_item.xml
             holder.name_sponsor = (TextView) view.findViewById(R.id.charge);
-
-
+            holder.numeroDeLikes = (CircularTextView) view.findViewById(R.id.circularTextView);
+            holder.votoPregunta = (ImageView) view.findViewById(R.id.fav);
+            //holder.votoPregunta.setTag(R.drawable.btnfavorito);
             // Locate the ImageView in listview_item.xml
 
 
@@ -90,18 +102,104 @@ public class PreguntasListViewAdapter extends BaseAdapter  {
         } else {
             holder = (ViewHolder) view.getTag();
             holder.name_sponsor.setText("");
+            holder.numeroDeLikes.setText("");
+
 
 
         }
 
 
+        emisionID = emisions.get(position).getObjectId();
         String firstName = emisions.get(position).getMensajeTexto();
 
         holder.name_sponsor.setText(firstName);
 
+        holder.numeroDeLikes.setText(emisions.get(position).getLikes().toString());
+
+        holder.numeroDeLikes.setStrokeWidth(1);
+        holder.numeroDeLikes.setStrokeColor("#ff0000");
+        holder.numeroDeLikes.setSolidColor("#ff0000");
+
+        if(myapp.getPreguntaBoolean(emisions.get(position).getObjectId())){
+            holder.votoPregunta.setImageResource(R.drawable.btn_favorito_marcado);
+        }
+        else {
+            holder.votoPregunta.setImageResource(R.drawable.btnfavorito);
+        }
+
+        holder.votoPregunta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               if(!myapp.getPreguntaBoolean(emisions.get(position).getObjectId())){
+                   myapp.setPreguntaBooleanTrue(emisions.get(position).getObjectId());
+                   holder.votoPregunta.setImageResource(R.drawable.btn_favorito_marcado);
+                   Integer likes = emisions.get(position).getLikes().intValue() + 1;
+                   holder.numeroDeLikes.setText(likes.toString());
+                   sumarLikes();
+               }
+               else{
+                   myapp.setPreguntaBooleanFalse(emisions.get(position).getObjectId());
+                   holder.votoPregunta.setImageResource(R.drawable.btnfavorito);
+                   Integer likes = emisions.get(position).getLikes().intValue() - 1;
+                   holder.numeroDeLikes.setText(likes.toString());
+                   quitarLikes();
+               }
+            }
+        });
 
 
 
         return view;
+    }
+
+    public void sumarLikes(){
+        ParseQuery<Emision> query = ParseQuery.getQuery(Emision.class);
+        query.whereEqualTo("objectId",emisionID);
+        query.getFirstInBackground(new GetCallback<Emision>() {
+            @Override
+            public void done(final Emision object, ParseException e) {
+                if(object!=null){
+                    Number newLikes = object.getLikes().intValue() + 1;
+                    object.setLikes(newLikes);
+                    new Thread(new Runnable() {
+                        public void run() {
+                            object.saveEventually();
+                        }
+
+                    }).start();
+                }
+                else {
+                    Log.i("SUMErLIKES","O");
+                }
+            }
+        });
+
+// Retrieve the object by id
+
+    }
+
+    public void quitarLikes(){
+        ParseQuery<Emision> query = ParseQuery.getQuery(Emision.class);
+        query.whereEqualTo("objectId",emisionID);
+        query.getFirstInBackground(new GetCallback<Emision>() {
+            @Override
+            public void done(final Emision object, ParseException e) {
+                if(object!=null){
+                    Number newLikes = object.getLikes().intValue() - 1;
+                    object.setLikes(newLikes);
+                    new Thread(new Runnable() {
+                        public void run() {
+                            object.saveEventually();
+                        }
+
+                    }).start();
+                }
+                else {
+                    Log.i("QUITARLIKES","O");
+                }
+
+            }
+        });
+
     }
 }

@@ -42,6 +42,12 @@ public class Emision extends ParseObject {
         put("mensajeTexto", texto);
     }
 
+    public Number getLikes() {
+        return getNumber("likes");
+    }
+
+    public void setLikes(Number likes){ put("likes", likes);}
+
 
 
 

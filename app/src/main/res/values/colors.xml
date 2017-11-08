@@ -13,5 +13,6 @@
     <color name="gray">#D5DADE</color>
     <color name="negro">#000000</color>
     <color name="blanco">#FFF</color>
+    <color name="rojo">#f00</color>
 
 </resources>

@@ -152,6 +152,28 @@ public class myApp extends Application {
         return;
     }
 
+    public void setPreguntaBooleanTrue (String objectId){
+        SharedPreferences prefs = mContext.getSharedPreferences("Pregunta", 0);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putBoolean(objectId,true);
+        editor.commit();
+        return;
+    }
+
+    public void setPreguntaBooleanFalse (String objectId){
+        SharedPreferences prefs = mContext.getSharedPreferences("Pregunta", 0);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putBoolean(objectId,false);
+        editor.commit();
+        return;
+    }
+
+    public boolean getPreguntaBoolean (String objectId){
+        SharedPreferences prefs = mContext.getSharedPreferences("Pregunta", 0);
+        boolean rb0 = prefs.getBoolean(objectId,false);
+        return rb0;
+    }
+
     public void setFavoriteAppTrue (String objectId){
         SharedPreferences prefs = mContext.getSharedPreferences("Favorite", 0);
         SharedPreferences.Editor editor = prefs.edit();

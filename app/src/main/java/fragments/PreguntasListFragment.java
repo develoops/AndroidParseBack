@@ -20,14 +20,18 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.parse.FindCallback;
 import com.parse.ParseException;
+import com.parse.ParseImageView;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
 
@@ -36,9 +40,10 @@ import adapters.PreguntasListViewAdapter;
 import adapters.PreguntasRecyclerViewAdapter;
 import mc.sms.R;
 
+import mc.sms.myApp;
 import model.Actividad;
 import model.Emision;
-
+import model.PersonaRolOrg;
 
 
 /**
@@ -47,11 +52,14 @@ import model.Emision;
 public class PreguntasListFragment extends Fragment {
 
     ListView listview;
+    //ImageView fav;
+    myApp myapp;
     public static Actividad activity;
     //public static MobiFile map;
     //public static GridView gridview;
     public static List<Emision> emisiones;
     //ImageButton pregunta;
+    PreguntasListViewAdapter preguntasListViewAdapter;
 
 
 
@@ -71,15 +79,7 @@ public class PreguntasListFragment extends Fragment {
         super.onCreate(savedInstanceState);
         // Retain this fragment across configuration changes.
         setRetainInstance(true);
-        ParseQuery<Emision> queryEmision = ParseQuery.getQuery(Emision.class);
-        queryEmision.include("emisor");
-        queryEmision.whereEqualTo("actividad", activity);
-        queryEmision.findInBackground(new FindCallback<Emision>() {
-            @Override
-            public void done(List<Emision> objects, ParseException e) {
-                emisiones=objects;
-            }
-        });
+
 
 
 
@@ -89,6 +89,10 @@ public class PreguntasListFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View RootView = inflater.inflate(R.layout.preguntaslistlayout, container , false);
         listview = (ListView) RootView.findViewById(R.id.commonListView);
+        //fav = (ImageView)RootView.findViewById(R.id.fav);
+        queryEmision();
+
+        this.myapp = (myApp) getActivity().getApplicationContext();
         FloatingActionButton fab = (FloatingActionButton) RootView.findViewById(R.id.fab);
 
         // gridview a partir del elemento del xml gridview
@@ -128,10 +132,11 @@ public class PreguntasListFragment extends Fragment {
             toolbar.setBackgroundColor(getResources().getColor(R.color.conferencia));
         }
 
-        if(activity!=null){
-            if(emisiones!=null){
 
-                listview.setAdapter(new PreguntasListViewAdapter(getActivity(),emisiones));
+
+
+
+
 
                /* PreguntasRecyclerViewAdapter adapter = new PreguntasRecyclerViewAdapter(emisiones);
                 RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
@@ -139,8 +144,14 @@ public class PreguntasListFragment extends Fragment {
                 listview.setItemAnimator(new DefaultItemAnimator());
                 listview.setAdapter(adapter);
 */
-            }
-        }
+
+
+
+
+
+
+
+
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -166,6 +177,7 @@ public class PreguntasListFragment extends Fragment {
                                         // get user input and set it to result
                                         // edit text
                                         saveQuestion(userInput.getText().toString());
+
 
                                     }
                                 })
@@ -303,6 +315,29 @@ public class PreguntasListFragment extends Fragment {
 
         }).start();
 
-        
+
+    }
+
+    private void queryEmision(){
+        ParseQuery<Emision> queryEmision = ParseQuery.getQuery(Emision.class);
+        queryEmision.include("emisor");
+        queryEmision.whereEqualTo("actividad", activity);
+        queryEmision.findInBackground(new FindCallback<Emision>() {
+            @Override
+            public void done(List<Emision> objects, ParseException e) {
+                if(objects!=null){
+
+                    Collections.sort(objects,new Comparator<Emision>() {
+                        @Override
+                        public int compare(Emision lhs, Emision rhs) {
+                            return  rhs.getLikes().intValue()-lhs.getLikes().intValue();
+                        }
+                    });
+                    preguntasListViewAdapter = new PreguntasListViewAdapter(getActivity(),objects);
+                    listview.setAdapter(preguntasListViewAdapter);
+                }
+
+            }
+        });
     }
 }
