@@ -10,6 +10,7 @@ android {
         targetSdkVersion 22
         versionCode 2
         versionName "1.1"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -30,7 +31,6 @@ dependencies {
     compile files('libs/YouTubeAndroidPlayerApi.jar')
     //compile files('libs/picasso-2.5.0.jar')
     compile 'com.google.code.gson:gson:2.2.4'
-    compile 'com.parse:parse-android:1.16.2'
     compile 'com.parse:parseui-login-android:0.0.2'
     compile 'com.parse:parseui-widget-android:0.0.2'
     compile 'com.parse.bolts:bolts-android:1.+'
@@ -39,6 +39,8 @@ dependencies {
     compile 'com.google.firebase:firebase-messaging:10.0.1'
     compile 'com.android.support:design:22.2.1'
     compile 'com.android.support:recyclerview-v7:22.2.1'
+    compile 'com.parse:parse-livequery-android:1.0.4'
+
 
 
     //update version to the latest one
@@ -55,6 +57,10 @@ repositories {
     maven {
         url "http://maven.google.com"
     }
+}
+configurations.all {
+    // OkHttp 3.5.0+ includes the websockets API, so we need this to prevent a conflict
+    exclude module: 'okhttp-ws'
 }
 
 apply plugin: 'com.google.gms.google-services'

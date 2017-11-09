@@ -17,10 +17,15 @@ import com.parse.Parse;
 //import com.parse.ParseCrashReporting;
 import com.parse.ParseException;
 import com.parse.ParseInstallation;
+import com.parse.ParseLiveQueryClient;
 import com.parse.ParseObject;
 import com.parse.ParsePush;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
+
+import org.json.JSONObject;
+
+import java.net.URI;
 
 import model.ActContAct;
 import model.ActFavUser;
@@ -34,6 +39,8 @@ import model.Persona;
 import model.PersonaRolAct;
 import model.PersonaRolOrg;
 import model.Rating;
+
+
 
 /**
  * Created by Alvaro on 2/18/15.
@@ -69,9 +76,29 @@ public class myApp extends Application {
                 .server("https://parseapi.back4app.com/").enableLocalDataStore().build()
 
         );
+        //ParseLiveQueryClient parseLiveQueryClient = ParseLiveQueryClient.Factory.getClient(new URI("wss://smsdemo.back4app.io"));
+
+
+      /*  LiveQueryClient.init("wss://smsdemo.back4app.io", "ClUXXsCBfTmS6E9zxXKck1oX4hYSC2pyHarv4U8E", true);
+        LiveQueryClient.connect();
+
+        final Subscription sub = new BaseQuery.Builder("Emision")
+                .addField("actividad")
+                .addField("mensajeTexto")
+                .addField("likes")
+                .build()
+                .subscribe();
+
+        sub.on(LiveQueryEvent.CREATE, new OnListener() {
+            @Override
+            public void on(final JSONObject object) {
+                Log.e("CREATED", object.toString());
+            }
+        });*/
 
         ParseInstallation parseInstallation = ParseInstallation.getCurrentInstallation();
         parseInstallation.put("GCMSenderId",getString(R.string.google_project_number));
+
         parseInstallation.saveInBackground();
 
 
