@@ -126,7 +126,7 @@ public class CurrentEventsFragment extends Fragment {
                     if (event.getType().equals("break")) {
 
                     } else {
-                        final List <Actividad> eventosAnidados = new ArrayList<>();
+                       /* final List <Actividad> eventosAnidados = new ArrayList<>();
                         ParseQuery<ActContAct> queryContenido = ParseQuery.getQuery(ActContAct.class);
                         queryContenido.include("contenido.lugar");
                         queryContenido.include ("contenedor");
@@ -140,9 +140,9 @@ public class CurrentEventsFragment extends Fragment {
                                     eventosAnidados.add(actContAct.getContenido());
                                 }
                             }
-                        });
+                        });*/
                         app.setFromDetail(false);
-                        Fragment fragment = EventDetailFragment.newInstance(event, meetingApp,roles,eventosAnidados);
+                        Fragment fragment = EventDetailFragment.newInstance(event, meetingApp);
                         final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
                         ft.replace(R.id.container, fragment);
                         ft.addToBackStack(null);

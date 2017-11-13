@@ -75,8 +75,10 @@ public class EventDetailFragment extends Fragment {
     RelativeLayout footer;
     DirectiveListViewAdapter2 speaker_adapter;
     Button makeFavourite,rate,ask,map,resumenes;
-    public static List <Actividad> events, eventosAnidados, eventsSpeaker;
+    public static List <Actividad> events, eventsSpeaker;
     public static List <Actividad> eventosSpeaker = new ArrayList<>();
+    public static List <Actividad> eventosAnidados = new ArrayList<>();
+
     public static List <Persona> speakers = new ArrayList<>();
     public static Persona personars;
     public static Actividad evento;
@@ -89,7 +91,7 @@ public class EventDetailFragment extends Fragment {
     ParseImageView header;
     private PendingIntent pendingIntent;
 
-    public static EventDetailFragment newInstance(Actividad event, Actividad meetingApp, List<PersonaRolAct> rols,List<Actividad> anidados) {
+    public static EventDetailFragment newInstance(Actividad event, Actividad meetingApp) {
 
         // Instantiate a new fragment
 
@@ -97,29 +99,11 @@ public class EventDetailFragment extends Fragment {
 
         selectedEvent = event;
         mApp = meetingApp; //para Alfonso
-        eventosAnidados=anidados;
-        roles= rols;
         return fragment;
 
     }
 
-    @Override
-    public void onAttach(Activity activity) {
 
-        super.onAttach(activity);
-        //this._id = getArguments().getInt(INDEX);
-
-        //((ActionBarActivity)getActivity()).getSupportActionBar().setHomeAsUpIndicator(R.drawable.left);
-        setHasOptionsMenu(true);
-        Calendar cal = Calendar.getInstance();
-        Log.i("DATe1", String.valueOf(selectedEvent.getStartDate().getTime()));
-        Log.i("CAL1", String.valueOf(cal.getTimeInMillis()));
-
-
-        events = (List<Actividad>) ParseUser.getCurrentUser().get("favoritos");
-
-
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -127,6 +111,43 @@ public class EventDetailFragment extends Fragment {
         // Retain this fragment across configuration changes.
         setRetainInstance(true);
 
+        ParseQuery<PersonaRolAct> personaRolActParseQuery = ParseQuery.getQuery(PersonaRolAct.class);
+        personaRolActParseQuery.include("persona.pais");
+        personaRolActParseQuery.include("actividad.lugar");
+        personaRolActParseQuery.fromPin("personasRol");
+        personaRolActParseQuery.fromLocalDatastore();
+        personaRolActParseQuery.whereEqualTo("act",selectedEvent);
+        personaRolActParseQuery.findInBackground(new FindCallback<PersonaRolAct>() {
+            @Override
+            public void done(List<PersonaRolAct> objects, ParseException e) {
+                if(objects!=null){
+                    roles=objects;
+                }
+
+            }
+        });
+
+
+        ParseQuery<ActContAct> queryContenido = ParseQuery.getQuery(ActContAct.class);
+        queryContenido.include("contenido.lugar");
+        queryContenido.include ("contenedor");
+        queryContenido.fromPin("ActconAct2");
+        queryContenido.fromLocalDatastore();
+        queryContenido.whereEqualTo("contenedor", selectedEvent);
+        queryContenido.findInBackground(new FindCallback<ActContAct>() {
+            @Override
+            public void done(List<ActContAct> objects, ParseException e) {
+                //List<Actividad> eventosAnidados = new ArrayList<>();
+                for(ActContAct actContAct:objects){
+                    Log.i("NOSFUIMOSALAB", "PASASTE");
+                    eventosAnidados.add(actContAct.getContenido());
+                }
+
+
+
+
+            }
+        });
 
     }
 

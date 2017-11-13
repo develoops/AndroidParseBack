@@ -121,7 +121,7 @@ public class FavouritesFragment extends Fragment {
                                 @Override
                                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                                    List<Actividad> eventosAnidados= new ArrayList<>();
+                                  /*  List<Actividad> eventosAnidados= new ArrayList<>();
                                     ParseObject object = (ParseObject)(listview.getItemAtPosition(position));
                                     Actividad event = ParseObject.createWithoutData(Actividad.class, object.getObjectId());
                                     ParseQuery<PersonaRolAct> personaRolActParseQuery = ParseQuery.getQuery(PersonaRolAct.class);
@@ -139,8 +139,10 @@ public class FavouritesFragment extends Fragment {
                                             }
 
                                         }
-                                    });
-                                    Fragment fragment = EventDetailFragment.newInstance(event, meetingApp,roles,eventosAnidados);
+                                    });*/
+                                    ParseObject object = (ParseObject)(listview.getItemAtPosition(position));
+                                    Actividad event = ParseObject.createWithoutData(Actividad.class, object.getObjectId());
+                                    Fragment fragment = EventDetailFragment.newInstance(event, meetingApp);
                                     final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
                                     ft.replace(R.id.container, fragment);
                                     ft.addToBackStack(null);

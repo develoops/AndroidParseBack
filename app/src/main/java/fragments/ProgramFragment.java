@@ -128,48 +128,14 @@ public class ProgramFragment extends Fragment {
 
                         evento = event;
                         Log.i("PORAQUIPASAA22222",String.valueOf(evento.getObjectId()));
-                        ParseQuery<PersonaRolAct> personaRolActParseQuery = ParseQuery.getQuery(PersonaRolAct.class);
-                        personaRolActParseQuery.include("persona.pais");
-                        personaRolActParseQuery.include("actividad.lugar");
-                        personaRolActParseQuery.fromLocalDatastore();
-                        personaRolActParseQuery.fromPin("personasRol");
-                        personaRolActParseQuery.whereEqualTo("act",evento);
-                        personaRolActParseQuery.findInBackground(new FindCallback<PersonaRolAct>() {
-                            @Override
-                            public void done(List<PersonaRolAct> objects, ParseException e) {
-                                if(objects!=null){
 
-                                    roles=objects;
-                                }
+                        //Log.i("NOPASOOOOOOOASDFSADF", String.valueOf(eventosAnidados.size()));
+                        Fragment fragment = EventDetailFragment.newInstance(evento, meetingApp);
+                        final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                        ft.replace(R.id.container, fragment);
+                        ft.addToBackStack(null);
+                        ft.commit();
 
-                            }
-                        });
-
-                        ParseQuery<ActContAct> queryContenido = ParseQuery.getQuery(ActContAct.class);
-                        queryContenido.include("contenido.lugar");
-                        queryContenido.include ("contenedor");
-                        queryContenido.fromPin("ActconAct2");
-                        queryContenido.fromLocalDatastore();
-                        queryContenido.whereEqualTo("contenedor", evento);
-                        queryContenido.findInBackground(new FindCallback<ActContAct>() {
-                            @Override
-                            public void done(List<ActContAct> objects, ParseException e) {
-                                List<Actividad> eventosAnidados = new ArrayList<>();
-                                for(ActContAct actContAct:objects){
-                                    Log.i("NOSFUIMOSALAB", "PASASTE");
-                                    eventosAnidados.add(actContAct.getContenido());
-                                }
-
-                                    Log.i("NOPASOOOOOOOASDFSADF", String.valueOf(eventosAnidados.size()));
-                                    Fragment fragment = EventDetailFragment.newInstance(evento, meetingApp,roles,eventosAnidados);
-                                    final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                                    ft.replace(R.id.container, fragment);
-                                    ft.addToBackStack(null);
-                                    ft.commit();
-
-
-                            }
-                        });
                         //Log.i("NOPASOOOOOOOASDFSADF", String.valueOf(eventosAnidados.size()));
 
                     }
@@ -179,7 +145,12 @@ public class ProgramFragment extends Fragment {
                     Log.i("PORAQUIPASAA","NO");
 
                     evento = event;
-                    Log.i("PORAQUIPASAA22222",String.valueOf(evento.getObjectId()));
+                    Fragment fragment = EventDetailFragment.newInstance(evento, meetingApp);
+                    final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                    ft.replace(R.id.container, fragment);
+                    ft.addToBackStack(null);
+                    ft.commit();
+                    /*Log.i("PORAQUIPASAA22222",String.valueOf(evento.getObjectId()));
                     ParseQuery<PersonaRolAct> personaRolActParseQuery = ParseQuery.getQuery(PersonaRolAct.class);
                     personaRolActParseQuery.include("persona.pais");
                     personaRolActParseQuery.include("actividad.lugar");
@@ -213,15 +184,11 @@ public class ProgramFragment extends Fragment {
                             }
 
                             Log.i("NOPASOOOOOOOASDFSADF", String.valueOf(eventosAnidados.size()));
-                            Fragment fragment = EventDetailFragment.newInstance(evento, meetingApp,roles,eventosAnidados);
-                            final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                            ft.replace(R.id.container, fragment);
-                            ft.addToBackStack(null);
-                            ft.commit();
+
 
 
                         }
-                    });
+                    });*/
                     //Log.i("NOPASOOOOOOOASDFSADF", String.valueOf(eventosAnidados.size()));
                 }
 

@@ -131,7 +131,12 @@ public class SpeakerDetailFragment extends Fragment {
                     Actividad event = ParseObject.createWithoutData(Actividad.class, object.getObjectId());
                     evento = event;
                     roles.clear();
-                    ParseQuery<PersonaRolAct> personaRolActParseQuery = ParseQuery.getQuery(PersonaRolAct.class);
+                    Fragment fragment = EventDetailFragment.newInstance(evento, meetingApp);
+                    final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                    ft.replace(R.id.container, fragment);
+                    ft.addToBackStack(null);
+                    ft.commit();
+                  /*  ParseQuery<PersonaRolAct> personaRolActParseQuery = ParseQuery.getQuery(PersonaRolAct.class);
                     personaRolActParseQuery.include("persona.pais");
                     personaRolActParseQuery.include("actividad.lugar");
                     personaRolActParseQuery.fromLocalDatastore();
@@ -175,13 +180,9 @@ public class SpeakerDetailFragment extends Fragment {
                             }
 
                             Log.i("NOPASOOOOOOOASDFSADF", String.valueOf(eventosAnidados.size()));
-                            Fragment fragment = EventDetailFragment.newInstance(evento, meetingApp,roles,eventosAnidados);
-                            final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                            ft.replace(R.id.container, fragment);
-                            ft.addToBackStack(null);
-                            ft.commit();
+
                         }
-                    });
+                    });*/
                 }
             });
         }

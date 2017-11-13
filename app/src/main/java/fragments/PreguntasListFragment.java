@@ -291,11 +291,16 @@ public class PreguntasListFragment extends Fragment {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
 
-                if (event.getAction() == KeyEvent.ACTION_UP && keyCode == KeyEvent.KEYCODE_BACK) {
+                Log.i("HOLA",String.valueOf(keyCode));
+                if (event.getAction() == KeyEvent.ACTION_UP && keyCode == KeyEvent.KEYCODE_BACK){
                     // handle back button's click listener
 
+                    getActivity().onBackPressed();
 
                     return true;
+
+
+
                 }
                 return false;
             }
@@ -420,6 +425,7 @@ public class PreguntasListFragment extends Fragment {
                                     Log.i("likes0",likes.toString());
                                     numeroDeLikes.setText(likes.toString());
                                     sumarLikes(emision.getObjectId());
+                                    //preguntasListViewAdapter.loadObjects();
                                 }
 
                             }
@@ -449,6 +455,7 @@ public class PreguntasListFragment extends Fragment {
                                     Log.i("likes11",likes2.toString());
                                     numeroDeLikes.setText(likes2.toString());
                                     quitarLikes(emision.getObjectId());
+                                    //preguntasListViewAdapter.loadObjects();
                                 }
 
                             }
