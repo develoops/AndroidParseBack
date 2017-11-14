@@ -214,8 +214,6 @@ public class EventDetailFragment extends Fragment {
             footer.setVisibility(View.GONE);
         }
 
-        List<Button> buttons = new ArrayList<>();
-
 
         if(selectedEvent.getParseFileV1()!=null){
 
@@ -372,6 +370,7 @@ public class EventDetailFragment extends Fragment {
             else {
                 speakers_listview.setVisibility(View.GONE);
             }
+
             events_listview.setVisibility(View.VISIBLE);
             adapter2 = new HetpinProgramListViewAdapter(getActivity(),anidateEvents,mApp,true,false);
 
@@ -447,6 +446,9 @@ public class EventDetailFragment extends Fragment {
 
                 }
             });
+        }
+        else {
+            events_listview.setVisibility(View.GONE);
         }
 
 

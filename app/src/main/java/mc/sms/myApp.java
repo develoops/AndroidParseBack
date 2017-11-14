@@ -179,6 +179,8 @@ public class myApp extends Application {
         return;
     }
 
+
+
     public void setPreguntaBooleanTrue (String objectId){
         SharedPreferences prefs = mContext.getSharedPreferences("Pregunta", 0);
         SharedPreferences.Editor editor = prefs.edit();
@@ -293,6 +295,20 @@ public class myApp extends Application {
         editor.putBoolean("firstTime",true);
         editor.commit();
         return;
+    }
+
+    public void usuarioAsignado(){
+        SharedPreferences mPreferences = this.getSharedPreferences("usuario", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = mPreferences.edit();
+        editor.putBoolean("usuario",true);
+        editor.commit();
+        return;
+    }
+
+    public boolean getUsuarioAsignado() {
+        SharedPreferences mPreferences = this.getSharedPreferences("usuario", Context.MODE_PRIVATE);
+        Boolean setFromDetail = mPreferences.getBoolean("usuario", false);
+        return setFromDetail;
     }
 
     public void setSecondTime(){

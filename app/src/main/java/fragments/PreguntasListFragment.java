@@ -34,6 +34,7 @@ import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseImageView;
 import com.parse.ParseLiveQueryClient;
+import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseQueryAdapter;
 import com.parse.ParseUser;
@@ -48,11 +49,12 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
+import java.util.Random;
 
 import adapters.PreguntasListViewAdapter;
 
 import adapters.PreguntasParseQueryAdapter;
-import adapters.PreguntasRecyclerViewAdapter;
+
 import mc.sms.R;
 
 import mc.sms.myApp;
@@ -79,6 +81,9 @@ public class PreguntasListFragment extends Fragment {
     ParseQueryAdapterPreg preguntasListViewAdapter;
     ParseLiveQueryClient parseLiveQueryClient;
 
+    public static ParseUser currentUser;
+
+
 
     public static PreguntasListFragment newInstance(Actividad actividad) {
 
@@ -96,6 +101,98 @@ public class PreguntasListFragment extends Fragment {
         super.onCreate(savedInstanceState);
         // Retain this fragment across configuration changes.
         setRetainInstance(true);
+        this.myapp = (myApp) getActivity().getApplicationContext();
+
+        if(!myapp.getUsuarioAsignado()){
+            ParseQuery<ParseUser> query = ParseUser.getQuery();
+            query.whereEqualTo("username", ParseUser.getCurrentUser().getUsername());
+            query.getFirstInBackground(new GetCallback<ParseUser>() {
+                @Override
+                public void done(final ParseUser object, ParseException e) {
+                    if(object!=null){
+
+                        if(object.get("nombre")==null){
+
+                            final LayoutInflater li = LayoutInflater.from(getActivity());
+                            final View promptsView = li.inflate(R.layout.custom2, null);
+
+
+                            AlertDialog.Builder alertDialogBuilder1 = new AlertDialog.Builder(
+                                    getActivity());
+
+                            // set prompts.xml to alertdialog builder
+                            alertDialogBuilder1.setView(promptsView);
+
+                            final EditText userInput1 = (EditText) promptsView
+                                    .findViewById(R.id.editText);
+
+                            // set dialog message
+                            alertDialogBuilder1
+                                    .setCancelable(false)
+                                    .setPositiveButton("OK",
+                                            new DialogInterface.OnClickListener() {
+                                                public void onClick(DialogInterface dialog, int id) {
+                                                    // get user input and set it to result
+                                                    // edit text
+                                                    if(userInput1.getText().toString().isEmpty()){
+                                                        Random rand = new Random();
+                                                        int n = rand.nextInt(999999999);
+                                                        String name = "anon" + String.valueOf(n);
+                                                        object.put("nombre", name);
+                                                    }
+                                                    else {
+                                                        object.put("nombre",userInput1.getText().toString());
+                                                    }
+
+                                                    new Thread(new Runnable() {
+                                                        public void run() {
+                                                            object.saveEventually();
+                                                            myapp.usuarioAsignado();
+                                                            //updateList();
+                                                        }
+
+                                                    }).start();
+
+
+                                                    //updateList();
+
+                                                }
+                                            })
+                                    .setNegativeButton("Cancelar",
+                                            new DialogInterface.OnClickListener() {
+                                                public void onClick(DialogInterface dialog, int id) {
+                                                    Random rand = new Random();
+                                                    int n = rand.nextInt(999999999);
+                                                    String name = "anon" + String.valueOf(n);
+                                                    object.put("nombre", name);
+                                                    new Thread(new Runnable() {
+                                                        public void run() {
+                                                            object.saveEventually();
+                                                            myapp.usuarioAsignado();
+                                                            //updateList();
+                                                        }
+
+                                                    }).start();
+                                                    dialog.cancel();
+                                                }
+                                            });
+
+                            // create alert dialog
+                            AlertDialog alertDialog1 = alertDialogBuilder1.create();
+
+                            // show it
+                            alertDialog1.show();
+
+                        }
+
+
+                    }
+                }
+            });
+        }
+
+
+
 
         try {
             parseLiveQueryClient = ParseLiveQueryClient.Factory.getClient(new URI("wss://smsdemo.back4app.io"));
@@ -151,6 +248,8 @@ public class PreguntasListFragment extends Fragment {
 
         // gridview a partir del elemento del xml gridview
 
+
+
         Toolbar toolbar = (Toolbar) RootView.findViewById(R.id.preguntastoolbar);
         if (Locale.getDefault().getLanguage().equals("en")) {
             toolbar.setTitle("Preguntas");
@@ -187,22 +286,12 @@ public class PreguntasListFragment extends Fragment {
 
 
 
-
-
-
-               /* PreguntasRecyclerViewAdapter adapter = new PreguntasRecyclerViewAdapter(emisiones);
-                RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
-                listview.setLayoutManager(mLayoutManager);
-                listview.setItemAnimator(new DefaultItemAnimator());
-                listview.setAdapter(adapter);
-*/
-
-
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 final LayoutInflater li = LayoutInflater.from(getActivity());
                 final View promptsView = li.inflate(R.layout.custom, null);
+
 
                 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
                         getActivity());
@@ -414,6 +503,7 @@ public class PreguntasListFragment extends Fragment {
                     // Here we can configure a ParseQuery to display
                     // only top-rated meals.
                     ParseQuery query = new ParseQuery("Emision");
+                    query.include("emisor");
                     query.whereEqualTo("actividad", activity);
                     query.addDescendingOrder("likes");
                     return query;
@@ -431,8 +521,20 @@ public class PreguntasListFragment extends Fragment {
             super.getItemView(emision, v, parent);
 
 
-            TextView titleTextView = (TextView) v.findViewById(R.id.name_speaker);
+            TextView titleTextView = (TextView) v.findViewById(R.id.name_question);
+            TextView titleTextView2 = (TextView) v.findViewById(R.id.user);
+            if(emision.getEmisor().get("nombre")!=null){
+
+                titleTextView2.setText(emision.getEmisor().get("nombre").toString());
+
+            }
+            else {
+                titleTextView2.setText("anónimo");
+            }
+
             titleTextView.setText(emision.getMensajeTexto());
+
+
             final CircularTextView numeroDeLikes = (CircularTextView)v.findViewById(R.id.circularTextView);
             final ImageView votoPregunta = (ImageView)v.findViewById(R.id.fav);
 
