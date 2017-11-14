@@ -4,6 +4,7 @@ package fragments;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.os.Handler;
+import android.os.Looper;
 import android.support.design.widget.FloatingActionButton;
 import android.content.DialogInterface;
 import android.graphics.Color;
@@ -32,12 +33,16 @@ import com.parse.GetCallback;
 import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseImageView;
+import com.parse.ParseLiveQueryClient;
 import com.parse.ParseQuery;
 import com.parse.ParseQueryAdapter;
 import com.parse.ParseUser;
+import com.parse.SubscriptionHandling;
 
 import org.json.JSONObject;
 
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -72,6 +77,7 @@ public class PreguntasListFragment extends Fragment {
     private ImageButton left, right;
     //ImageButton pregunta;
     ParseQueryAdapterPreg preguntasListViewAdapter;
+    ParseLiveQueryClient parseLiveQueryClient;
 
 
     public static PreguntasListFragment newInstance(Actividad actividad) {
@@ -91,9 +97,45 @@ public class PreguntasListFragment extends Fragment {
         // Retain this fragment across configuration changes.
         setRetainInstance(true);
 
-
+        try {
+            parseLiveQueryClient = ParseLiveQueryClient.Factory.getClient(new URI("wss://smsdemo.back4app.io"));
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+            Log.i("FAIL","FAIL");
+        }
         //queryEmision();
 
+        ParseQuery<Emision> queryEmision = ParseQuery.getQuery(Emision.class);
+        queryEmision.include("emisor");
+        queryEmision.whereEqualTo("actividad", activity);
+
+        SubscriptionHandling<Emision> subscriptionHandling = parseLiveQueryClient.subscribe(queryEmision);
+        subscriptionHandling.handleEvent(SubscriptionHandling.Event.CREATE, new SubscriptionHandling.HandleEventCallback<Emision>() {
+            @Override
+            public void onEvent(ParseQuery<Emision> query, Emision object) {
+                // HANDLING create event
+                Log.i("ESCUCHANDO","LISTO");
+                updateList();
+
+
+            }
+        });
+
+        subscriptionHandling.handleEvent(SubscriptionHandling.Event.DELETE, new SubscriptionHandling.HandleEventCallback<Emision>() {
+            @Override
+            public void onEvent(ParseQuery<Emision> query, Emision object) {
+                Log.i("ESCUCHANDO2","LISTO");
+                updateList();
+
+            }
+        });
+
+        subscriptionHandling.handleEvent(SubscriptionHandling.Event.UPDATE, new SubscriptionHandling.HandleEventCallback<Emision>() {
+            @Override
+            public void onEvent(ParseQuery<Emision> query, Emision object) {
+                updateList();
+            }
+        });
 
     }
 
@@ -180,7 +222,7 @@ public class PreguntasListFragment extends Fragment {
                                         // get user input and set it to result
                                         // edit text
                                         saveQuestion(userInput.getText().toString());
-                                        updateList();
+                                        //updateList();
 
                                     }
                                 })
@@ -308,10 +350,11 @@ public class PreguntasListFragment extends Fragment {
 
     }
     private void updateList(){
-        final Handler handler = new Handler();
+        final Handler handler = new Handler(Looper.getMainLooper());
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
+
                 preguntasListViewAdapter.loadObjects();
                 //preguntasListViewAdapter.notifyDataSetChanged();
                 //listview.setAdapter(preguntasListViewAdapter);
@@ -388,7 +431,7 @@ public class PreguntasListFragment extends Fragment {
             super.getItemView(emision, v, parent);
 
 
-            TextView titleTextView = (TextView) v.findViewById(R.id.charge);
+            TextView titleTextView = (TextView) v.findViewById(R.id.name_speaker);
             titleTextView.setText(emision.getMensajeTexto());
             final CircularTextView numeroDeLikes = (CircularTextView)v.findViewById(R.id.circularTextView);
             final ImageView votoPregunta = (ImageView)v.findViewById(R.id.fav);

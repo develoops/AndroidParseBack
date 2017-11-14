@@ -76,7 +76,7 @@ public class myApp extends Application {
                 .server("https://parseapi.back4app.com/").enableLocalDataStore().build()
 
         );
-        //ParseLiveQueryClient parseLiveQueryClient = ParseLiveQueryClient.Factory.getClient(new URI("wss://smsdemo.back4app.io"));
+       // ParseLiveQueryClient parseLiveQueryClient = ParseLiveQueryClient.Factory.getClient(new URI("wss://smsdemo.back4app.io"));
 
 
       /*  LiveQueryClient.init("wss://smsdemo.back4app.io", "ClUXXsCBfTmS6E9zxXKck1oX4hYSC2pyHarv4U8E", true);

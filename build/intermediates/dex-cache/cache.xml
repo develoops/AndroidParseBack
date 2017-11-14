@@ -138,21 +138,21 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/Alvaro/Downloads/AndroidParseBack copy/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="dd9eb42a2010cc0301849d2a12d0e10b7ac9eb0d">
+        <dex dex="/Users/Alvaro/Downloads/AndroidParseBack copy/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_0f2d0e87c72204aa82a9bd05bf3245f5b9cdf0e0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/Alvaro/.android/build-cache/99eb6f45eb1ec42c7ff4cfa282a6c522e1daf9f6/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="433f4d6aa5f21f19552afe0e6c5eff0fedba73ad">
         <dex dex="/Users/Alvaro/Downloads/AndroidParseBack copy/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_46938b187bb04f5452d42e2af22d03d120b8ca40/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Alvaro/Downloads/AndroidParseBack copy/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="98f58d23c593c5ec1e4939323f7bc3cc81769802">
-        <dex dex="/Users/Alvaro/Downloads/AndroidParseBack copy/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_0f2d0e87c72204aa82a9bd05bf3245f5b9cdf0e0/classes.dex" />
     </item>
     <item
         is-multidex="true"
