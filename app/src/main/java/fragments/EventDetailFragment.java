@@ -541,78 +541,67 @@ public class EventDetailFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
+                Fragment fragment = EncuestaFragment.newInstance(selectedEvent);
+                final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.container, fragment);
+                ft.addToBackStack(null);
+                ft.commit();
 
-                final Dialog dialogo = new Dialog(getActivity());
+/*
+            final Dialog dialogo = new Dialog(getActivity());
                 dialogo.requestWindowFeature(Window.FEATURE_NO_TITLE);
                 dialogo.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
 
                 dialogo.setContentView(R.layout.dialog_rate);
-                Button btn_Ok = (Button) dialogo.findViewById(R.id.popOkRate);
-                Button btn_Cancel = (Button)dialogo.findViewById(R.id.popCancelRate);
-                TextView textView = (TextView)dialogo.findViewById(R.id.durationTitle);
+            Button btn_Ok = (Button) dialogo.findViewById(R.id.popOkRate);
+            Button btn_Cancel = (Button)dialogo.findViewById(R.id.popCancelRate);
+            TextView textView = (TextView)dialogo.findViewById(R.id.durationTitle);
 
                 if(Locale.getDefault().getLanguage().equals("en")){
-                    btn_Cancel.setText("Cancelar");
-                    textView.setText("Evaluar");
-                }
+                btn_Cancel.setText("Cancelar");
+                textView.setText("Evaluar");
+            }
                 else {
-                    btn_Cancel.setText("Cancelar");
-                    textView.setText("Evaluar");
-                }
-                ratingBar = (RatingBar) dialogo.findViewById(R.id.rating_bar);
+                btn_Cancel.setText("Cancelar");
+                textView.setText("Evaluar");
+            }
+            ratingBar = (RatingBar) dialogo.findViewById(R.id.rating_bar);
                 btn_Ok.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        if ((int) ratingBar.getRating()>0){
+                @Override
+                public void onClick(View view) {
+                    if ((int) ratingBar.getRating()>0){
 
 
-                            saveRating((int) ratingBar.getRating());
-
-
-/*
-                            if(myapp.checkConnection()){
-                                ParseUser user = ParseUser.getCurrentUser();
-                                user.add("ratings",gameScore);
-                                user.saveInBackground(new SaveCallback() {
-                                    @Override
-                                    public void done(ParseException e) {
-                                    }
-                                });
-                            }
-                            else {
-                                ParseUser user = ParseUser.getCurrentUser();
-                                user.add("ratings",gameScore);
-                                user.saveEventually();
-                            }
-*/
+                        saveRating((int) ratingBar.getRating());
 
 
 
-                            myapp.setBooleanAppTrue(selectedEvent.getObjectId());
-                            dialogo.dismiss();
-                            Toast toast =
-                                    Toast.makeText(getActivity(),
-                                            getString(R.string.rate), Toast.LENGTH_SHORT);
-                            toast.show();
-                            rate.setVisibility(View.INVISIBLE);
 
-                        }
-
-
-                    }
-                });
-                btn_Cancel.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
+                        myapp.setBooleanAppTrue(selectedEvent.getObjectId());
                         dialogo.dismiss();
+                        Toast toast =
+                                Toast.makeText(getActivity(),
+                                        getString(R.string.rate), Toast.LENGTH_SHORT);
+                        toast.show();
+                        rate.setVisibility(View.INVISIBLE);
+
                     }
-                });
+
+
+                }
+            });
+                btn_Cancel.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    dialogo.dismiss();
+                }
+            });
 
                 dialogo.getWindow().getAttributes().width = RelativeLayout.LayoutParams.MATCH_PARENT;
-                dialogo.show();
+                dialogo.show();*/
 
 
-            }
+        }
         });
 
         ask.setOnClickListener(new View.OnClickListener() {

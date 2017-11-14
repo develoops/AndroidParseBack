@@ -331,78 +331,6 @@ public class PreguntasListFragment extends Fragment {
         });
 
 
-  /*      ParseQuery<MobiFile> query = ParseQuery.getQuery(MobiFile.class);
-        query.whereEqualTo("title","MapaComercial");
-        query.getFirstInBackground(new GetCallback<MobiFile>() {
-            @Override
-            public void done(MobiFile mobiFile, ParseException e) {
-
-                if(mobiFile!=null){
-                    mobiFile.getParseFileV1().getDataInBackground();
-                    button.setVisibility(View.VISIBLE);
-                    Log.i("MOBIFILE", String.valueOf(mobiFile.getObjectId()));
-                    if(Locale.getDefault().getLanguage().equals("en")){
-                        button.setText("Commercial Map");
-                    }
-                    else {
-                        button.setText("Mapa Comercial");
-                    }
-                }
-
-            }
-        });*/
-
-
-/*
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                final Dialog dialogo = new Dialog(getActivity());
-                dialogo.requestWindowFeature(Window.FEATURE_NO_TITLE);
-                dialogo.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
-
-                dialogo.setContentView(R.layout.map_box_layout);
-
-                ParseQuery<MobiFile> query = ParseQuery.getQuery(MobiFile.class);
-                query.whereEqualTo("title","MapaComercial");
-                query.getFirstInBackground(new GetCallback<MobiFile>() {
-                    @Override
-                    public void done(MobiFile mobiFile, ParseException e) {
-                        map=mobiFile;
-                        final Button done = (Button) dialogo.findViewById(R.id.btn_done_image_dialog);
-                        TouchImageView mapadialog = (TouchImageView) dialogo.findViewById(R.id.image_dialog);
-                        mapadialog.setMaxZoom(4f);
-                        mapadialog.setMinZoom(1f);
-                        if (map!= null) {
-                            ImageLoader imageLoader = ImageLoader.getInstance();
-                            //Load the image from the url into the ImageView.
-                            imageLoader.displayImage(map.getParseFileV1().getUrl(), mapadialog);
-                        }
-
-
-                        dialogo.getWindow().getAttributes().width = RelativeLayout.LayoutParams.MATCH_PARENT;
-                        done.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                dialogo.dismiss();
-
-                            }
-                        });
-
-                        dialogo.show();
-                    }
-                });
-
-
-
-
-
-
-
-            }
-
-        });*/
 
         return RootView;
     }
@@ -410,10 +338,6 @@ public class PreguntasListFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        /*
-        View v = mTabHost.getTabWidget().getChildAt(0);
-        v.setBackgroundResource(R.drawable.programa);
-*/
 
 
         getView().setFocusableInTouchMode(true);
