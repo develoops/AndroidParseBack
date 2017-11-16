@@ -121,7 +121,7 @@ public class CurrentEventsFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 ParseObject object = (ParseObject) (listview.getItemAtPosition(position));
-                Actividad event = ParseObject.createWithoutData(Actividad.class, object.getObjectId());
+                final Actividad event = ParseObject.createWithoutData(Actividad.class, object.getObjectId());
                 if(event.getType()!=null){
                     if (event.getType().equals("break")) {
 
@@ -141,12 +141,29 @@ public class CurrentEventsFragment extends Fragment {
                                 }
                             }
                         });*/
-                        app.setFromDetail(false);
-                        Fragment fragment = EventDetailFragment.newInstance(event, meetingApp);
-                        final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                        ft.replace(R.id.container, fragment);
-                        ft.addToBackStack(null);
-                        ft.commit();
+
+                        ParseQuery<PersonaRolAct> personaRolActParseQuery = ParseQuery.getQuery(PersonaRolAct.class);
+                        personaRolActParseQuery.include("persona.pais");
+                        personaRolActParseQuery.include("actividad.lugar");
+                        personaRolActParseQuery.fromPin("personasRol");
+                        personaRolActParseQuery.fromLocalDatastore();
+                        personaRolActParseQuery.whereEqualTo("act",event);
+                        personaRolActParseQuery.findInBackground(new FindCallback<PersonaRolAct>() {
+                            @Override
+                            public void done(List<PersonaRolAct> objects, ParseException e) {
+                                if(objects!=null){
+                                    roles=objects;
+                                    app.setFromDetail(false);
+                                    Fragment fragment = EventDetailFragment.newInstance(event, meetingApp,roles);
+                                    final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                                    ft.replace(R.id.container, fragment);
+                                    ft.addToBackStack(null);
+                                    ft.commit();
+                                }
+
+                            }
+                        });
+
 
                     }
 

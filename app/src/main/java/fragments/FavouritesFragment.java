@@ -122,9 +122,7 @@ public class FavouritesFragment extends Fragment {
                                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                                   /*  List<Actividad> eventosAnidados= new ArrayList<>();
-                                    ParseObject object = (ParseObject)(listview.getItemAtPosition(position));
-                                    Actividad event = ParseObject.createWithoutData(Actividad.class, object.getObjectId());
-                                    ParseQuery<PersonaRolAct> personaRolActParseQuery = ParseQuery.getQuery(PersonaRolAct.class);
+
                                     personaRolActParseQuery.include("persona.pais");
                                     personaRolActParseQuery.include("actividad.lugar");
                                     personaRolActParseQuery.fromLocalDatastore();
@@ -140,13 +138,35 @@ public class FavouritesFragment extends Fragment {
 
                                         }
                                     });*/
+
+
+
+
                                     ParseObject object = (ParseObject)(listview.getItemAtPosition(position));
-                                    Actividad event = ParseObject.createWithoutData(Actividad.class, object.getObjectId());
-                                    Fragment fragment = EventDetailFragment.newInstance(event, meetingApp);
-                                    final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                                    ft.replace(R.id.container, fragment);
-                                    ft.addToBackStack(null);
-                                    ft.commit();
+                                    final Actividad event = ParseObject.createWithoutData(Actividad.class, object.getObjectId());
+                                    ParseQuery<PersonaRolAct> personaRolActParseQuery = ParseQuery.getQuery(PersonaRolAct.class);
+                                    personaRolActParseQuery.include("persona.pais");
+                                    personaRolActParseQuery.include("actividad.lugar");
+                                    personaRolActParseQuery.fromPin("personasRol");
+                                    personaRolActParseQuery.fromLocalDatastore();
+                                    personaRolActParseQuery.whereEqualTo("act",event);
+                                    personaRolActParseQuery.findInBackground(new FindCallback<PersonaRolAct>() {
+                                        @Override
+                                        public void done(List<PersonaRolAct> objects, ParseException e) {
+                                            if(objects!=null){
+                                                roles=objects;
+
+                                            }
+
+                                            Fragment fragment = EventDetailFragment.newInstance(event, meetingApp,roles);
+                                            final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                                            ft.replace(R.id.container, fragment);
+                                            ft.addToBackStack(null);
+                                            ft.commit();
+
+                                        }
+                                    });
+
                                 }
                             });
 

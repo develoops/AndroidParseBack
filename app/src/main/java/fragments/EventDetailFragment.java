@@ -61,6 +61,7 @@ import model.Actividad;
 import model.Emision;
 import model.Persona;
 import model.PersonaRolAct;
+import model.PreguntaEncuesta;
 import model.Rating;
 
 /**
@@ -85,13 +86,15 @@ public class EventDetailFragment extends Fragment {
     public static List <PersonaRolAct> roles,roles2 = new ArrayList<>();
    // public static Integer counter=0;
     public myApp myapp;
+    public static List<PreguntaEncuesta> preguntaEncuestas = new ArrayList<>();
+
     public static Actividad mApp;
     GridDocumentsAdapter docsadapter;
 
     ParseImageView header;
     private PendingIntent pendingIntent;
 
-    public static EventDetailFragment newInstance(Actividad event, Actividad meetingApp) {
+    public static EventDetailFragment newInstance(Actividad event, Actividad meetingApp, List<PersonaRolAct> rols) {
 
         // Instantiate a new fragment
 
@@ -99,7 +102,9 @@ public class EventDetailFragment extends Fragment {
 
         selectedEvent = event;
         mApp = meetingApp; //para Alfonso
+        roles=rols;
         return fragment;
+
 
     }
 
@@ -110,25 +115,23 @@ public class EventDetailFragment extends Fragment {
         super.onCreate(savedInstanceState);
         // Retain this fragment across configuration changes.
         setRetainInstance(true);
-
-        ParseQuery<PersonaRolAct> personaRolActParseQuery = ParseQuery.getQuery(PersonaRolAct.class);
-        personaRolActParseQuery.include("persona.pais");
-        personaRolActParseQuery.include("actividad.lugar");
-        personaRolActParseQuery.fromPin("personasRol");
-        personaRolActParseQuery.fromLocalDatastore();
-        personaRolActParseQuery.whereEqualTo("act",selectedEvent);
-        personaRolActParseQuery.findInBackground(new FindCallback<PersonaRolAct>() {
+        ParseQuery<PreguntaEncuesta> preguntaEncuestaParseQuery = ParseQuery.getQuery(PreguntaEncuesta.class);
+        preguntaEncuestaParseQuery.addAscendingOrder("posicion");
+        preguntaEncuestaParseQuery.findInBackground(new FindCallback<PreguntaEncuesta>() {
             @Override
-            public void done(List<PersonaRolAct> objects, ParseException e) {
-                if(objects!=null){
-                    roles=objects;
-                }
+            public void done(List<PreguntaEncuesta> objects, ParseException e) {
+                preguntaEncuestas=objects;
+                Log.i("PREGUNTA", objects.get(0).getPreguntaTexto() );
+                Log.i("HOLA","HELO");
 
             }
         });
 
 
-        ParseQuery<ActContAct> queryContenido = ParseQuery.getQuery(ActContAct.class);
+
+
+
+       /* ParseQuery<ActContAct> queryContenido = ParseQuery.getQuery(ActContAct.class);
         queryContenido.include("contenido.lugar");
         queryContenido.include ("contenedor");
         queryContenido.fromPin("ActconAct2");
@@ -147,7 +150,7 @@ public class EventDetailFragment extends Fragment {
 
 
             }
-        });
+        });*/
 
     }
 
@@ -541,7 +544,7 @@ public class EventDetailFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                Fragment fragment = EncuestaFragment.newInstance(selectedEvent);
+                Fragment fragment = EncuestaFragment.newInstance(selectedEvent,preguntaEncuestas);
                 final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
                 ft.replace(R.id.container, fragment);
                 ft.addToBackStack(null);

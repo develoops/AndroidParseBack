@@ -84,6 +84,7 @@ public class ProgramFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // Retain this fragment across configuration changes.
+
         setRetainInstance(true);
 
     }
@@ -129,12 +130,29 @@ public class ProgramFragment extends Fragment {
                         evento = event;
                         Log.i("PORAQUIPASAA22222",String.valueOf(evento.getObjectId()));
 
+                        ParseQuery<PersonaRolAct> personaRolActParseQuery = ParseQuery.getQuery(PersonaRolAct.class);
+                        personaRolActParseQuery.include("persona.pais");
+                        personaRolActParseQuery.include("actividad.lugar");
+                        personaRolActParseQuery.fromPin("personasRol");
+                        personaRolActParseQuery.fromLocalDatastore();
+                        personaRolActParseQuery.whereEqualTo("act",evento);
+                        personaRolActParseQuery.findInBackground(new FindCallback<PersonaRolAct>() {
+                            @Override
+                            public void done(List<PersonaRolAct> objects, ParseException e) {
+                                if(objects!=null){
+                                    roles=objects;
+                                    Fragment fragment = EventDetailFragment.newInstance(evento, meetingApp,roles);
+                                    final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                                    ft.replace(R.id.container, fragment);
+                                    ft.addToBackStack(null);
+                                    ft.commit();
+                                }
+
+                            }
+                        });
+
                         //Log.i("NOPASOOOOOOOASDFSADF", String.valueOf(eventosAnidados.size()));
-                        Fragment fragment = EventDetailFragment.newInstance(evento, meetingApp);
-                        final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                        ft.replace(R.id.container, fragment);
-                        ft.addToBackStack(null);
-                        ft.commit();
+
 
                         //Log.i("NOPASOOOOOOOASDFSADF", String.valueOf(eventosAnidados.size()));
 
@@ -145,7 +163,7 @@ public class ProgramFragment extends Fragment {
                     Log.i("PORAQUIPASAA","NO");
 
                     evento = event;
-                    Fragment fragment = EventDetailFragment.newInstance(evento, meetingApp);
+                    Fragment fragment = EventDetailFragment.newInstance(evento, meetingApp,roles);
                     final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
                     ft.replace(R.id.container, fragment);
                     ft.addToBackStack(null);

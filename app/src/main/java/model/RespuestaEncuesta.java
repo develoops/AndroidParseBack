@@ -32,8 +32,8 @@ public class RespuestaEncuesta extends ParseObject {
         put("valoracion", valoracion);
     }
 
-    public void setEvent(Actividad event) {
-        put("evento", event);
+    public void setEvent(Actividad actividad) {
+        put("evento", actividad);
     }
 
 

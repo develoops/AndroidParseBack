@@ -31,6 +31,7 @@ import model.ActContAct;
 import model.ActFavUser;
 import model.Actividad;
 import model.Emision;
+import model.Encuesta;
 import model.Info;
 import model.Lugar;
 import model.Media;
@@ -38,8 +39,9 @@ import model.Org;
 import model.Persona;
 import model.PersonaRolAct;
 import model.PersonaRolOrg;
+import model.PreguntaEncuesta;
 import model.Rating;
-
+import model.RespuestaEncuesta;
 
 
 /**
@@ -62,14 +64,17 @@ public class myApp extends Application {
         ParseObject.registerSubclass(ActFavUser.class);
         ParseObject.registerSubclass(Actividad.class);
         ParseObject.registerSubclass(Emision.class);
+        ParseObject.registerSubclass(Encuesta.class);
         ParseObject.registerSubclass(Info.class);
         ParseObject.registerSubclass(Lugar.class);
         ParseObject.registerSubclass(Media.class);
         ParseObject.registerSubclass(Org.class);
         ParseObject.registerSubclass(Persona.class);
         ParseObject.registerSubclass(PersonaRolAct.class);
+        ParseObject.registerSubclass(PreguntaEncuesta.class);
         ParseObject.registerSubclass(PersonaRolOrg.class);
         ParseObject.registerSubclass(Rating.class);
+        ParseObject.registerSubclass(RespuestaEncuesta.class);
         Parse.initialize(new Parse.Configuration.Builder(this)
                 .applicationId("ClUXXsCBfTmS6E9zxXKck1oX4hYSC2pyHarv4U8E")
                 .clientKey("IZ08jbbJwcLnDlEh79edrsxNIcU0iM9FG6Uwpj92")

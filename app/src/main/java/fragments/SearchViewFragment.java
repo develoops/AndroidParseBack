@@ -82,7 +82,7 @@ public class SearchViewFragment extends Fragment implements SearchView.OnQueryTe
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 ParseObject object = (ParseObject)(listview.getItemAtPosition(position));
-                Actividad event = ParseObject.createWithoutData(Actividad.class, object.getObjectId());
+                final Actividad event = ParseObject.createWithoutData(Actividad.class, object.getObjectId());
                /* final List <Actividad> eventosAnidados = new ArrayList<>();
                 ParseQuery<ActContAct> queryContenido = ParseQuery.getQuery(ActContAct.class);
                 queryContenido.include("contenido.lugar");
@@ -99,6 +99,7 @@ public class SearchViewFragment extends Fragment implements SearchView.OnQueryTe
                     }
                 });
 
+             ;*/
                 ParseQuery<PersonaRolAct> personaRolActParseQuery = ParseQuery.getQuery(PersonaRolAct.class);
                 personaRolActParseQuery.include("persona.pais");
                 personaRolActParseQuery.include("actividad.lugar");
@@ -111,15 +112,16 @@ public class SearchViewFragment extends Fragment implements SearchView.OnQueryTe
                         if(objects!=null){
 
                             roles=objects;
+                            Fragment fragment = EventDetailFragment.newInstance(event, mApp,roles);
+                            final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                            ft.replace(R.id.container, fragment);
+                            ft.addToBackStack(null);
+                            ft.commit();
                         }
 
                     }
-                });*/
-                Fragment fragment = EventDetailFragment.newInstance(event, mApp);
-                final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.container, fragment);
-                ft.addToBackStack(null);
-                ft.commit();
+                });
+
                 /*
                 MeetingApp meetingApp = ParseObject.createWithoutData(MeetingApp.class, object.getObjectId());
                 Fragment fragment = SplashEventFragment.newInstance(meetingApp);
