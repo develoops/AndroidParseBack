@@ -46,6 +46,7 @@ public class EncuestaFragment extends Fragment {
         final View RootView = inflater.inflate(R.layout.encuesta_layout, container, false);
         Toolbar toolbar = (Toolbar) RootView.findViewById(R.id.encuestatoolbar);
         TextView textView = (TextView) RootView.findViewById(R.id.textHeader);
+        header = (RelativeLayout)RootView.findViewById(R.id.header);
         if (Locale.getDefault().getLanguage().equals("en")) {
             toolbar.setTitle("Encuesta");
         } else {
@@ -71,7 +72,7 @@ public class EncuestaFragment extends Fragment {
             }
         });
 
-        header = (RelativeLayout)RootView.findViewById(R.id.header);
+
 
         return RootView;
     }
