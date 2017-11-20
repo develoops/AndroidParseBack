@@ -142,7 +142,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="dd9eb42a2010cc0301849d2a12d0e10b7ac9eb0d">
+        sha1="7b73c99f08bfc60ca9e1fbf0a21f18c8a8065bc2">
         <dex dex="/Users/Alvaro/Downloads/AndroidParseBack copy/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_0f2d0e87c72204aa82a9bd05bf3245f5b9cdf0e0/classes.dex" />
     </item>
     <item

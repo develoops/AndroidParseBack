@@ -49,17 +49,6 @@ public class DirectiveDetailFragment extends Fragment {
 
     }
 
-    @Override
-    public void onAttach(Activity activity) {
-
-        super.onAttach(activity);
-        //this._id = getArguments().getInt(INDEX);
-
-        ((ActionBarActivity)getActivity()).getSupportActionBar().setHomeAsUpIndicator(R.drawable.left);
-        setHasOptionsMenu(true);
-
-
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

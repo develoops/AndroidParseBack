@@ -117,31 +117,6 @@ public class EventDetailFragment extends Fragment {
         // Retain this fragment across configuration changes.
         setRetainInstance(true);
 
-
-
-
-
-       /* ParseQuery<ActContAct> queryContenido = ParseQuery.getQuery(ActContAct.class);
-        queryContenido.include("contenido.lugar");
-        queryContenido.include ("contenedor");
-        queryContenido.fromPin("ActconAct2");
-        queryContenido.fromLocalDatastore();
-        queryContenido.whereEqualTo("contenedor", selectedEvent);
-        queryContenido.findInBackground(new FindCallback<ActContAct>() {
-            @Override
-            public void done(List<ActContAct> objects, ParseException e) {
-                //List<Actividad> eventosAnidados = new ArrayList<>();
-                for(ActContAct actContAct:objects){
-                    Log.i("NOSFUIMOSALAB", "PASASTE");
-                    eventosAnidados.add(actContAct.getContenido());
-                }
-
-
-
-
-            }
-        });*/
-
     }
 
     @Override
@@ -221,22 +196,6 @@ public class EventDetailFragment extends Fragment {
 
         }
 
-        /*
-        List <TabUI> tabUIs= selectedEvent.getToolbar().getUITabs();
-        for(TabUI tabUI:tabUIs){
-            if(tabUI.getViewPointer().getnameView().equals("funRoomEvent")){
-                map.setVisibility(View.VISIBLE);
-            }
-            else if(tabUI.getViewPointer().getnameView().equals("funRating")){
-                rate.setVisibility(View.VISIBLE);
-            }
-            else if(tabUI.getViewPointer().getnameView().equals("funFavorite")){
-                favourite.setVisibility(View.VISIBLE);
-            }
-            else if(tabUI.getViewPointer().getnameView().equals("navLibrary")){
-            }
-        }*/
-
 
         rate.setTextColor(Color.WHITE);
         ask.setTextColor(Color.WHITE);
@@ -278,7 +237,19 @@ public class EventDetailFragment extends Fragment {
             //checkin.getLayoutParams().width = (width/5);
             makeFavourite.getLayoutParams().width = (width/3);
         }
+        else if(selectedEvent.getType().equals("social")){
+            ask.setVisibility(View.GONE);
+
+            rate.setVisibility(View.GONE);
+            ///ask.setVisibility(View.GONE);
+            map.getLayoutParams().width = (width/2);
+            //checkin.getLayoutParams().width = (width/5);
+            makeFavourite.getLayoutParams().width = (width/2);
+        }
         else {
+
+            rate.setVisibility(View.VISIBLE);
+            ask.setVisibility(View.VISIBLE);
 
             rate.getLayoutParams().width = (width/4);
             ask.getLayoutParams().width = (width/4);
@@ -302,52 +273,6 @@ public class EventDetailFragment extends Fragment {
             rate.setVisibility(View.INVISIBLE);
         }
 
-//        if(selectedEvent.getEventFiles()!=null){
-//
-//            if(selectedEvent.getType().equals("Trabajos Libres")){
-//                fileslistview.setVisibility(View.VISIBLE);
-//                docsadapter = new GridDocumentsAdapter(getActivity(),R.layout.cell_document,selectedEvent.getEventFiles());
-//                fileslistview.setAdapter(docsadapter);
-//
-//                fileslistview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//                    @Override
-//                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//
-//
-//
-//                        ParseObject object = (ParseObject)(fileslistview.getItemAtPosition(position));
-//                        MobiFile mobiFile= ParseObject.createWithoutData(MobiFile.class, object.getObjectId());
-//                        Fragment fragment = DocumentDetailFragment.newInstance(mobiFile);
-//                        final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-//                        ft.replace(R.id.container,fragment);
-//                        ft.addToBackStack(null);
-//                        ft.commit();
-//
-//                    }
-//                });
-//
-//
-//            }
-//            else {
-//                checkin.setVisibility(View.VISIBLE);
-//                checkin.setText("Docs");
-//                checkin.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        Fragment fragment = DocumentListFragment.newInstance(selectedEvent.getEventFiles());
-//                        final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-//                        ft.replace(R.id.container, fragment);
-//                        ft.addToBackStack(null);
-//                        ft.commit();
-//                    }
-//                });
-//
-//            }
-//
-//        }
-
-        //checkin.setVisibility(View.VISIBLE);
-        //checkin.setText("Preguntas");
         map.setVisibility(View.VISIBLE);
         map.setText("Mapa");
         if(eventosAnidados!=null || eventosAnidados.size()>0 ){
@@ -391,8 +316,6 @@ public class EventDetailFragment extends Fragment {
                 @Override
                 public void done(List<PreguntaEncuesta> objects, ParseException e) {
                     preguntaEncuestas=objects;
-
-
                 }
             });
 
@@ -402,7 +325,6 @@ public class EventDetailFragment extends Fragment {
 
                     ParseObject object = (ParseObject) (events_listview.getItemAtPosition(position));
                     Actividad event = ParseObject.createWithoutData(Actividad.class, object.getObjectId());
-                    //final List <Actividad> eventosAnidados2 = new ArrayList<>();
                     roles2.clear();
                     ParseQuery<PersonaRolAct> personaRolActParseQuery = ParseQuery.getQuery(PersonaRolAct.class);
                     personaRolActParseQuery.include("persona.pais");
@@ -494,11 +416,12 @@ public class EventDetailFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 ParseObject object = (ParseObject) (speakers_listview.getItemAtPosition(position));
+                eventosSpeaker.clear();
                 final PersonaRolAct actor = ParseObject.createWithoutData(PersonaRolAct.class, object.getObjectId());
                 //Persona person = ParseObject.createWithoutData(Persona.class, object.getObjectId());
                 ParseQuery<PersonaRolAct> personaRolActParseQuery = ParseQuery.getQuery(PersonaRolAct.class);
                 personaRolActParseQuery.include("persona.pais");
-                personaRolActParseQuery.include("actividad.lugar");
+                //personaRolActParseQuery.include("act.lugar");
                 personaRolActParseQuery.fromLocalDatastore();
                 personaRolActParseQuery.fromPin("personasRol");
                 personaRolActParseQuery.whereEqualTo("persona",actor.getPerson());

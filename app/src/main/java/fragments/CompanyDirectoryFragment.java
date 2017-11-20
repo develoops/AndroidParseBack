@@ -227,11 +227,11 @@ public class CompanyDirectoryFragment extends Fragment{
                 //map.setText("Map");
 
             }
-            makeFavourite.setVisibility(View.INVISIBLE);
-            call.setVisibility(View.INVISIBLE);
-            call.getLayoutParams().width = (width / 4);
-            web.getLayoutParams().width = (width / 4);
-            mail.getLayoutParams().width = (width / 4);
+            makeFavourite.setVisibility(View.GONE);
+            call.setVisibility(View.GONE);
+           // call.getLayoutParams().width = (width / 4);
+            web.getLayoutParams().width = (width / 2);
+            mail.getLayoutParams().width = (width / 2);
            // map.getLayoutParams().width = (width / 4);
 
 

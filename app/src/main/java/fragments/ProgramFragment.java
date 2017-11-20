@@ -132,16 +132,15 @@ public class ProgramFragment extends Fragment {
 
                         ParseQuery<PersonaRolAct> personaRolActParseQuery = ParseQuery.getQuery(PersonaRolAct.class);
                         personaRolActParseQuery.include("persona.pais");
-                        personaRolActParseQuery.include("actividad.lugar");
-                        personaRolActParseQuery.fromPin("personasRol");
+                        //personaRolActParseQuery.include("actividad.lugar");
                         personaRolActParseQuery.fromLocalDatastore();
+                        personaRolActParseQuery.fromPin("personasRol");
                         personaRolActParseQuery.whereEqualTo("act",evento);
                         personaRolActParseQuery.findInBackground(new FindCallback<PersonaRolAct>() {
                             @Override
                             public void done(List<PersonaRolAct> objects, ParseException e) {
                                 if(objects!=null){
-                                    roles=objects;
-                                    Fragment fragment = EventDetailFragment.newInstance(evento, meetingApp,roles);
+                                    Fragment fragment = EventDetailFragment.newInstance(evento, meetingApp,objects);
                                     final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
                                     ft.replace(R.id.container, fragment);
                                     ft.addToBackStack(null);
@@ -150,6 +149,9 @@ public class ProgramFragment extends Fragment {
 
                             }
                         });
+
+
+
 
                         //Log.i("NOPASOOOOOOOASDFSADF", String.valueOf(eventosAnidados.size()));
 
