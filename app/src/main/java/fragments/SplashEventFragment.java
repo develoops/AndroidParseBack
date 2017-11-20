@@ -29,6 +29,7 @@ import model.Org;
 import model.Persona;
 import model.PersonaRolAct;
 import model.PersonaRolOrg;
+import model.PreguntaEncuesta;
 
 /**
  * Created by Alvaro on 2/25/15.
@@ -45,6 +46,7 @@ public class SplashEventFragment extends Fragment {
     public static List<Org> organizaciones = new ArrayList<>();
     public static List<Persona> persons = new ArrayList<>();
     public static List<PersonaRolOrg> comite = new ArrayList<>();
+    public static List<PreguntaEncuesta> preguntaEncuestas = new ArrayList<>();
     //public static List <String> ids = new ArrayList<>();
 
 
@@ -172,6 +174,18 @@ public class SplashEventFragment extends Fragment {
                     }
                 });
 
+                ParseQuery<PreguntaEncuesta> preguntaEncuestaParseQuery = ParseQuery.getQuery(PreguntaEncuesta.class);
+                preguntaEncuestaParseQuery.fromLocalDatastore();
+                preguntaEncuestaParseQuery.whereEqualTo("tipo","general");
+                preguntaEncuestaParseQuery.addAscendingOrder("posicion");
+                preguntaEncuestaParseQuery.findInBackground(new FindCallback<PreguntaEncuesta>() {
+                    @Override
+                    public void done(List<PreguntaEncuesta> objects, ParseException e) {
+                        preguntaEncuestas=objects;
+
+                    }
+                });
+
                 ParseQuery<ActContAct> queryContenido = ParseQuery.getQuery(ActContAct.class);
                 queryContenido.include("contenido.lugar");
                 queryContenido.include ("contenedor");
@@ -197,7 +211,7 @@ public class SplashEventFragment extends Fragment {
                         handler.postDelayed(new Runnable() {
                             @Override
                             public void run() {
-                                Fragment fragment = MeetingAppViewPagerFragment.newInstance(meetingApp,actividades, persons, organizaciones,comite);
+                                Fragment fragment = MeetingAppViewPagerFragment.newInstance(meetingApp,actividades, persons, organizaciones,comite,preguntaEncuestas);
                                 final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
                                 ft.replace(R.id.container, fragment);
                                 ft.addToBackStack(null);

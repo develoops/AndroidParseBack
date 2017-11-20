@@ -32,6 +32,7 @@ import model.Media;
 import model.Org;
 import model.Persona;
 import model.PersonaRolOrg;
+import model.PreguntaEncuesta;
 import utils.MUtil;
 import views.CustomViewPager;
 
@@ -51,6 +52,7 @@ public class MeetingAppViewPagerFragment extends Fragment {
    public static List<PersonaRolOrg> comite = new ArrayList<>();
     public static List<Media> media = new ArrayList<>();
 
+    public static List<PreguntaEncuesta> pEncuestas = new ArrayList<>();
     myApp app;
     public static List<Persona> speakers = new ArrayList<>();
     public static List<Info> news ;
@@ -58,7 +60,7 @@ public class MeetingAppViewPagerFragment extends Fragment {
     public static Long time;
     public List<String> Titles = new ArrayList<>();
 
-    public static MeetingAppViewPagerFragment newInstance(Actividad app, List<Actividad> actividades, List <Persona> spk, List<Org> orgs, List<PersonaRolOrg> academic) {
+    public static MeetingAppViewPagerFragment newInstance(Actividad app, List<Actividad> actividades, List <Persona> spk, List<Org> orgs, List<PersonaRolOrg> academic,  List<PreguntaEncuesta> preguntasEncuestas) {
         // Instantiate a new fragment
         MeetingAppViewPagerFragment fragment = new MeetingAppViewPagerFragment();
         meetingApp = app;
@@ -66,6 +68,7 @@ public class MeetingAppViewPagerFragment extends Fragment {
         organizaciones = orgs;
         speakers = spk;
         comite=academic;
+        pEncuestas = preguntasEncuestas;
         //fragment.setRetainInstance(true);
         return fragment;
 
@@ -81,6 +84,7 @@ public class MeetingAppViewPagerFragment extends Fragment {
         Titles.add("Favoritos");
         Titles.add("Patrocinadores");
         Titles.add("Comité Académico");
+        Titles.add("Encuesta General");
       /*  Titles.add("Materiales");
         Titles.add("Comité Académico");*/
         setRetainInstance(true);
@@ -251,7 +255,7 @@ public class MeetingAppViewPagerFragment extends Fragment {
             pager.setOffscreenPageLimit(4);
             Log.i("ACTIVIDADESSSSS222222", String.valueOf(events));
             pager.setMaxChildProgramId(MUtil.divideEventByGroupSize(events) - 1);
-            pageAdapter = new EventsFragmentAdapter(getChildFragmentManager(), Titles, Numboftabs, meetingApp, events, speakers, organizaciones, comite, media,pager, app);
+            pageAdapter = new EventsFragmentAdapter(getChildFragmentManager(), Titles, Numboftabs, meetingApp, events, speakers, organizaciones, comite, media,pEncuestas,pager, app);
             pager.setAdapter(pageAdapter);
             mSlidingTabLayout.setViewPager(pager);
 
@@ -280,7 +284,7 @@ public class MeetingAppViewPagerFragment extends Fragment {
 
             pager.setOffscreenPageLimit(4);
             pager.setMaxChildProgramId(MUtil.divideEventByGroupSize(events) - 1);
-            pageAdapter = new EventsFragmentAdapter(getChildFragmentManager(), Titles, Numboftabs, meetingApp, events, speakers,organizaciones,comite,media,pager, app);
+            pageAdapter = new EventsFragmentAdapter(getChildFragmentManager(), Titles, Numboftabs, meetingApp, events, speakers,organizaciones,comite,media,pEncuestas,pager, app);
             pager.setAdapter(pageAdapter);
             mSlidingTabLayout.setViewPager(pager);
         }

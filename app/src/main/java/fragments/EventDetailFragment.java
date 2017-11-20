@@ -63,6 +63,7 @@ import model.Persona;
 import model.PersonaRolAct;
 import model.PreguntaEncuesta;
 import model.Rating;
+import utils.TouchImageView;
 
 /**
  * Created by Alvaro on 3/1/15.
@@ -115,17 +116,6 @@ public class EventDetailFragment extends Fragment {
         super.onCreate(savedInstanceState);
         // Retain this fragment across configuration changes.
         setRetainInstance(true);
-        ParseQuery<PreguntaEncuesta> preguntaEncuestaParseQuery = ParseQuery.getQuery(PreguntaEncuesta.class);
-        preguntaEncuestaParseQuery.addAscendingOrder("posicion");
-        preguntaEncuestaParseQuery.findInBackground(new FindCallback<PreguntaEncuesta>() {
-            @Override
-            public void done(List<PreguntaEncuesta> objects, ParseException e) {
-                preguntaEncuestas=objects;
-                Log.i("PREGUNTA", objects.get(0).getPreguntaTexto() );
-                Log.i("HOLA","HELO");
-
-            }
-        });
 
 
 
@@ -393,6 +383,19 @@ public class EventDetailFragment extends Fragment {
             adapter2 = new HetpinProgramListViewAdapter(getActivity(),anidateEvents,mApp,true,false);
 
             events_listview.setAdapter(adapter2);
+            ParseQuery<PreguntaEncuesta> preguntaEncuestaParseQuery = ParseQuery.getQuery(PreguntaEncuesta.class);
+            preguntaEncuestaParseQuery.fromLocalDatastore();
+            preguntaEncuestaParseQuery.whereNotEqualTo("tipo","general");
+            preguntaEncuestaParseQuery.addAscendingOrder("posicion");
+            preguntaEncuestaParseQuery.findInBackground(new FindCallback<PreguntaEncuesta>() {
+                @Override
+                public void done(List<PreguntaEncuesta> objects, ParseException e) {
+                    preguntaEncuestas=objects;
+
+
+                }
+            });
+
             events_listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -647,40 +650,36 @@ public class EventDetailFragment extends Fragment {
 
                 dialogo.setContentView(R.layout.map_box_layout);
 
-//                if(selectedEvent.getPlace()!=null){
-//                    if(selectedEvent.getPlace().getMaps()!=null){
-//                        MobiFile map = selectedEvent.getPlace().getMaps().get(0);
-//                        try {
-//                            map.fetchIfNeeded();
-//                        } catch (ParseException e) {
-//                            e.printStackTrace();
-//                        }
-//                        final Button done = (Button) dialogo.findViewById(R.id.btn_done_image_dialog);
-//                        TouchImageView mapadialog = (TouchImageView) dialogo.findViewById(R.id.image_dialog);
-//                        mapadialog.setMaxZoom(3f);
-//                        mapadialog.setMinZoom(1f);
-//                        if (map!= null) {
-//                            ImageLoader imageLoader = ImageLoader.getInstance();
-//                            //Load the image from the url into the ImageView.
-//                            imageLoader.displayImage(map.getParseFileV1().getUrl(), mapadialog);
-//                        }
-//
-//
-//                        dialogo.getWindow().getAttributes().width = RelativeLayout.LayoutParams.MATCH_PARENT;
-//                        done.setOnClickListener(new View.OnClickListener() {
-//                            @Override
-//                            public void onClick(View view) {
-//                                dialogo.dismiss();
-//
-//                            }
-//                        });
-//
-//                        dialogo.show();
-//                    }
-//                }
-//                else {
-//
-//                }
+                if(selectedEvent.getPlace()!=null){
+                    if(selectedEvent.getPlace().getImgPerfil()!=null){
+                        ParseFile map = selectedEvent.getPlace().getImgPerfil();
+
+                        final Button done = (Button) dialogo.findViewById(R.id.btn_done_image_dialog);
+                        TouchImageView mapadialog = (TouchImageView) dialogo.findViewById(R.id.image_dialog);
+                        mapadialog.setMaxZoom(3f);
+                        mapadialog.setMinZoom(1f);
+                        if (map!= null) {
+                            ImageLoader imageLoader = ImageLoader.getInstance();
+                            //Load the image from the url into the ImageView.
+                            imageLoader.displayImage(map.getUrl(), mapadialog);
+                        }
+
+
+                        dialogo.getWindow().getAttributes().width = RelativeLayout.LayoutParams.MATCH_PARENT;
+                        done.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                dialogo.dismiss();
+
+                            }
+                        });
+
+                        dialogo.show();
+                    }
+                }
+                else {
+
+                }
 
 
 

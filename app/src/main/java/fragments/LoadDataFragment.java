@@ -30,6 +30,7 @@ import model.Actividad;
 import model.Org;
 import model.PersonaRolAct;
 import model.PersonaRolOrg;
+import model.PreguntaEncuesta;
 import utils.MUtil;
 
 /**
@@ -188,6 +189,7 @@ public class LoadDataFragment extends Fragment {
 			}
 		});
 
+
 		ParseQuery<PersonaRolOrg> queryPersonaRolOrg2 = ParseQuery.getQuery(PersonaRolOrg.class);
 		queryPersonaRolOrg2.include("persona.pais");
 		queryPersonaRolOrg2.include("org");
@@ -223,6 +225,16 @@ public class LoadDataFragment extends Fragment {
 				else {
 					Log.i("SOCIEDAD","NULO");
 				}
+			}
+		});
+
+		ParseQuery<PreguntaEncuesta> preguntaEncuestaParseQuery = ParseQuery.getQuery(PreguntaEncuesta.class);
+
+		preguntaEncuestaParseQuery.findInBackground(new FindCallback<PreguntaEncuesta>() {
+			@Override
+			public void done(List<PreguntaEncuesta> objects, ParseException e) {
+
+					ParseObject.pinAllInBackground(objects);
 			}
 		});
 

@@ -20,6 +20,7 @@ import fragments.ChildPagerMeetingsFragment;
 
 import fragments.CurrentEventsFragment;
 import fragments.DirectiveFragment;
+import fragments.EncuestaGeneralFragment;
 import fragments.FavouritesFragment;
 import fragments.MoreFragment;
 import fragments.SpeakersFragment;
@@ -31,6 +32,7 @@ import model.Media;
 import model.Org;
 import model.Persona;
 import model.PersonaRolOrg;
+import model.PreguntaEncuesta;
 import views.CustomViewPager;
 
 /**
@@ -46,6 +48,7 @@ public class EventsFragmentAdapter extends FragmentStatePagerAdapter
     public static List<Org> organizaciones = new ArrayList<>();
     public static List<Persona> speakers = new ArrayList<>();
     public static List<Media> media = new ArrayList<>();
+    public static List<PreguntaEncuesta> pEncuestas = new ArrayList<>();
 
     public static List<PersonaRolOrg> academic = new ArrayList<>();
 
@@ -56,7 +59,7 @@ public class EventsFragmentAdapter extends FragmentStatePagerAdapter
     List<String> tabUIs; // This will Store the Titles of the Tabs which are Going to be passed when ViewPagerAdapter is created
     int NumbOfTabs; // Store the number of tabs, this will also be passed when the ViewPagerAdapter is created
 
-    public EventsFragmentAdapter(FragmentManager fm, List<String> mTitles, int mNumbOfTabsumb, Actividad meetingApp, List<Actividad> actividades, List<Persona> personas, List <Org> orgs, List<PersonaRolOrg> comite, List<Media> doc,CustomViewPager pager, myApp app) {
+    public EventsFragmentAdapter(FragmentManager fm, List<String> mTitles, int mNumbOfTabsumb, Actividad meetingApp, List<Actividad> actividades, List<Persona> personas, List <Org> orgs, List<PersonaRolOrg> comite, List<Media> doc, List<PreguntaEncuesta> preguntaEncuestas, CustomViewPager pager, myApp app) {
         super(fm);
         events = actividades;
         organizaciones= orgs;
@@ -64,6 +67,7 @@ public class EventsFragmentAdapter extends FragmentStatePagerAdapter
         speakers = personas;
         academic=comite;
         media=doc;
+        pEncuestas = preguntaEncuestas;
         Log.i("EVENTOOOOOOOOOsANTES", String.valueOf(events));
         //this.events = LoadDataFragment.eventos;
         this.tabUIs= mTitles;
@@ -173,6 +177,9 @@ public class EventsFragmentAdapter extends FragmentStatePagerAdapter
         }
         else if(tabUIs.get(position).equals("Comité Académico")){
             return  DirectiveFragment.newInstance(academic);
+        }
+        else if(tabUIs.get(position).equals("Encuesta General")){
+            return  EncuestaGeneralFragment.newInstance(mApp,pEncuestas);
         }
         else {
             return MoreFragment.newInstance(mApp,media);
