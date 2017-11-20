@@ -3,8 +3,10 @@ package fragments;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -25,6 +28,7 @@ import java.util.List;
 import java.util.Locale;
 
 import mc.sms.R;
+import mc.sms.myApp;
 import model.Actividad;
 import model.Emision;
 import model.PreguntaEncuesta;
@@ -39,9 +43,13 @@ public class EncuestaFragment extends Fragment {
 
     public static Actividad activity;
 
-    RelativeLayout seccion,seccion2,seccion3,seccion4,seccion5,seccion6,seccion7;
+    RelativeLayout seccion,seccion2,seccion3,seccion4,seccion5,seccion6,seccion7,header,header2,header3;
     RatingBar ratingBar,ratingBar2,ratingBar3,ratingBar4,ratingBar5,ratingBar6,ratingBar7;
+    TextView textView, textView2, textView3, textView4, textView5, textView6, textView7, textFinal,textHeader,textHeader2,textHeader3;
+    Button sendButton;
     public static List<PreguntaEncuesta> preguntaEncuestas = new ArrayList<>();
+    public myApp myapp;
+
 
     public static EncuestaFragment newInstance(Actividad actividad, List<PreguntaEncuesta> preguntasEncuestas) {
 
@@ -66,9 +74,17 @@ public class EncuestaFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View RootView = inflater.inflate(R.layout.encuesta_layout, container, false);
         Toolbar toolbar = (Toolbar) RootView.findViewById(R.id.encuestatoolbar);
-        Button send = (Button) RootView.findViewById(R.id.sendButton);
+        sendButton = (Button) RootView.findViewById(R.id.sendButton);
 
         //header = (RelativeLayout)RootView.findViewById(R.id.header);
+        this.myapp = (myApp) getActivity().getApplicationContext();
+        textFinal = (TextView) RootView.findViewById(R.id.textFinal);
+        textHeader = (TextView) RootView.findViewById(R.id.textHeader);
+        textHeader2 = (TextView) RootView.findViewById(R.id.textHeader2);
+        textHeader3 = (TextView) RootView.findViewById(R.id.textHeader3);
+
+
+
         seccion = (RelativeLayout) RootView.findViewById(R.id.seccion1);
         seccion2 = (RelativeLayout) RootView.findViewById(R.id.seccion2);
         seccion3 = (RelativeLayout) RootView.findViewById(R.id.seccion3);
@@ -76,14 +92,16 @@ public class EncuestaFragment extends Fragment {
         seccion5 = (RelativeLayout) RootView.findViewById(R.id.seccion5);
         seccion6 = (RelativeLayout) RootView.findViewById(R.id.seccion6);
         seccion7 = (RelativeLayout) RootView.findViewById(R.id.seccion7);
-
-        TextView textView = (TextView) seccion.findViewById(R.id.textHeader);
-        TextView textView2 = (TextView) seccion2.findViewById(R.id.textHeader);
-        TextView textView3 = (TextView) seccion3.findViewById(R.id.textHeader);
-        TextView textView4 = (TextView) seccion4.findViewById(R.id.textHeader);
-        TextView textView5 = (TextView) seccion5.findViewById(R.id.textHeader);
-        TextView textView6 = (TextView) seccion6.findViewById(R.id.textHeader);
-        TextView textView7 = (TextView) seccion7.findViewById(R.id.textHeader);
+        header = (RelativeLayout) RootView.findViewById(R.id.header);
+        header2 = (RelativeLayout) RootView.findViewById(R.id.header2);
+        header3 = (RelativeLayout) RootView.findViewById(R.id.header3);
+        textView = (TextView) seccion.findViewById(R.id.textHeader);
+        textView2 = (TextView) seccion2.findViewById(R.id.textHeader);
+        textView3 = (TextView) seccion3.findViewById(R.id.textHeader);
+        textView4 = (TextView) seccion4.findViewById(R.id.textHeader);
+        textView5 = (TextView) seccion5.findViewById(R.id.textHeader);
+        textView6 = (TextView) seccion6.findViewById(R.id.textHeader);
+        textView7 = (TextView) seccion7.findViewById(R.id.textHeader);
 
         ratingBar = (RatingBar) seccion.findViewById(R.id.ratingBar);
         ratingBar2 = (RatingBar) seccion2.findViewById(R.id.ratingBar);
@@ -92,8 +110,34 @@ public class EncuestaFragment extends Fragment {
         ratingBar5 = (RatingBar) seccion5.findViewById(R.id.ratingBar);
         ratingBar6 = (RatingBar) seccion6.findViewById(R.id.ratingBar);
         ratingBar7 = (RatingBar) seccion7.findViewById(R.id.ratingBar);
-
-
+/*
+        textView.setVisibility(View.VISIBLE);
+        textView2.setVisibility(View.VISIBLE);
+        textView3.setVisibility(View.VISIBLE);
+        textView4.setVisibility(View.VISIBLE);
+        textView5.setVisibility(View.VISIBLE);
+        textView6.setVisibility(View.VISIBLE);
+        textView7.setVisibility(View.VISIBLE);
+        ratingBar.setVisibility(View.VISIBLE);
+        textHeader.setVisibility(View.VISIBLE);
+        textHeader2.setVisibility(View.VISIBLE);
+        textHeader3.setVisibility(View.VISIBLE);
+        ratingBar2.setVisibility(View.VISIBLE);
+        ratingBar3.setVisibility(View.VISIBLE);
+        ratingBar4.setVisibility(View.VISIBLE);
+        ratingBar5.setVisibility(View.VISIBLE);
+        ratingBar6.setVisibility(View.VISIBLE);
+        ratingBar7.setVisibility(View.VISIBLE);
+        seccion.setVisibility(View.VISIBLE);
+        seccion2.setVisibility(View.VISIBLE);
+        seccion3.setVisibility(View.VISIBLE);
+        seccion4.setVisibility(View.VISIBLE);
+        seccion5.setVisibility(View.VISIBLE);
+        seccion6.setVisibility(View.VISIBLE);
+        seccion7.setVisibility(View.VISIBLE);
+        header.setVisibility(View.VISIBLE);
+        header2.setVisibility(View.VISIBLE);
+        header3.setVisibility(View.VISIBLE);*/
 
 
         textView.setText(preguntaEncuestas.get(0).getPreguntaTexto());
@@ -104,7 +148,7 @@ public class EncuestaFragment extends Fragment {
         textView6.setText(preguntaEncuestas.get(5).getPreguntaTexto());
         textView7.setText(preguntaEncuestas.get(6).getPreguntaTexto());
 
-        send.setOnClickListener(new View.OnClickListener() {
+        sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -164,11 +208,25 @@ public class EncuestaFragment extends Fragment {
                         respuestaEncuesta6.saveEventually();
                         respuestaEncuesta7.saveEventually();
 
+                        myapp.setEncuestaTrue(activity.getObjectId());
+
+
+
+
+                       /* Fragment fragment = MeetingAppViewPagerFragment.newInstance(SplashEventFragment.meetingApp, SplashEventFragment.actividades, SplashEventFragment.persons, SplashEventFragment.organizaciones, SplashEventFragment.comite);
+                        final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                        ft.replace(R.id.container, fragment);
+                        ft.addToBackStack(null);
+                        ft.commit();*/
+
 
 
                     }
 
                 }).start();
+
+                sacarVistasyMostrarTextoFinal();
+
 
 
             }
@@ -205,6 +263,69 @@ public class EncuestaFragment extends Fragment {
         return RootView;
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        /*
+        View v = mTabHost.getTabWidget().getChildAt(0);
+        v.setBackgroundResource(R.drawable.programa);
+*/
+        getView().setFocusableInTouchMode(true);
+        getView().requestFocus();
+        getView().setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+
+                Log.i("HOLA",String.valueOf(keyCode));
+                if (event.getAction() == KeyEvent.ACTION_UP && keyCode == KeyEvent.KEYCODE_BACK){
+                    // handle back button's click listener
+
+
+                    getActivity().onBackPressed();
+
+                    return true;
+
+
+
+                }
+                return false;
+            }
+        });
+
+    }
+
+    void sacarVistasyMostrarTextoFinal(){
+        textView.setVisibility(View.GONE);
+        textView2.setVisibility(View.GONE);
+        textView3.setVisibility(View.GONE);
+        textView4.setVisibility(View.GONE);
+        textView5.setVisibility(View.GONE);
+        textView6.setVisibility(View.GONE);
+        textView7.setVisibility(View.GONE);
+        ratingBar.setVisibility(View.GONE);
+        ratingBar2.setVisibility(View.GONE);
+        ratingBar3.setVisibility(View.GONE);
+        ratingBar4.setVisibility(View.GONE);
+        ratingBar5.setVisibility(View.GONE);
+        ratingBar6.setVisibility(View.GONE);
+        ratingBar7.setVisibility(View.GONE);
+        seccion.setVisibility(View.GONE);
+        seccion2.setVisibility(View.GONE);
+        seccion3.setVisibility(View.GONE);
+        seccion4.setVisibility(View.GONE);
+        seccion5.setVisibility(View.GONE);
+        seccion6.setVisibility(View.GONE);
+        seccion7.setVisibility(View.GONE);
+        header.setVisibility(View.GONE);
+        header2.setVisibility(View.GONE);
+        header3.setVisibility(View.GONE);
+        textHeader.setVisibility(View.GONE);
+        textHeader2.setVisibility(View.GONE);
+        textHeader3.setVisibility(View.GONE);
+        sendButton.setVisibility(View.GONE);
+        textFinal.setVisibility(View.VISIBLE);
+
+    }
 
 
 

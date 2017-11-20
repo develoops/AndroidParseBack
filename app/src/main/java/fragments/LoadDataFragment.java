@@ -188,7 +188,7 @@ public class LoadDataFragment extends Fragment {
 			}
 		});
 
-	/*	ParseQuery<PersonaRolOrg> queryPersonaRolOrg2 = ParseQuery.getQuery(PersonaRolOrg.class);
+		ParseQuery<PersonaRolOrg> queryPersonaRolOrg2 = ParseQuery.getQuery(PersonaRolOrg.class);
 		queryPersonaRolOrg2.include("persona.pais");
 		queryPersonaRolOrg2.include("org");
 		queryPersonaRolOrg2.whereEqualTo("tipo","congreso");
@@ -197,16 +197,14 @@ public class LoadDataFragment extends Fragment {
 			public void done(List<PersonaRolOrg> objects, ParseException e) {
 				if(objects!=null){
 
-					for(PersonaRolOrg personaRolOrg:objects){
-						personaRolOrg.getPerson().getImage().getDataInBackground();
-					}
+
 					academic = objects;
 				}
 
 				ParseObject.pinAllInBackground("comite",objects);
 
 			}
-		});*/
+		});
 
 		ParseQuery<Org> queryOrg = ParseQuery.getQuery(Org.class);
 		if (!myapp.checkConnection()) {

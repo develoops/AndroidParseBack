@@ -173,6 +173,7 @@ public class EventDetailFragment extends Fragment {
         header= (ParseImageView)RootView.findViewById(R.id.header);
         footer = (RelativeLayout)RootView.findViewById(R.id.footer);
 
+
         footer.setBackgroundColor(getResources().getColor(R.color.companySecundario));
 
 
@@ -277,11 +278,25 @@ public class EventDetailFragment extends Fragment {
         int width = displayMetrics.widthPixels;
         int height = displayMetrics.heightPixels;
 
-        rate.getLayoutParams().width = (width/4);
-        ask.getLayoutParams().width = (width/4);
-        map.getLayoutParams().width = (width/4);
-        //checkin.getLayoutParams().width = (width/5);
-        makeFavourite.getLayoutParams().width = (width/4);
+        if(myapp.getEncuestaTrue(selectedEvent.getObjectId())){
+            //rate.getLayoutParams().width = (width/3);
+            ask.getLayoutParams().width = (width/3);
+
+            rate.setVisibility(View.GONE);
+            ///ask.setVisibility(View.GONE);
+            map.getLayoutParams().width = (width/3);
+            //checkin.getLayoutParams().width = (width/5);
+            makeFavourite.getLayoutParams().width = (width/3);
+        }
+        else {
+
+            rate.getLayoutParams().width = (width/4);
+            ask.getLayoutParams().width = (width/4);
+            map.getLayoutParams().width = (width/4);
+            //checkin.getLayoutParams().width = (width/5);
+            makeFavourite.getLayoutParams().width = (width/4);
+        }
+
 
 
         TextView description = (TextView) RootView.findViewById(R.id.content);

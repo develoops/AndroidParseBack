@@ -80,6 +80,7 @@ public class MeetingAppViewPagerFragment extends Fragment {
         Titles.add("Ponentes");
         Titles.add("Favoritos");
         Titles.add("Patrocinadores");
+        Titles.add("Comité Académico");
       /*  Titles.add("Materiales");
         Titles.add("Comité Académico");*/
         setRetainInstance(true);
