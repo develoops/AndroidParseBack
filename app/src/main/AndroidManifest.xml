@@ -94,7 +94,7 @@
         <meta-data android:name="com.parse.push.gcm_sender_id"
             android:value="id:712456314512" />;
 
-        <meta-data android:name="com.parse.push.notification_icon" android:resource="@drawable/iconparse"/>
+        <meta-data android:name="com.parse.push.notification_icon" android:resource="@drawable/ic_launcher"/>
     </application>
 
 </manifest>
