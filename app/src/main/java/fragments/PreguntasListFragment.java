@@ -462,7 +462,15 @@ public class PreguntasListFragment extends Fragment {
             final CircularTextView numeroDeLikes = (CircularTextView)v.findViewById(R.id.circularTextView);
             final ImageView votoPregunta = (ImageView)v.findViewById(R.id.fav);
 
-            numeroDeLikes.setText(emision.getLikes().toString());
+            if(emision.getLikes()==null){
+                emision.setLikes(0);
+                numeroDeLikes.setText(emision.getLikes().toString());
+
+            }
+            else {
+                numeroDeLikes.setText(emision.getLikes().toString());
+
+            }
             numeroDeLikes.setStrokeWidth(1);
             numeroDeLikes.setStrokeColor("#ff0000");
             numeroDeLikes.setSolidColor("#ff0000");
