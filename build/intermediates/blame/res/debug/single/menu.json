@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/Alvaro/Downloads/AndroidParseBack copy/app/build/intermediates/res/merged/debug/menu/menu_main.xml",
+        "source": "/Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/res/menu/menu_main.xml"
+    },
+    {
+        "merged": "/Users/Alvaro/Downloads/AndroidParseBack copy/app/build/intermediates/res/merged/debug/menu/menuprogram.xml",
+        "source": "/Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/res/menu/menuprogram.xml"
+    },
+    {
+        "merged": "/Users/Alvaro/Downloads/AndroidParseBack copy/app/build/intermediates/res/merged/debug/menu/menu_toolbar.xml",
+        "source": "/Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/res/menu/menu_toolbar.xml"
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/Alvaro/Downloads/AndroidParseBack copy/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/com_parse_ui_facebook_login_logo.png",
+        "source": "/Users/Alvaro/.android/build-cache/0076cea8b0c6d6c6e43947b06212696f1e2193ea/output/res/drawable-xxhdpi-v4/com_parse_ui_facebook_login_logo.png"
+    },
+    {
+        "merged": "/Users/Alvaro/Downloads/AndroidParseBack copy/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/com_parse_ui_twitter_login_logo.png",
+        "source": "/Users/Alvaro/.android/build-cache/0076cea8b0c6d6c6e43947b06212696f1e2193ea/output/res/drawable-xxhdpi-v4/com_parse_ui_twitter_login_logo.png"
+    },
+    {
+        "merged": "/Users/Alvaro/Downloads/AndroidParseBack copy/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/com_parse_ui_app_logo.png",
+        "source": "/Users/Alvaro/.android/build-cache/0076cea8b0c6d6c6e43947b06212696f1e2193ea/output/res/drawable-xxhdpi-v4/com_parse_ui_app_logo.png"
+    }
+]

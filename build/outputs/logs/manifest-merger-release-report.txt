@@ -1,0 +1,379 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:2:1-100:12
+	package
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:3:5-21
+		INJECTED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:4:5-67
+MERGED from [com.google.firebase:firebase-analytics:10.0.1] /Users/Alvaro/.android/build-cache/99eb6f45eb1ec42c7ff4cfa282a6c522e1daf9f6/output/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics-impl:10.0.1] /Users/Alvaro/.android/build-cache/fd4d105c8d23232310683243ddb545f3832af730/output/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-iid:10.0.1] /Users/Alvaro/.android/build-cache/694d583b242792b9200d8e63e7688274594f95fa/output/AndroidManifest.xml:20:5-66
+MERGED from [com.parse:parse-android:1.16.3] /Users/Alvaro/.android/build-cache/e1dc1fb1131c67a9be09be1af2da634559751a5b/output/AndroidManifest.xml:19:5-67
+	android:name
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:4:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:5:5-79
+MERGED from [com.google.firebase:firebase-analytics:10.0.1] /Users/Alvaro/.android/build-cache/99eb6f45eb1ec42c7ff4cfa282a6c522e1daf9f6/output/AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics-impl:10.0.1] /Users/Alvaro/.android/build-cache/fd4d105c8d23232310683243ddb545f3832af730/output/AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-iid:10.0.1] /Users/Alvaro/.android/build-cache/694d583b242792b9200d8e63e7688274594f95fa/output/AndroidManifest.xml:19:5-78
+MERGED from [com.parse:parse-android:1.16.3] /Users/Alvaro/.android/build-cache/e1dc1fb1131c67a9be09be1af2da634559751a5b/output/AndroidManifest.xml:20:5-79
+	android:name
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:5:22-76
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:6:5-68
+MERGED from [com.google.firebase:firebase-analytics:10.0.1] /Users/Alvaro/.android/build-cache/99eb6f45eb1ec42c7ff4cfa282a6c522e1daf9f6/output/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:10.0.1] /Users/Alvaro/.android/build-cache/fd4d105c8d23232310683243ddb545f3832af730/output/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-iid:10.0.1] /Users/Alvaro/.android/build-cache/694d583b242792b9200d8e63e7688274594f95fa/output/AndroidManifest.xml:21:5-67
+	android:name
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:6:22-65
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:7:5-81
+	android:name
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:7:22-78
+uses-permission#android.permission.VIBRATE
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:8:5-66
+	android:name
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:8:22-63
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:9:5-71
+	android:name
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:9:22-68
+uses-permission#android.permission.CALL_PHONE
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:10:5-69
+	android:name
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:10:22-66
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:11:5-82
+MERGED from [com.google.firebase:firebase-iid:10.0.1] /Users/Alvaro/.android/build-cache/694d583b242792b9200d8e63e7688274594f95fa/output/AndroidManifest.xml:22:5-81
+	android:name
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:11:22-79
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:12:5-74
+	android:name
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:12:22-72
+permission#mc.sms.permission.C2D_MESSAGE
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:14:5-15:47
+MERGED from [com.google.firebase:firebase-iid:10.0.1] /Users/Alvaro/.android/build-cache/694d583b242792b9200d8e63e7688274594f95fa/output/AndroidManifest.xml:24:5-109
+	android:protectionLevel
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:15:9-44
+	android:name
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:14:17-61
+uses-permission#mc.sms.permission.C2D_MESSAGE
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:17:5-69
+MERGED from [com.google.firebase:firebase-iid:10.0.1] /Users/Alvaro/.android/build-cache/694d583b242792b9200d8e63e7688274594f95fa/output/AndroidManifest.xml:26:5-78
+	android:name
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:17:22-66
+uses-feature#android.hardware.telephony
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:18:5-89
+	android:required
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:18:62-86
+	android:name
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:18:19-60
+supports-screens
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:19:5-24:40
+	android:largeScreens
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:21:9-36
+	android:smallScreens
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:23:9-36
+	android:normalScreens
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:22:9-37
+	android:xlargeScreens
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:24:9-37
+	android:anyDensity
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:20:9-34
+application
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:26:5-98:19
+MERGED from [com.parse:parseui-login-android:0.0.2] /Users/Alvaro/.android/build-cache/0076cea8b0c6d6c6e43947b06212696f1e2193ea/output/AndroidManifest.xml:32:5-20
+MERGED from [com.parse:parseui-widget-android:0.0.2] /Users/Alvaro/.android/build-cache/a004065b37b512fb2467755c592c8c528f022b33/output/AndroidManifest.xml:31:5-20
+MERGED from [com.google.firebase:firebase-core:10.0.1] /Users/Alvaro/.android/build-cache/e54461bb20248f78e6c0f95ac31b428499e7c7b5/output/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-analytics:10.0.1] /Users/Alvaro/.android/build-cache/99eb6f45eb1ec42c7ff4cfa282a6c522e1daf9f6/output/AndroidManifest.xml:24:5-33:19
+MERGED from [com.google.firebase:firebase-analytics-impl:10.0.1] /Users/Alvaro/.android/build-cache/fd4d105c8d23232310683243ddb545f3832af730/output/AndroidManifest.xml:24:5-28:19
+MERGED from [com.google.firebase:firebase-messaging:10.0.1] /Users/Alvaro/.android/build-cache/e7c4dc661f1339f8930d611a6387e22ff8cb8e29/output/AndroidManifest.xml:19:5-29:19
+MERGED from [com.google.firebase:firebase-iid:10.0.1] /Users/Alvaro/.android/build-cache/694d583b242792b9200d8e63e7688274594f95fa/output/AndroidManifest.xml:28:5-50:19
+MERGED from [com.google.firebase:firebase-common:10.0.1] /Users/Alvaro/.android/build-cache/385bb029f74eeb55016a3640c6c2066344e84b2a/output/AndroidManifest.xml:4:5-7:19
+MERGED from [com.google.android.gms:play-services-tasks:10.0.1] /Users/Alvaro/.android/build-cache/81b72648157793fbe7185bcc97ae1ed9c91e2e46/output/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:10.0.1] /Users/Alvaro/.android/build-cache/0e58086e65d4c8bdea70961d2d95df3afc5a1eef/output/AndroidManifest.xml:19:5-21:19
+MERGED from [com.android.support:design:22.2.1] /Users/Alvaro/.android/build-cache/7b4cf8d2b3db5a2505b43bdcfef25f8ffd2f00ff/output/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:22.2.1] /Users/Alvaro/.android/build-cache/9245d12d0700378e1180a7ed1ac6e0254f954e0a/output/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:25.2.0] /Users/Alvaro/.android/build-cache/448d71120e130f19dd59b240eb4d8102e34bb018/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:25.2.0] /Users/Alvaro/.android/build-cache/75b88da94cdd41e980869a2b29d08c0b2e1c2b2d/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.2.0] /Users/Alvaro/.android/build-cache/3cb71e3bdf06800580c4330e74e5673e99665344/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.2.0] /Users/Alvaro/.android/build-cache/b67737107de381b0829d0da363483a1d12244f12/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.2.0] /Users/Alvaro/.android/build-cache/7cf95ba23589c209e5717a4ed37512c9ef22a8fc/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.2.0] /Users/Alvaro/.android/build-cache/d95b2524f964e98f6a13cc9ba5c15b1bdcbfd4ed/output/AndroidManifest.xml:25:5-20
+MERGED from [com.parse:parse-livequery-android:1.0.4] /Users/Alvaro/.android/build-cache/67284ad641150ebbf7ddaf5670cd1ac83f0b0836/output/AndroidManifest.xml:20:5-20
+MERGED from [com.parse:parse-android:1.16.3] /Users/Alvaro/.android/build-cache/e1dc1fb1131c67a9be09be1af2da634559751a5b/output/AndroidManifest.xml:22:5-27:19
+	android:label
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:31:9-41
+	android:hardwareAccelerated
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:27:9-43
+	android:allowBackup
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:28:9-35
+	android:icon
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:30:9-45
+	android:largeHeap
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:29:9-33
+	android:theme
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:32:9-40
+	android:name
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:33:9-36
+activity#mc.sms.MainActivity
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:35:9-54:20
+	android:screenOrientation
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:40:13-49
+	android:configChanges
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:39:13-63
+	android:alwaysRetainTaskState
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:38:13-49
+	android:name
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:36:13-47
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:41:13-45:29
+action#android.intent.action.MAIN
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:42:17-69
+	android:name
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:42:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:44:17-77
+	android:name
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:44:27-74
+intent-filter#android.intent.action.SENDTO+android.intent.category.DEFAULT
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:46:13-50:29
+action#android.intent.action.SENDTO
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:47:17-71
+	android:name
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:47:25-68
+data
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:48:17-49
+	android:scheme
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:48:23-46
+category#android.intent.category.DEFAULT
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:49:17-76
+	android:name
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:49:27-73
+service#com.parse.PushService
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:61:9-57
+	android:name
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:61:18-54
+receiver#com.parse.ParsePushBroadcastReceiver
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:62:9-67:20
+	android:name
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:62:19-70
+intent-filter#android.intent.action.BOOT_COMPLETED+android.intent.action.USER_PRESENT
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:63:13-66:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:64:17-79
+	android:name
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:64:25-76
+action#android.intent.action.USER_PRESENT
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:65:17-77
+	android:name
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:65:25-74
+receiver#com.parse.GcmBroadcastReceiver
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:68:9-79:20
+	android:permission
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:69:13-73
+	android:name
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:68:19-64
+intent-filter#com.google.android.c2dm.intent.RECEIVE+com.google.android.c2dm.intent.REGISTRATION+mc.sms
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:70:13-78:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:71:17-81
+	android:name
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:71:25-78
+action#com.google.android.c2dm.intent.REGISTRATION
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:72:17-86
+	android:name
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:72:25-83
+category#mc.sms
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:77:17-51
+	android:name
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:77:27-48
+receiver#utils.Receiver
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:80:9-86:20
+	android:exported
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:80:49-73
+	android:name
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:80:19-48
+intent-filter#com.parse.push.intent.DELETE+com.parse.push.intent.OPEN+com.parse.push.intent.RECEIVE
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:81:13-85:29
+action#com.parse.push.intent.RECEIVE
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:82:17-72
+	android:name
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:82:25-69
+action#com.parse.push.intent.DELETE
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:83:17-71
+	android:name
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:83:25-68
+action#com.parse.push.intent.OPEN
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:84:17-69
+	android:name
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:84:25-66
+service#mc.sms.ServicioAlarma
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:88:9-90:38
+	android:enabled
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:90:13-35
+	android:name
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:89:13-49
+receiver#mc.sms.BroadcastAlarma
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:92:9-59
+	android:name
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:92:19-56
+meta-data#com.parse.push.gcm_sender_id
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:94:9-95:47
+	android:value
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:95:13-44
+	android:name
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:94:20-63
+meta-data#com.parse.push.notification_icon
+ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:97:9-110
+	android:resource
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:97:68-108
+	android:name
+		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:97:20-67
+uses-sdk
+INJECTED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:multidex:1.0.1] /Users/Alvaro/.android/build-cache/babf2ab11787ce89134060b0fe32d5b4afbc0567/output/AndroidManifest.xml:18:5-42
+MERGED from [com.parse:parseui-login-android:0.0.2] /Users/Alvaro/.android/build-cache/0076cea8b0c6d6c6e43947b06212696f1e2193ea/output/AndroidManifest.xml:28:5-30:41
+MERGED from [com.parse:parseui-widget-android:0.0.2] /Users/Alvaro/.android/build-cache/a004065b37b512fb2467755c592c8c528f022b33/output/AndroidManifest.xml:27:5-29:41
+MERGED from [com.google.firebase:firebase-core:10.0.1] /Users/Alvaro/.android/build-cache/e54461bb20248f78e6c0f95ac31b428499e7c7b5/output/AndroidManifest.xml:4:5-42
+MERGED from [com.google.firebase:firebase-analytics:10.0.1] /Users/Alvaro/.android/build-cache/99eb6f45eb1ec42c7ff4cfa282a6c522e1daf9f6/output/AndroidManifest.xml:17:5-42
+MERGED from [com.google.firebase:firebase-analytics-impl:10.0.1] /Users/Alvaro/.android/build-cache/fd4d105c8d23232310683243ddb545f3832af730/output/AndroidManifest.xml:17:5-42
+MERGED from [com.google.firebase:firebase-messaging:10.0.1] /Users/Alvaro/.android/build-cache/e7c4dc661f1339f8930d611a6387e22ff8cb8e29/output/AndroidManifest.xml:17:5-42
+MERGED from [com.google.firebase:firebase-iid:10.0.1] /Users/Alvaro/.android/build-cache/694d583b242792b9200d8e63e7688274594f95fa/output/AndroidManifest.xml:17:5-42
+MERGED from [com.google.firebase:firebase-common:10.0.1] /Users/Alvaro/.android/build-cache/385bb029f74eeb55016a3640c6c2066344e84b2a/output/AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-tasks:10.0.1] /Users/Alvaro/.android/build-cache/81b72648157793fbe7185bcc97ae1ed9c91e2e46/output/AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-basement:10.0.1] /Users/Alvaro/.android/build-cache/0e58086e65d4c8bdea70961d2d95df3afc5a1eef/output/AndroidManifest.xml:17:5-42
+MERGED from [com.android.support:design:22.2.1] /Users/Alvaro/.android/build-cache/7b4cf8d2b3db5a2505b43bdcfef25f8ffd2f00ff/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:22.2.1] /Users/Alvaro/.android/build-cache/9245d12d0700378e1180a7ed1ac6e0254f954e0a/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:22.2.1] /Users/Alvaro/.android/build-cache/29971aed7af885659282b07e2c6557298488288a/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:25.2.0] /Users/Alvaro/.android/build-cache/448d71120e130f19dd59b240eb4d8102e34bb018/output/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.2.0] /Users/Alvaro/.android/build-cache/75b88da94cdd41e980869a2b29d08c0b2e1c2b2d/output/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.2.0] /Users/Alvaro/.android/build-cache/3cb71e3bdf06800580c4330e74e5673e99665344/output/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.2.0] /Users/Alvaro/.android/build-cache/b67737107de381b0829d0da363483a1d12244f12/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.2.0] /Users/Alvaro/.android/build-cache/7cf95ba23589c209e5717a4ed37512c9ef22a8fc/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.2.0] /Users/Alvaro/.android/build-cache/d95b2524f964e98f6a13cc9ba5c15b1bdcbfd4ed/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.parse:parse-livequery-android:1.0.4] /Users/Alvaro/.android/build-cache/67284ad641150ebbf7ddaf5670cd1ac83f0b0836/output/AndroidManifest.xml:16:5-18:41
+MERGED from [com.parse:parse-android:1.16.3] /Users/Alvaro/.android/build-cache/e1dc1fb1131c67a9be09be1af2da634559751a5b/output/AndroidManifest.xml:15:5-17:41
+	tools:overrideLibrary
+		ADDED from [com.android.support:support-v4:25.2.0] /Users/Alvaro/.android/build-cache/448d71120e130f19dd59b240eb4d8102e34bb018/output/AndroidManifest.xml:23:9-51
+	android:targetSdkVersion
+		INJECTED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml
+receiver#com.google.android.gms.measurement.AppMeasurementReceiver
+ADDED from [com.google.firebase:firebase-analytics:10.0.1] /Users/Alvaro/.android/build-cache/99eb6f45eb1ec42c7ff4cfa282a6c522e1daf9f6/output/AndroidManifest.xml:25:7-26:18
+MERGED from [com.google.firebase:firebase-analytics-impl:10.0.1] /Users/Alvaro/.android/build-cache/fd4d105c8d23232310683243ddb545f3832af730/output/AndroidManifest.xml:25:7-26:18
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:10.0.1] /Users/Alvaro/.android/build-cache/99eb6f45eb1ec42c7ff4cfa282a6c522e1daf9f6/output/AndroidManifest.xml:25:90-112
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:10.0.1] /Users/Alvaro/.android/build-cache/99eb6f45eb1ec42c7ff4cfa282a6c522e1daf9f6/output/AndroidManifest.xml:25:113-137
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:10.0.1] /Users/Alvaro/.android/build-cache/99eb6f45eb1ec42c7ff4cfa282a6c522e1daf9f6/output/AndroidManifest.xml:25:17-89
+receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
+ADDED from [com.google.firebase:firebase-analytics:10.0.1] /Users/Alvaro/.android/build-cache/99eb6f45eb1ec42c7ff4cfa282a6c522e1daf9f6/output/AndroidManifest.xml:27:7-31:18
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:10.0.1] /Users/Alvaro/.android/build-cache/99eb6f45eb1ec42c7ff4cfa282a6c522e1daf9f6/output/AndroidManifest.xml:27:162-184
+	android:permission
+		ADDED from [com.google.firebase:firebase-analytics:10.0.1] /Users/Alvaro/.android/build-cache/99eb6f45eb1ec42c7ff4cfa282a6c522e1daf9f6/output/AndroidManifest.xml:27:105-161
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:10.0.1] /Users/Alvaro/.android/build-cache/99eb6f45eb1ec42c7ff4cfa282a6c522e1daf9f6/output/AndroidManifest.xml:27:17-104
+intent-filter#com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:10.0.1] /Users/Alvaro/.android/build-cache/99eb6f45eb1ec42c7ff4cfa282a6c522e1daf9f6/output/AndroidManifest.xml:28:11-30:27
+action#com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:10.0.1] /Users/Alvaro/.android/build-cache/99eb6f45eb1ec42c7ff4cfa282a6c522e1daf9f6/output/AndroidManifest.xml:29:15-76
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:10.0.1] /Users/Alvaro/.android/build-cache/99eb6f45eb1ec42c7ff4cfa282a6c522e1daf9f6/output/AndroidManifest.xml:29:23-74
+service#com.google.android.gms.measurement.AppMeasurementService
+ADDED from [com.google.firebase:firebase-analytics:10.0.1] /Users/Alvaro/.android/build-cache/99eb6f45eb1ec42c7ff4cfa282a6c522e1daf9f6/output/AndroidManifest.xml:32:7-137
+MERGED from [com.google.firebase:firebase-analytics-impl:10.0.1] /Users/Alvaro/.android/build-cache/fd4d105c8d23232310683243ddb545f3832af730/output/AndroidManifest.xml:27:7-137
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:10.0.1] /Users/Alvaro/.android/build-cache/99eb6f45eb1ec42c7ff4cfa282a6c522e1daf9f6/output/AndroidManifest.xml:32:88-110
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:10.0.1] /Users/Alvaro/.android/build-cache/99eb6f45eb1ec42c7ff4cfa282a6c522e1daf9f6/output/AndroidManifest.xml:32:111-135
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:10.0.1] /Users/Alvaro/.android/build-cache/99eb6f45eb1ec42c7ff4cfa282a6c522e1daf9f6/output/AndroidManifest.xml:32:16-87
+service#com.google.firebase.messaging.FirebaseMessagingService
+ADDED from [com.google.firebase:firebase-messaging:10.0.1] /Users/Alvaro/.android/build-cache/e7c4dc661f1339f8930d611a6387e22ff8cb8e29/output/AndroidManifest.xml:23:9-27:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-messaging:10.0.1] /Users/Alvaro/.android/build-cache/e7c4dc661f1339f8930d611a6387e22ff8cb8e29/output/AndroidManifest.xml:23:88-111
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:10.0.1] /Users/Alvaro/.android/build-cache/e7c4dc661f1339f8930d611a6387e22ff8cb8e29/output/AndroidManifest.xml:23:18-87
+intent-filter#com.google.firebase.MESSAGING_EVENT
+ADDED from [com.google.firebase:firebase-messaging:10.0.1] /Users/Alvaro/.android/build-cache/e7c4dc661f1339f8930d611a6387e22ff8cb8e29/output/AndroidManifest.xml:24:13-26:29
+	android:priority
+		ADDED from [com.google.firebase:firebase-messaging:10.0.1] /Users/Alvaro/.android/build-cache/e7c4dc661f1339f8930d611a6387e22ff8cb8e29/output/AndroidManifest.xml:24:28-51
+action#com.google.firebase.MESSAGING_EVENT
+ADDED from [com.google.firebase:firebase-messaging:10.0.1] /Users/Alvaro/.android/build-cache/e7c4dc661f1339f8930d611a6387e22ff8cb8e29/output/AndroidManifest.xml:25:17-77
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:10.0.1] /Users/Alvaro/.android/build-cache/e7c4dc661f1339f8930d611a6387e22ff8cb8e29/output/AndroidManifest.xml:25:25-75
+receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
+ADDED from [com.google.firebase:firebase-iid:10.0.1] /Users/Alvaro/.android/build-cache/694d583b242792b9200d8e63e7688274594f95fa/output/AndroidManifest.xml:30:9-36:20
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:10.0.1] /Users/Alvaro/.android/build-cache/694d583b242792b9200d8e63e7688274594f95fa/output/AndroidManifest.xml:30:85-108
+	android:permission
+		ADDED from [com.google.firebase:firebase-iid:10.0.1] /Users/Alvaro/.android/build-cache/694d583b242792b9200d8e63e7688274594f95fa/output/AndroidManifest.xml:30:109-169
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.0.1] /Users/Alvaro/.android/build-cache/694d583b242792b9200d8e63e7688274594f95fa/output/AndroidManifest.xml:30:19-84
+intent-filter#${applicationId}+com.google.android.c2dm.intent.RECEIVE+com.google.android.c2dm.intent.REGISTRATION
+ADDED from [com.google.firebase:firebase-iid:10.0.1] /Users/Alvaro/.android/build-cache/694d583b242792b9200d8e63e7688274594f95fa/output/AndroidManifest.xml:31:13-35:29
+category#${applicationId}
+ADDED from [com.google.firebase:firebase-iid:10.0.1] /Users/Alvaro/.android/build-cache/694d583b242792b9200d8e63e7688274594f95fa/output/AndroidManifest.xml:34:17-60
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.0.1] /Users/Alvaro/.android/build-cache/694d583b242792b9200d8e63e7688274594f95fa/output/AndroidManifest.xml:34:27-58
+receiver#com.google.firebase.iid.FirebaseInstanceIdInternalReceiver
+ADDED from [com.google.firebase:firebase-iid:10.0.1] /Users/Alvaro/.android/build-cache/694d583b242792b9200d8e63e7688274594f95fa/output/AndroidManifest.xml:40:9-119
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:10.0.1] /Users/Alvaro/.android/build-cache/694d583b242792b9200d8e63e7688274594f95fa/output/AndroidManifest.xml:40:93-117
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.0.1] /Users/Alvaro/.android/build-cache/694d583b242792b9200d8e63e7688274594f95fa/output/AndroidManifest.xml:40:19-92
+service#com.google.firebase.iid.FirebaseInstanceIdService
+ADDED from [com.google.firebase:firebase-iid:10.0.1] /Users/Alvaro/.android/build-cache/694d583b242792b9200d8e63e7688274594f95fa/output/AndroidManifest.xml:44:9-48:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:10.0.1] /Users/Alvaro/.android/build-cache/694d583b242792b9200d8e63e7688274594f95fa/output/AndroidManifest.xml:44:83-106
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.0.1] /Users/Alvaro/.android/build-cache/694d583b242792b9200d8e63e7688274594f95fa/output/AndroidManifest.xml:44:18-82
+intent-filter#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from [com.google.firebase:firebase-iid:10.0.1] /Users/Alvaro/.android/build-cache/694d583b242792b9200d8e63e7688274594f95fa/output/AndroidManifest.xml:45:13-47:29
+	android:priority
+		ADDED from [com.google.firebase:firebase-iid:10.0.1] /Users/Alvaro/.android/build-cache/694d583b242792b9200d8e63e7688274594f95fa/output/AndroidManifest.xml:45:28-51
+action#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from [com.google.firebase:firebase-iid:10.0.1] /Users/Alvaro/.android/build-cache/694d583b242792b9200d8e63e7688274594f95fa/output/AndroidManifest.xml:46:17-79
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.0.1] /Users/Alvaro/.android/build-cache/694d583b242792b9200d8e63e7688274594f95fa/output/AndroidManifest.xml:46:25-77
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:10.0.1] /Users/Alvaro/.android/build-cache/385bb029f74eeb55016a3640c6c2066344e84b2a/output/AndroidManifest.xml:6:9-194
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:10.0.1] /Users/Alvaro/.android/build-cache/385bb029f74eeb55016a3640c6c2066344e84b2a/output/AndroidManifest.xml:6:19-78
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:10.0.1] /Users/Alvaro/.android/build-cache/385bb029f74eeb55016a3640c6c2066344e84b2a/output/AndroidManifest.xml:6:144-168
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:10.0.1] /Users/Alvaro/.android/build-cache/385bb029f74eeb55016a3640c6c2066344e84b2a/output/AndroidManifest.xml:6:169-192
+	android:name
+		ADDED from [com.google.firebase:firebase-common:10.0.1] /Users/Alvaro/.android/build-cache/385bb029f74eeb55016a3640c6c2066344e84b2a/output/AndroidManifest.xml:6:79-143
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:10.0.1] /Users/Alvaro/.android/build-cache/0e58086e65d4c8bdea70961d2d95df3afc5a1eef/output/AndroidManifest.xml:20:9-121
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:10.0.1] /Users/Alvaro/.android/build-cache/0e58086e65d4c8bdea70961d2d95df3afc5a1eef/output/AndroidManifest.xml:20:66-119
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:10.0.1] /Users/Alvaro/.android/build-cache/0e58086e65d4c8bdea70961d2d95df3afc5a1eef/output/AndroidManifest.xml:20:20-65
+service#com.parse.PushServiceApi26
+ADDED from [com.parse:parse-android:1.16.3] /Users/Alvaro/.android/build-cache/e1dc1fb1131c67a9be09be1af2da634559751a5b/output/AndroidManifest.xml:23:9-26:72
+	android:exported
+		ADDED from [com.parse:parse-android:1.16.3] /Users/Alvaro/.android/build-cache/e1dc1fb1131c67a9be09be1af2da634559751a5b/output/AndroidManifest.xml:25:13-36
+	android:permission
+		ADDED from [com.parse:parse-android:1.16.3] /Users/Alvaro/.android/build-cache/e1dc1fb1131c67a9be09be1af2da634559751a5b/output/AndroidManifest.xml:26:13-69
+	android:name
+		ADDED from [com.parse:parse-android:1.16.3] /Users/Alvaro/.android/build-cache/e1dc1fb1131c67a9be09be1af2da634559751a5b/output/AndroidManifest.xml:24:13-54

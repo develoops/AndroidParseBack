@@ -1,0 +1,26 @@
+[
+    {
+        "outputFile": "/Users/Alvaro/Downloads/AndroidParseBack copy/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-mr/values-mr.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 105,
+                    "endColumn": 201,
+                    "endOffset": 302
+                },
+                "from": {
+                    "file": "/Users/Alvaro/.android/build-cache/0e58086e65d4c8bdea70961d2d95df3afc5a1eef/output/res/values-mr/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 0,
+                        "startOffset": 285,
+                        "endColumn": 201,
+                        "endOffset": 486
+                    }
+                }
+            }
+        ]
+    }
+]

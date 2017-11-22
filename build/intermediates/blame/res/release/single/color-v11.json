@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/Alvaro/Downloads/AndroidParseBack copy/app/build/intermediates/res/merged/release/color-v11/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/Users/Alvaro/.android/build-cache/9245d12d0700378e1180a7ed1ac6e0254f954e0a/output/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "/Users/Alvaro/Downloads/AndroidParseBack copy/app/build/intermediates/res/merged/release/color-v11/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/Users/Alvaro/.android/build-cache/9245d12d0700378e1180a7ed1ac6e0254f954e0a/output/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+    }
+]
