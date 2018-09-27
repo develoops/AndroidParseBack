@@ -5,7 +5,7 @@ import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -142,11 +142,11 @@ public class DirectiveDetailFragment extends Fragment {
                     // handle back button's click listener
 
                     if(bool){
-                        ((ActionBarActivity)getActivity()).getSupportActionBar().setHomeAsUpIndicator(R.drawable.directorio);
+                        ((AppCompatActivity)getActivity()).getSupportActionBar().setHomeAsUpIndicator(R.drawable.directorio);
                         getActivity().onBackPressed();
                     }
                     else {
-                        ((ActionBarActivity)getActivity()).getSupportActionBar().setHomeAsUpIndicator(R.drawable.left);
+                        ((AppCompatActivity)getActivity()).getSupportActionBar().setHomeAsUpIndicator(R.drawable.left);
                         getActivity().onBackPressed();
                     }
 
@@ -194,11 +194,11 @@ public class DirectiveDetailFragment extends Fragment {
             case android.R.id.home:
 
                 if(bool){
-                    ((ActionBarActivity)getActivity()).getSupportActionBar().setHomeAsUpIndicator(R.drawable.directorio);
+                    ((AppCompatActivity)getActivity()).getSupportActionBar().setHomeAsUpIndicator(R.drawable.directorio);
                     getActivity().onBackPressed();
                 }
                 else {
-                    ((ActionBarActivity)getActivity()).getSupportActionBar().setHomeAsUpIndicator(R.drawable.left);
+                    ((AppCompatActivity)getActivity()).getSupportActionBar().setHomeAsUpIndicator(R.drawable.left);
                     getActivity().onBackPressed();
                 }
 

@@ -181,7 +181,7 @@ okhttp3/Cache$2.class
 model/Org.class
 android/support/v4/media/MediaBrowserCompatApi21.class
 okhttp3/Cache.class
-android/support/v7/app/ActionBarActivity.class
+android/support/v7/app/AppCompatActivity.class
 com/google/android/gms/common/util/zzs.class
 mc/sms/R.class
 android/support/v4/net/ConnectivityManagerCompat$BaseConnectivityManagerCompatImpl.class

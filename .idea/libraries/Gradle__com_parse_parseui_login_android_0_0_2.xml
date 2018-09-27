@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.parse:parseui-login-android-0.0.2">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/0076cea8b0c6d6c6e43947b06212696f1e2193ea/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/0076cea8b0c6d6c6e43947b06212696f1e2193ea/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.parse/parseui-login-android/0.0.2/6d36c03b8d7ef34adcdef78c2c5d226b22bee8a0/parseui-login-android-0.0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
