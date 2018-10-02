@@ -12,15 +12,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/Alvaro/Downloads/Android Studio.app/Contents/gradle/m2repository/com/google/code/gson/gson/2.2.4/gson-2.2.4.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="27.0.0"
-        sha1="a60a5e993c98c864010053cb901b7eab25306568">
-        <dex dex="/Users/Alvaro/Downloads/AndroidParseBack/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.2.4_827b7d7851a2eb853451dd041a22431b3d728007/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/Alvaro/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/common/1.1.0/edf3f7bfb84a7521d0599efa3b0113a0ee90f85/common-1.1.0.jar"
         jumboMode="true"
         optimize="true"
@@ -138,6 +129,24 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/Alvaro/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.2.4/a60a5e993c98c864010053cb901b7eab25306568/gson-2.2.4.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="27.0.0"
+        sha1="a60a5e993c98c864010053cb901b7eab25306568">
+        <dex dex="/Users/Alvaro/Downloads/AndroidParseBack/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.2.4_34a716b9e62fba371f2bfb13efecb91c5cd76856/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Alvaro/Downloads/AndroidParseBack/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="27.0.0"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/Users/Alvaro/Downloads/AndroidParseBack/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_7145c87f914936f2393b38f6e6eadce445612d19/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/Alvaro/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.14.0/102d7be47241d781ef95f1581d414b0943053130/okio-1.14.0.jar"
         jumboMode="true"
         optimize="true"
@@ -153,15 +162,6 @@
         revision="27.0.0"
         sha1="7ef0f1d95bf4c0b3ba30bbae25e0e562b05cf75e">
         <dex dex="/Users/Alvaro/Downloads/AndroidParseBack/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.10.0_a411aa20fb85d6c3e65755dffe6047f61bf07c36/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Alvaro/Downloads/AndroidParseBack/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="27.0.0"
-        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="/Users/Alvaro/Downloads/AndroidParseBack/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_7145c87f914936f2393b38f6e6eadce445612d19/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -205,7 +205,7 @@
         jumboMode="true"
         optimize="true"
         revision="27.0.0"
-        sha1="7bb55422e4e96a2ebda3094d24dcbd5173c114cb">
+        sha1="ceebff9c0ae3f042ac86ce0d53b7f04c8f054c3b">
         <dex dex="/Users/Alvaro/Downloads/AndroidParseBack/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_0f1562292cdde4206cf3ae9026e9463cd4d364f9/classes.dex" />
     </item>
     <item

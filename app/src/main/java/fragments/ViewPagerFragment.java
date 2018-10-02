@@ -55,10 +55,10 @@ public class ViewPagerFragment extends Fragment {
         //((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
 
         if (Locale.getDefault().getLanguage().equals("en")){
-            toolbar.setTitle("SMS2017");
+            toolbar.setTitle("SMS2018");
         }
         else {
-            toolbar.setTitle("SMS2017");
+            toolbar.setTitle("SMS2018");
         }
 
         toolbar.setTitleTextColor(Color.WHITE);

@@ -203,7 +203,7 @@ public class LoadDataFragment extends Fragment {
 					academic = objects;
 				}
 
-				ParseObject.pinAllInBackground("comite",objects);
+				ParseObject.pinAllInBackground("commitee",objects);
 
 			}
 		});
