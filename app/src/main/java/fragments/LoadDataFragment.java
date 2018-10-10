@@ -203,10 +203,11 @@ public class LoadDataFragment extends Fragment {
 					academic = objects;
 				}
 
-				ParseObject.pinAllInBackground("commitee",objects);
+				ParseObject.pinAllInBackground("comite",objects);
 
 			}
 		});
+
 
 		ParseQuery<Org> queryOrg = ParseQuery.getQuery(Org.class);
 		if (!myapp.checkConnection()) {

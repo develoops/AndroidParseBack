@@ -79,7 +79,7 @@ public class DirectiveFragment extends Fragment {
             Collections.sort(actors,new Comparator<PersonaRolOrg>() {
                 @Override
                 public int compare(PersonaRolOrg lhs, PersonaRolOrg rhs) {
-                    return lhs.getPerson().getFirstName().compareTo(rhs.getPerson().getFirstName());
+                    return lhs.getOrder().compareTo(rhs.getOrder());
                 }
             });
             adapter = new DirectiveListViewAdapter(getActivity(),actors, true);

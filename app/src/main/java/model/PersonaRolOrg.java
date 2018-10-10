@@ -32,6 +32,9 @@ public class PersonaRolOrg extends ParseObject {
         return getString("bios");
     }
 
+    public String getOrder(){
+        return getString("order");
+    }
 
 
 
