@@ -47,7 +47,7 @@ public class MeetingAppViewPagerFragment extends Fragment {
     private SlidingTabLayout mSlidingTabLayout;
     ListView listview;
     public static List<Actividad> events = new ArrayList<>();
-    public static List<Org> organizaciones = new ArrayList<>();
+    public static List<Org> organizaciones,organizaciones2 = new ArrayList<>();
    // public static List<Actividad> actividades = new ArrayList<>();
    public static List<PersonaRolOrg> comite = new ArrayList<>();
     public static List<Media> media = new ArrayList<>();
@@ -60,12 +60,13 @@ public class MeetingAppViewPagerFragment extends Fragment {
     public static Long time;
     public List<String> Titles = new ArrayList<>();
 
-    public static MeetingAppViewPagerFragment newInstance(Actividad app, List<Actividad> actividades, List <Persona> spk, List<Org> orgs, List<PersonaRolOrg> academic,  List<PreguntaEncuesta> preguntasEncuestas) {
+    public static MeetingAppViewPagerFragment newInstance(Actividad app, List<Actividad> actividades, List <Persona> spk, List<Org> orgs, List<Org> orgs2,List<PersonaRolOrg> academic,  List<PreguntaEncuesta> preguntasEncuestas) {
         // Instantiate a new fragment
         MeetingAppViewPagerFragment fragment = new MeetingAppViewPagerFragment();
         meetingApp = app;
         events = actividades;
         organizaciones = orgs;
+        organizaciones2 = orgs2;
         speakers = spk;
         comite=academic;
         pEncuestas = preguntasEncuestas;
@@ -82,11 +83,10 @@ public class MeetingAppViewPagerFragment extends Fragment {
         Titles.add("Programa");
         Titles.add("Ponentes");
         Titles.add("Favoritos");
+        Titles.add("Auspiciadores");
         Titles.add("Patrocinadores");
         Titles.add("Comité Organizador");
-        Titles.add("Encuesta General");
-      /*  Titles.add("Materiales");
-        Titles.add("Comité Académico");*/
+
         setRetainInstance(true);
         ParseQuery<Info> noticias = ParseQuery.getQuery(Info.class);
         noticias.findInBackground(new FindCallback<Info>() {
@@ -255,7 +255,7 @@ public class MeetingAppViewPagerFragment extends Fragment {
             pager.setOffscreenPageLimit(4);
             Log.i("ACTIVIDADESSSSS222222", String.valueOf(events));
             pager.setMaxChildProgramId(MUtil.divideEventByGroupSize(events) - 1);
-            pageAdapter = new EventsFragmentAdapter(getChildFragmentManager(), Titles, Numboftabs, meetingApp, events, speakers, organizaciones, comite, media,pEncuestas,pager, app);
+            pageAdapter = new EventsFragmentAdapter(getChildFragmentManager(), Titles, Numboftabs, meetingApp, events, speakers, organizaciones, organizaciones2,comite, media,pEncuestas,pager, app);
             pager.setAdapter(pageAdapter);
             mSlidingTabLayout.setViewPager(pager);
 
@@ -284,7 +284,7 @@ public class MeetingAppViewPagerFragment extends Fragment {
 
             pager.setOffscreenPageLimit(4);
             pager.setMaxChildProgramId(MUtil.divideEventByGroupSize(events) - 1);
-            pageAdapter = new EventsFragmentAdapter(getChildFragmentManager(), Titles, Numboftabs, meetingApp, events, speakers,organizaciones,comite,media,pEncuestas,pager, app);
+            pageAdapter = new EventsFragmentAdapter(getChildFragmentManager(), Titles, Numboftabs, meetingApp, events, speakers,organizaciones,organizaciones2,comite,media,pEncuestas,pager, app);
             pager.setAdapter(pageAdapter);
             mSlidingTabLayout.setViewPager(pager);
         }

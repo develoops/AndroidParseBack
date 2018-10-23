@@ -27,6 +27,7 @@ import mc.sms.myApp;
 import model.ActContAct;
 import model.Actividad;
 
+import model.Media;
 import model.Org;
 import model.PersonaRolAct;
 import model.PersonaRolOrg;
@@ -43,6 +44,7 @@ public class LoadDataFragment extends Fragment {
 	public static List<Actividad> eventos;
 	public static List<Org> orgs;
 	public static List<PersonaRolOrg> staff, academic;
+	public static List<Media> media;
 	//public static Stand stand, mCongress;
 	public myApp myapp;
 	//public static CompanyApp company;
@@ -244,7 +246,7 @@ public class LoadDataFragment extends Fragment {
 			queryOrg2.fromLocalDatastore();
 
 		}
-		queryOrg2.whereEqualTo("tipo","patrocinador");
+		queryOrg2.whereNotEqualTo("tipo","sociedad");
 
 		queryOrg2.findInBackground(new FindCallback<Org>() {
 			@Override
@@ -287,14 +289,17 @@ public class LoadDataFragment extends Fragment {
 		});
 
 
-/*
+
 		ParseQuery<Media> queryMedia = ParseQuery.getQuery(Media.class);
+		queryMedia.whereEqualTo("info","sociedad");
+
 		queryMedia.findInBackground(new FindCallback<Media>() {
 			@Override
 			public void done(List<Media> objects, ParseException e) {
+				media=objects;
 				ParseObject.pinAllInBackground("media",objects);
 			}
-		});*/
+		});
 
 		ParseQuery<Actividad> query = ParseQuery.getQuery(Actividad.class);
 		query.include("lugar");

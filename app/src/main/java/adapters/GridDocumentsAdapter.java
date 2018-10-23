@@ -51,7 +51,7 @@ public class GridDocumentsAdapter extends ArrayAdapter<Media> {
             holder.txtTitle = (TextView) row.findViewById(R.id.title_doc);
             holder.size = (TextView) row.findViewById(R.id.size_doc);
 
-            holder.imageItem = (ParseImageView) row.findViewById(R.id.doc_icon);
+            holder.imageItem = (ImageView) row.findViewById(R.id.doc_icon);
             row.setTag(holder);
         } else {
             holder = (RecordHolder) row.getTag();
@@ -85,8 +85,9 @@ public class GridDocumentsAdapter extends ArrayAdapter<Media> {
 
         }
         Log.i("MOBIFILE",mobiFile.getObjectId());
+        holder.imageItem.setVisibility(View.VISIBLE);
+        holder.imageItem.setImageResource(R.drawable.pdf);
 
-        //holder.imageItem.setVisibility(View.GONE);
      /*   holder.size.setText(mobiFile.getSize() + " MB");
 
 

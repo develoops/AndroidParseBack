@@ -36,6 +36,7 @@ public class ViewPagerFragment extends Fragment {
     {
         super.onCreate(savedInstanceState);
         Tabs.add("Congresos");
+        Tabs.add("Saludo Sociedad");
         Tabs.add("Sociedad");
         Tabs.add("Directiva");
         setRetainInstance(true);

@@ -248,14 +248,15 @@ public class EventDetailFragment extends Fragment {
         }
         else {
 
-            rate.setVisibility(View.VISIBLE);
+            //rate.setVisibility(View.VISIBLE);
             ask.setVisibility(View.VISIBLE);
 
-            rate.getLayoutParams().width = (width/4);
-            ask.getLayoutParams().width = (width/4);
-            map.getLayoutParams().width = (width/4);
+
+            rate.setVisibility(View.GONE);
+            ask.getLayoutParams().width = (width/3);
+            map.getLayoutParams().width = (width/3);
             //checkin.getLayoutParams().width = (width/5);
-            makeFavourite.getLayoutParams().width = (width/4);
+            makeFavourite.getLayoutParams().width = (width/3);
         }
 
 
@@ -476,7 +477,6 @@ public class EventDetailFragment extends Fragment {
         else {
             Log.i("HOLAEVENT","HOLA");
         }
-
 
 
 

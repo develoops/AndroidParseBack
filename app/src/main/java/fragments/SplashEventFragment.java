@@ -43,7 +43,7 @@ public class SplashEventFragment extends Fragment {
     public static ParseImageView splash;
 
 
-    public static List<Org> organizaciones = new ArrayList<>();
+    public static List<Org> organizaciones,organizaciones2 = new ArrayList<>();
     public static List<Persona> persons = new ArrayList<>();
     public static List<PersonaRolOrg> comite = new ArrayList<>();
     public static List<PreguntaEncuesta> preguntaEncuestas = new ArrayList<>();
@@ -174,7 +174,31 @@ public class SplashEventFragment extends Fragment {
                     }
                 });
 
-                ParseQuery<PreguntaEncuesta> preguntaEncuestaParseQuery = ParseQuery.getQuery(PreguntaEncuesta.class);
+
+
+                ParseQuery<Org> queryOrg3 = ParseQuery.getQuery(Org.class);
+                queryOrg3.whereEqualTo("tipo","patrocinador2");
+                queryOrg3.fromLocalDatastore();
+                queryOrg3.fromPin("patrocinadores");
+                queryOrg3.findInBackground(new FindCallback<Org>() {
+                @Override
+                    public void done(List<Org> objects, ParseException e) {
+                      /*  for(Org org:objects){
+                            org.getimgFondo().getDataInBackground();
+                            org.getimgPerfil().getDataInBackground();
+                        }*/
+
+                        organizaciones2 = objects;
+                    //Log.i("CANTIDADPATR2", String.valueOf(organizaciones.size()));
+                    }
+                });
+
+
+
+
+
+
+        ParseQuery<PreguntaEncuesta> preguntaEncuestaParseQuery = ParseQuery.getQuery(PreguntaEncuesta.class);
                 preguntaEncuestaParseQuery.fromLocalDatastore();
                 preguntaEncuestaParseQuery.whereEqualTo("tipo","general");
                 preguntaEncuestaParseQuery.addAscendingOrder("posicion");
@@ -211,7 +235,7 @@ public class SplashEventFragment extends Fragment {
                         handler.postDelayed(new Runnable() {
                             @Override
                             public void run() {
-                                Fragment fragment = MeetingAppViewPagerFragment.newInstance(meetingApp,actividades, persons, organizaciones,comite,preguntaEncuestas);
+                                Fragment fragment = MeetingAppViewPagerFragment.newInstance(meetingApp,actividades, persons, organizaciones,organizaciones2,comite,preguntaEncuestas);
                                 final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
                                 ft.replace(R.id.container, fragment);
                                 ft.addToBackStack(null);

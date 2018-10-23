@@ -16,6 +16,7 @@ import fragments.DirectiveFragment;
 import fragments.LoadDataFragment;
 import fragments.MeetingsFragment;
 import fragments.NewsFragment;
+import fragments.SaludosSociedadFragment;
 
 /**
  * Created by Alvaro on 3/3/15.
@@ -60,6 +61,9 @@ public class PagerFragmentAdapter extends FragmentStatePagerAdapter
         }
         else if(tabUIs.get(position).equals("Sociedad")){
             return CompanyDirectoryFragment.newInstance(LoadDataFragment.com, false);
+        }
+        else if(tabUIs.get(position).equals("Saludo Sociedad")){
+            return SaludosSociedadFragment.newInstance(LoadDataFragment.media);
         }
         else if(tabUIs.get(position).equals("Directiva")){
             return DirectiveFragment.newInstance(LoadDataFragment.staff);
