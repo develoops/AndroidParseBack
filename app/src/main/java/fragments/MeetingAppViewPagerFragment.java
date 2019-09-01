@@ -2,6 +2,7 @@ package fragments;
 
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -85,7 +86,9 @@ public class MeetingAppViewPagerFragment extends Fragment {
         Titles.add("Favoritos");
         Titles.add("Auspiciadores");
         Titles.add("Patrocinadores");
-        Titles.add("Comité Organizador");
+        Titles.add("Comité Científico");
+        Titles.add("Materiales");
+
 
         setRetainInstance(true);
         ParseQuery<Info> noticias = ParseQuery.getQuery(Info.class);
@@ -257,6 +260,8 @@ public class MeetingAppViewPagerFragment extends Fragment {
             pager.setMaxChildProgramId(MUtil.divideEventByGroupSize(events) - 1);
             pageAdapter = new EventsFragmentAdapter(getChildFragmentManager(), Titles, Numboftabs, meetingApp, events, speakers, organizaciones, organizaciones2,comite, media,pEncuestas,pager, app);
             pager.setAdapter(pageAdapter);
+            mSlidingTabLayout.setDistributeEvenly(true);
+            mSlidingTabLayout.setBackgroundColor(Color.WHITE);
             mSlidingTabLayout.setViewPager(pager);
 
 
@@ -286,6 +291,8 @@ public class MeetingAppViewPagerFragment extends Fragment {
             pager.setMaxChildProgramId(MUtil.divideEventByGroupSize(events) - 1);
             pageAdapter = new EventsFragmentAdapter(getChildFragmentManager(), Titles, Numboftabs, meetingApp, events, speakers,organizaciones,organizaciones2,comite,media,pEncuestas,pager, app);
             pager.setAdapter(pageAdapter);
+            mSlidingTabLayout.setDistributeEvenly(true);
+            mSlidingTabLayout.setBackgroundColor(Color.WHITE);
             mSlidingTabLayout.setViewPager(pager);
         }
 

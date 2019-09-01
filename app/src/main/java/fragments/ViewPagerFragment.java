@@ -35,10 +35,10 @@ public class ViewPagerFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        Tabs.add("Congresos");
-        Tabs.add("Saludo Sociedad");
+        Tabs.add("Eventos");
         Tabs.add("Sociedad");
-        Tabs.add("Directiva");
+        Tabs.add("Directiva SMS");
+        Tabs.add("Saludo");
         setRetainInstance(true);
     }
 
@@ -93,14 +93,6 @@ public class ViewPagerFragment extends Fragment {
 
 
             Numboftabs =Tabs.size();
-
-//            Collections.sort(Tabs, new Comparator<model.View>() {
-//                @Override
-//                public int compare(model.View lhs, model.View rhs) {
-//                    return lhs.getsortingAux()- rhs.getsortingAux();
-//
-//                }
-//            });
 
             Log.e(getClass().getName(), "end onCreateView");
             pageAdapter = new PagerFragmentAdapter(getChildFragmentManager(),Tabs,Numboftabs);

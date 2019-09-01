@@ -131,7 +131,6 @@ public class SpeakerDetailFragment extends Fragment {
                     Actividad event = ParseObject.createWithoutData(Actividad.class, object.getObjectId());
                     evento = event;
                     roles.clear();
-
                     ParseQuery<PersonaRolAct> personaRolActParseQuery = ParseQuery.getQuery(PersonaRolAct.class);
                     personaRolActParseQuery.include("persona.pais");
                     personaRolActParseQuery.include("actividad.lugar");
@@ -156,19 +155,33 @@ public class SpeakerDetailFragment extends Fragment {
                                         roles.add(personaRolAct);
                                     }
                                 }
-
-                                Fragment fragment = EventDetailFragment.newInstance(evento, meetingApp,roles);
-                                final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                                ft.replace(R.id.container, fragment);
-                                ft.addToBackStack(null);
-                                ft.commit();
                             }
 
                         }
                     });
+                    ParseQuery<ActContAct> queryContenido = ParseQuery.getQuery(ActContAct.class);
+                    queryContenido.include("contenido.lugar");
+                    queryContenido.include ("contenedor");
+                    queryContenido.fromPin("ActconAct2");
+                    queryContenido.fromLocalDatastore();
+                    queryContenido.whereEqualTo("contenedor", event);
+                    queryContenido.findInBackground(new FindCallback<ActContAct>() {
+                        @Override
+                        public void done(List<ActContAct> objects, ParseException e) {
+                            List<Actividad> eventosAnidados = new ArrayList<>();
+                            for(ActContAct actContAct:objects){
+                                Log.i("NOSFUIMOSALAB", "PASASTE");
+                                eventosAnidados.add(actContAct.getContenido());
+                            }
 
-
-
+                            Log.i("NOPASOOOOOOOASDFSADF", String.valueOf(eventosAnidados.size()));
+                            Fragment fragment = EventDetailFragment.newInstance(evento, meetingApp,roles,eventosAnidados);
+                            final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                            ft.replace(R.id.container, fragment);
+                            ft.addToBackStack(null);
+                            ft.commit();
+                        }
+                    });
                 }
             });
         }

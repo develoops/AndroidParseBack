@@ -83,7 +83,7 @@ public class SearchViewFragment extends Fragment implements SearchView.OnQueryTe
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 ParseObject object = (ParseObject)(listview.getItemAtPosition(position));
                 final Actividad event = ParseObject.createWithoutData(Actividad.class, object.getObjectId());
-               /* final List <Actividad> eventosAnidados = new ArrayList<>();
+                final List <Actividad> eventosAnidados = new ArrayList<>();
                 ParseQuery<ActContAct> queryContenido = ParseQuery.getQuery(ActContAct.class);
                 queryContenido.include("contenido.lugar");
                 queryContenido.include ("contenedor");
@@ -99,7 +99,7 @@ public class SearchViewFragment extends Fragment implements SearchView.OnQueryTe
                     }
                 });
 
-             ;*/
+                ;
                 ParseQuery<PersonaRolAct> personaRolActParseQuery = ParseQuery.getQuery(PersonaRolAct.class);
                 personaRolActParseQuery.include("persona.pais");
                 personaRolActParseQuery.include("actividad.lugar");
@@ -112,7 +112,7 @@ public class SearchViewFragment extends Fragment implements SearchView.OnQueryTe
                         if(objects!=null){
 
                             roles=objects;
-                            Fragment fragment = EventDetailFragment.newInstance(event, mApp,roles);
+                            Fragment fragment = EventDetailFragment.newInstance(event, mApp,roles,eventosAnidados);
                             final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
                             ft.replace(R.id.container, fragment);
                             ft.addToBackStack(null);

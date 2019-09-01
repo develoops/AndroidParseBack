@@ -177,7 +177,7 @@ public class SplashEventFragment extends Fragment {
 
 
                 ParseQuery<Org> queryOrg3 = ParseQuery.getQuery(Org.class);
-                queryOrg3.whereEqualTo("tipo","patrocinador2");
+                queryOrg3.whereEqualTo("tipo","auspiciador");
                 queryOrg3.fromLocalDatastore();
                 queryOrg3.fromPin("patrocinadores");
                 queryOrg3.findInBackground(new FindCallback<Org>() {

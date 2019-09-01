@@ -84,7 +84,6 @@ public class ProgramFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // Retain this fragment across configuration changes.
-
         setRetainInstance(true);
 
     }
@@ -129,10 +128,9 @@ public class ProgramFragment extends Fragment {
 
                         evento = event;
                         Log.i("PORAQUIPASAA22222",String.valueOf(evento.getObjectId()));
-
                         ParseQuery<PersonaRolAct> personaRolActParseQuery = ParseQuery.getQuery(PersonaRolAct.class);
                         personaRolActParseQuery.include("persona.pais");
-                        //personaRolActParseQuery.include("actividad.lugar");
+                        personaRolActParseQuery.include("actividad.lugar");
                         personaRolActParseQuery.fromLocalDatastore();
                         personaRolActParseQuery.fromPin("personasRol");
                         personaRolActParseQuery.whereEqualTo("act",evento);
@@ -140,22 +138,38 @@ public class ProgramFragment extends Fragment {
                             @Override
                             public void done(List<PersonaRolAct> objects, ParseException e) {
                                 if(objects!=null){
-                                    Fragment fragment = EventDetailFragment.newInstance(evento, meetingApp,objects);
-                                    final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                                    ft.replace(R.id.container, fragment);
-                                    ft.addToBackStack(null);
-                                    ft.commit();
+
+                                    roles=objects;
                                 }
 
                             }
                         });
 
+                        ParseQuery<ActContAct> queryContenido = ParseQuery.getQuery(ActContAct.class);
+                        queryContenido.include("contenido.lugar");
+                        queryContenido.include ("contenedor");
+                        queryContenido.fromPin("ActconAct2");
+                        queryContenido.fromLocalDatastore();
+                        queryContenido.whereEqualTo("contenedor", evento);
+                        queryContenido.findInBackground(new FindCallback<ActContAct>() {
+                            @Override
+                            public void done(List<ActContAct> objects, ParseException e) {
+                                List<Actividad> eventosAnidados = new ArrayList<>();
+                                for(ActContAct actContAct:objects){
+                                    Log.i("NOSFUIMOSALAB", "PASASTE");
+                                    eventosAnidados.add(actContAct.getContenido());
+                                }
+
+                                Log.i("NOPASOOOOOOOASDFSADF", String.valueOf(eventosAnidados.size()));
+                                Fragment fragment = EventDetailFragment.newInstance(evento, meetingApp,roles,eventosAnidados);
+                                final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                                ft.replace(R.id.container, fragment);
+                                ft.addToBackStack(null);
+                                ft.commit();
 
 
-
-                        //Log.i("NOPASOOOOOOOASDFSADF", String.valueOf(eventosAnidados.size()));
-
-
+                            }
+                        });
                         //Log.i("NOPASOOOOOOOASDFSADF", String.valueOf(eventosAnidados.size()));
 
                     }
@@ -165,12 +179,50 @@ public class ProgramFragment extends Fragment {
                     Log.i("PORAQUIPASAA","NO");
 
                     evento = event;
-                    Fragment fragment = EventDetailFragment.newInstance(evento, meetingApp,roles);
-                    final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                    ft.replace(R.id.container, fragment);
-                    ft.addToBackStack(null);
-                    ft.commit();
+                    Log.i("PORAQUIPASAA22222",String.valueOf(evento.getObjectId()));
+                    ParseQuery<PersonaRolAct> personaRolActParseQuery = ParseQuery.getQuery(PersonaRolAct.class);
+                    personaRolActParseQuery.include("persona.pais");
+                    personaRolActParseQuery.include("actividad.lugar");
+                    personaRolActParseQuery.fromLocalDatastore();
+                    personaRolActParseQuery.fromPin("personasRol");
+                    personaRolActParseQuery.whereEqualTo("act",evento);
+                    personaRolActParseQuery.findInBackground(new FindCallback<PersonaRolAct>() {
+                        @Override
+                        public void done(List<PersonaRolAct> objects, ParseException e) {
+                            if(objects!=null){
 
+                                roles=objects;
+                            }
+
+                        }
+                    });
+
+                    ParseQuery<ActContAct> queryContenido = ParseQuery.getQuery(ActContAct.class);
+                    queryContenido.include("contenido.lugar");
+                    queryContenido.include ("contenedor");
+                    queryContenido.fromPin("ActconAct2");
+                    queryContenido.fromLocalDatastore();
+                    queryContenido.whereEqualTo("contenedor", evento);
+                    queryContenido.findInBackground(new FindCallback<ActContAct>() {
+                        @Override
+                        public void done(List<ActContAct> objects, ParseException e) {
+                            List<Actividad> eventosAnidados = new ArrayList<>();
+                            for(ActContAct actContAct:objects){
+                                Log.i("NOSFUIMOSALAB", "PASASTE");
+                                eventosAnidados.add(actContAct.getContenido());
+                            }
+
+                            Log.i("NOPASOOOOOOOASDFSADF", String.valueOf(eventosAnidados.size()));
+                            Fragment fragment = EventDetailFragment.newInstance(evento, meetingApp,roles,eventosAnidados);
+                            final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                            ft.replace(R.id.container, fragment);
+                            ft.addToBackStack(null);
+                            ft.commit();
+
+
+                        }
+                    });
+                    //Log.i("NOPASOOOOOOOASDFSADF", String.valueOf(eventosAnidados.size()));
                 }
 
 
@@ -190,13 +242,11 @@ public class ProgramFragment extends Fragment {
 
             // second argument is the default to use if the preference can't be found
 /*            Boolean welcomeScreenShown = mPrefs.getBoolean(welcomeScreenShownPref, false);
-
             if (!welcomeScreenShown) {
                 // here you can launch another activity if you like
                 // the code below will display a popup
                 String title ="";
                 String subtitle="";
-
 //                List <New> news =  meetingApp.getWalls().get(0).getNews();
 //                for (int i=0; i<news.size(); i++) {
 //                   if(news.get(i).getTitle().equals("Bienvenida")){
@@ -241,7 +291,6 @@ public class ProgramFragment extends Fragment {
             Collections.sort(events, new Comparator<Event>() {
                 @Override
                 public int compare(Event lhs, Event rhs) {
-
                     if(lhs.getPlace()==null){
                         return 0;
                     }
@@ -250,12 +299,9 @@ public class ProgramFragment extends Fragment {
                     }
                     else {
                         return lhs.getPlace().getName().toString().compareTo(rhs.getPlace().getName().toString());
-
                     }
-
                 }
             });
-
 */
 
 
@@ -307,4 +353,3 @@ public class ProgramFragment extends Fragment {
 
 
 }
-

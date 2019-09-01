@@ -1,7 +1,6 @@
 package fragments;
 
 
-import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.Dialog;
 import android.app.PendingIntent;
@@ -58,7 +57,6 @@ import mc.sms.myApp;
 import model.ActContAct;
 import model.ActFavUser;
 import model.Actividad;
-import model.Emision;
 import model.Persona;
 import model.PersonaRolAct;
 import model.PreguntaEncuesta;
@@ -85,7 +83,7 @@ public class EventDetailFragment extends Fragment {
     public static Persona personars;
     public static Actividad evento;
     public static List <PersonaRolAct> roles,roles2 = new ArrayList<>();
-   // public static Integer counter=0;
+    // public static Integer counter=0;
     public myApp myapp;
     public static List<PreguntaEncuesta> preguntaEncuestas = new ArrayList<>();
 
@@ -95,7 +93,7 @@ public class EventDetailFragment extends Fragment {
     ParseImageView header;
     private PendingIntent pendingIntent;
 
-    public static EventDetailFragment newInstance(Actividad event, Actividad meetingApp, List<PersonaRolAct> rols) {
+    public static EventDetailFragment newInstance(Actividad event, Actividad meetingApp, List<PersonaRolAct> rols,List<Actividad> anidados) {
 
         // Instantiate a new fragment
 
@@ -103,9 +101,10 @@ public class EventDetailFragment extends Fragment {
 
         selectedEvent = event;
         mApp = meetingApp; //para Alfonso
-        roles=rols;
+        eventosAnidados=anidados;
+        roles= rols;
+        fragment.setRetainInstance(true);
         return fragment;
-
 
     }
 
@@ -545,7 +544,7 @@ public class EventDetailFragment extends Fragment {
                 dialogo.show();*/
 
 
-        }
+            }
         });
 
         ask.setOnClickListener(new View.OnClickListener() {
@@ -553,11 +552,11 @@ public class EventDetailFragment extends Fragment {
             public void onClick(View v) {
 
 
-                        Fragment fragment = PreguntasListFragment.newInstance(selectedEvent);
-                        final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                        ft.replace(R.id.container, fragment);
-                        ft.addToBackStack(null);
-                        ft.commit();
+                Fragment fragment = PreguntasListFragment.newInstance(selectedEvent);
+                final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.container, fragment);
+                ft.addToBackStack(null);
+                ft.commit();
 
 
             }

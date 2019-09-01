@@ -21,8 +21,8 @@ public class Media extends ParseObject {
         return getString("nombre");
     }
 
-    public String getTipo() {
-        return getString("tipo");
+    public String getOrden() {
+        return getString("orden");
     }
     public String getUrl() {
         return getString("url");

@@ -79,7 +79,7 @@ public class EventDetailFragment3 extends Fragment {
     public static Persona personars;
     public static Actividad evento;
     public static List <PersonaRolAct> roles,roles2 = new ArrayList<>();
-   // public static Integer counter=0;
+    // public static Integer counter=0;
     public myApp myapp;
     public static Actividad mApp;
     GridDocumentsAdapter docsadapter;
@@ -226,7 +226,7 @@ public class EventDetailFragment3 extends Fragment {
         rate.setTextColor(Color.WHITE);
         ask.setTextColor(Color.WHITE);
         map.setTextColor(Color.WHITE);
-       // checkin.setTextColor(Color.WHITE);
+        //checkin.setTextColor(Color.WHITE);
         makeFavourite.setTextColor(Color.WHITE);
         ask.setVisibility(View.VISIBLE);
         //checkin.setVisibility(View.INVISIBLE);
@@ -249,15 +249,42 @@ public class EventDetailFragment3 extends Fragment {
         }
 */
 
+
         DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
         int width = displayMetrics.widthPixels;
         int height = displayMetrics.heightPixels;
 
-        rate.getLayoutParams().width = (width/4);
-        ask.getLayoutParams().width = (width/4);
-        map.getLayoutParams().width = (width/4);
-        //checkin.getLayoutParams().width = (width/5);
-        makeFavourite.getLayoutParams().width = (width/4);
+        if(myapp.getEncuestaTrue(selectedEvent.getObjectId())){
+            //rate.getLayoutParams().width = (width/3);
+            ask.getLayoutParams().width = (width/3);
+
+            rate.setVisibility(View.GONE);
+            ///ask.setVisibility(View.GONE);
+            map.getLayoutParams().width = (width/3);
+            //checkin.getLayoutParams().width = (width/5);
+            makeFavourite.getLayoutParams().width = (width/3);
+        }
+        else if(selectedEvent.getType().equals("social")){
+            ask.setVisibility(View.GONE);
+
+            rate.setVisibility(View.GONE);
+            ///ask.setVisibility(View.GONE);
+            map.getLayoutParams().width = (width/2);
+            //checkin.getLayoutParams().width = (width/5);
+            makeFavourite.getLayoutParams().width = (width/2);
+        }
+        else {
+
+            //rate.setVisibility(View.VISIBLE);
+            ask.setVisibility(View.VISIBLE);
+
+
+            rate.setVisibility(View.GONE);
+            ask.getLayoutParams().width = (width/3);
+            map.getLayoutParams().width = (width/3);
+            //checkin.getLayoutParams().width = (width/5);
+            makeFavourite.getLayoutParams().width = (width/3);
+        }
 
 
         TextView description = (TextView) RootView.findViewById(R.id.content);
@@ -273,50 +300,8 @@ public class EventDetailFragment3 extends Fragment {
             rate.setVisibility(View.INVISIBLE);
         }
 
-//        if(selectedEvent.getEventFiles()!=null){
-//
-//            if(selectedEvent.getType().equals("Trabajos Libres")){
-//                fileslistview.setVisibility(View.VISIBLE);
-//                docsadapter = new GridDocumentsAdapter(getActivity(),R.layout.cell_document,selectedEvent.getEventFiles());
-//                fileslistview.setAdapter(docsadapter);
-//
-//                fileslistview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//                    @Override
-//                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//
-//
-//
-//                        ParseObject object = (ParseObject)(fileslistview.getItemAtPosition(position));
-//                        MobiFile mobiFile= ParseObject.createWithoutData(MobiFile.class, object.getObjectId());
-//                        Fragment fragment = DocumentDetailFragment.newInstance(mobiFile);
-//                        final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-//                        ft.replace(R.id.container,fragment);
-//                        ft.addToBackStack(null);
-//                        ft.commit();
-//
-//                    }
-//                });
-//
-//
-//            }
-//            else {
-//                checkin.setVisibility(View.VISIBLE);
-//                checkin.setText("Docs");
-//                checkin.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        Fragment fragment = DocumentListFragment.newInstance(selectedEvent.getEventFiles());
-//                        final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-//                        ft.replace(R.id.container, fragment);
-//                        ft.addToBackStack(null);
-//                        ft.commit();
-//                    }
-//                });
-//
-//            }
-//
-//        }
-
+        map.setVisibility(View.VISIBLE);
+        map.setText("Mapa");
 
         if(eventosAnidados!=null || eventosAnidados.size()>0 ){
 
@@ -358,6 +343,7 @@ public class EventDetailFragment3 extends Fragment {
                     Actividad event = ParseObject.createWithoutData(Actividad.class, object.getObjectId());
                     //final List <Actividad> eventosAnidados2 = new ArrayList<>();
                     roles2.clear();
+
                     ParseQuery<PersonaRolAct> personaRolActParseQuery = ParseQuery.getQuery(PersonaRolAct.class);
                     personaRolActParseQuery.include("persona.pais");
                     personaRolActParseQuery.include("actividad.lugar");
@@ -420,6 +406,9 @@ public class EventDetailFragment3 extends Fragment {
 
                 }
             });
+        }
+        else {
+            events_listview.setVisibility(View.GONE);
         }
 
 

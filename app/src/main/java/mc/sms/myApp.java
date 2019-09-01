@@ -76,8 +76,8 @@ public class myApp extends Application {
         ParseObject.registerSubclass(Rating.class);
         ParseObject.registerSubclass(RespuestaEncuesta.class);
         Parse.initialize(new Parse.Configuration.Builder(this)
-                .applicationId("sq5wbMZGz2aDmzs7lWcDmfjCEhZo2FwP26mroTNe")
-                .clientKey("nkQgReJciAbo3mlLktxU8elozQMDKSnKdHnfu99h")
+                .applicationId("4ycbqaeaT2CR9d9k775xsmwLvQBDztYAwU4ydPNd")
+                .clientKey("tLjK4Y8tQmeTEBGjUhVjPk8w2EUW1BraZnkyBvwV")
                 .server("https://parseapi.back4app.com/").enableLocalDataStore().build()
 
         );

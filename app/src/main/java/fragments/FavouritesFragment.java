@@ -114,7 +114,7 @@ public class FavouritesFragment extends Fragment {
 
                             }
                             else {
-                                       // textView.setVisibility(View.VISIBLE);
+                                // textView.setVisibility(View.VISIBLE);
                             }
 
                             listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -141,6 +141,7 @@ public class FavouritesFragment extends Fragment {
 
 
 
+                                    final List<Actividad> eventosAnidados= new ArrayList<>();
 
                                     ParseObject object = (ParseObject)(listview.getItemAtPosition(position));
                                     final Actividad event = ParseObject.createWithoutData(Actividad.class, object.getObjectId());
@@ -158,7 +159,7 @@ public class FavouritesFragment extends Fragment {
 
                                             }
 
-                                            Fragment fragment = EventDetailFragment.newInstance(event, meetingApp,roles);
+                                            Fragment fragment = EventDetailFragment.newInstance(event, meetingApp,roles,eventosAnidados);
                                             final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
                                             ft.replace(R.id.container, fragment);
                                             ft.addToBackStack(null);

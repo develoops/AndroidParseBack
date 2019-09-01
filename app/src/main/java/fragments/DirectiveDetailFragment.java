@@ -141,7 +141,7 @@ public class DirectiveDetailFragment extends Fragment {
                 if (event.getAction() == KeyEvent.ACTION_UP && keyCode == KeyEvent.KEYCODE_BACK){
                     // handle back button's click listener
 
-                    if(bool){
+                  /*  if(bool){
                         ((AppCompatActivity)getActivity()).getSupportActionBar().setHomeAsUpIndicator(R.drawable.directorio);
                         getActivity().onBackPressed();
                     }
@@ -150,7 +150,8 @@ public class DirectiveDetailFragment extends Fragment {
                         getActivity().onBackPressed();
                     }
 
-
+*/
+                    getActivity().onBackPressed();
                     return true;
 
 

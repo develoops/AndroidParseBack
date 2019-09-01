@@ -46,6 +46,9 @@ public class Org extends ParseObject {
         return getString("sitioWeb");
     }
 
+    public String getOrder(){
+        return getString("order");
+    }
 
 
 

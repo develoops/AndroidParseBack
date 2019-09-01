@@ -52,6 +52,8 @@
 
         </activity>
 
+        <meta-data android:name="com.parse.push.gcm_sender_id"
+            android:value="id:34634808952" />
 
         <service android:name="com.parse.PushService" />
         <receiver android:name="com.parse.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
@@ -62,6 +64,8 @@
                 <category android:name="mc.sms" />
             </intent-filter>
         </receiver>
+
+
         <receiver android:name="com.parse.ParsePushBroadcastReceiver" android:exported="false">
             <intent-filter>
                 <action android:name="com.parse.push.intent.RECEIVE" />
@@ -78,8 +82,7 @@
 
         <receiver android:name="mc.sms.BroadcastAlarma" />
 
-        <meta-data android:name="com.parse.push.gcm_sender_id"
-            android:value="id:712456314512" />;
+
 
         <meta-data android:name="com.parse.push.notification_icon" android:resource="@drawable/ic_launcher"/>
     </application>

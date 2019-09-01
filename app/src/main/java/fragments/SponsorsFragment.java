@@ -12,12 +12,15 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import adapters.SponsorsListViewAdapter;
 import mc.sms.R;
 import model.Actividad;
 import model.Org;
+import model.PersonaRolOrg;
 
 /**
  * Created by Alvaro on 2/25/15.
@@ -64,7 +67,12 @@ public class SponsorsFragment extends Fragment {
         if(mApp!=null){
             if(organizaciones!=null){
 
-
+                    Collections.sort(organizaciones,new Comparator<Org>() {
+                        @Override
+                        public int compare(Org lhs, Org rhs) {
+                            return lhs.getOrder().compareTo(rhs.getOrder());
+                        }
+                    });
 
 
                 listview.setAdapter(new SponsorsListViewAdapter(getActivity(),organizaciones));

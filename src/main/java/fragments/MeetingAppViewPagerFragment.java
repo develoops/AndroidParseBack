@@ -262,6 +262,7 @@ public class MeetingAppViewPagerFragment extends Fragment {
             pager.setMaxChildProgramId(MUtil.divideEventByGroupSize(events) - 1);
             pageAdapter = new EventsFragmentAdapter(getChildFragmentManager(), Titles, Numboftabs, meetingApp, events, speakers, organizaciones, comite, media,pEncuestas,pager, app);
             pager.setAdapter(pageAdapter);
+            mSlidingTabLayout.setDistributeEvenly(true);
             mSlidingTabLayout.setViewPager(pager);
 
 

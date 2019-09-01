@@ -91,6 +91,7 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jniLibs" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/manifests" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/multi-dex" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/pre-dexed" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/reload-dex" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/res" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/restart-dex" />
@@ -100,57 +101,62 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/symbols" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/transforms" />
       <excludeFolder url="file://$MODULE_DIR$/build/outputs" />
+      <excludeFolder url="file://$MODULE_DIR$/build/reports" />
       <excludeFolder url="file://$MODULE_DIR$/build/tmp" />
     </content>
-    <orderEntry type="jdk" jdkName="Android API 27 Platform (1)" jdkType="Android SDK" />
+    <orderEntry type="jdk" jdkName="Android API 28 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="gson-2.2.4" level="project" />
-    <orderEntry type="library" exported="" name="appcompat-v7-27.1.1" level="project" />
-    <orderEntry type="library" exported="" name="support-vector-drawable-27.1.1" level="project" />
-    <orderEntry type="library" exported="" name="play-services-tasks-11.8.0" level="project" />
-    <orderEntry type="library" exported="" name="firebase-core-11.8.0" level="project" />
-    <orderEntry type="library" exported="" name="firebase-analytics-license-11.8.0" level="project" />
-    <orderEntry type="library" exported="" name="play-services-basement-license-11.8.0" level="project" />
-    <orderEntry type="library" exported="" name="firebase-iid-11.8.0" level="project" />
-    <orderEntry type="library" exported="" name="firebase-messaging-license-11.8.0" level="project" />
-    <orderEntry type="library" exported="" name="bolts-tasks-1.4.0" level="project" />
-    <orderEntry type="library" exported="" name="viewmodel-1.1.0" level="project" />
-    <orderEntry type="library" exported="" name="firebase-messaging-11.8.0" level="project" />
-    <orderEntry type="library" exported="" name="firebase-common-license-11.8.0" level="project" />
-    <orderEntry type="library" exported="" name="support-media-compat-27.1.1" level="project" />
-    <orderEntry type="library" exported="" name="support-annotations-27.1.1" level="project" />
-    <orderEntry type="library" exported="" name="parseui-login-android-0.0.2" level="project" />
+    <orderEntry type="library" exported="" name="play-services-basement-16.2.0" level="project" />
+    <orderEntry type="library" exported="" name="play-services-base-16.0.1" level="project" />
+    <orderEntry type="library" exported="" name="play-services-measurement-api-16.4.0" level="project" />
     <orderEntry type="library" exported="" name="support-v4-27.1.1" level="project" />
     <orderEntry type="library" exported="" name="support-compat-27.1.1" level="project" />
-    <orderEntry type="library" exported="" name="animated-vector-drawable-27.1.1" level="project" />
-    <orderEntry type="library" exported="" name="parse-android-1.16.2" level="project" />
     <orderEntry type="library" exported="" name="parseui-widget-android-0.0.2" level="project" />
-    <orderEntry type="library" exported="" name="recyclerview-v7-27.1.1" level="project" />
     <orderEntry type="library" exported="" name="bolts-android-1.4.0" level="project" />
-    <orderEntry type="library" exported="" name="play-services-basement-11.8.0" level="project" />
+    <orderEntry type="library" exported="" name="play-services-measurement-base-16.4.0" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="multidex-instrumentation-1.0.1" level="project" />
-    <orderEntry type="library" exported="" name="firebase-iid-license-11.8.0" level="project" />
-    <orderEntry type="library" exported="" name="parse-livequery-android-1.0.4" level="project" />
-    <orderEntry type="library" exported="" name="okio-1.13.0" level="project" />
+    <orderEntry type="library" exported="" name="auto-value-annotations-1.6" level="project" />
+    <orderEntry type="library" exported="" name="firebase-iid-interop-16.0.1" level="project" />
     <orderEntry type="library" exported="" name="YouTubeAndroidPlayerApi" level="project" />
     <orderEntry type="library" exported="" name="transition-27.1.1" level="project" />
     <orderEntry type="library" exported="" name="universal-image-loader-1.9.3" level="project" />
-    <orderEntry type="library" exported="" name="play-services-tasks-license-11.8.0" level="project" />
     <orderEntry type="library" exported="" name="design-27.1.1" level="project" />
     <orderEntry type="library" exported="" name="livedata-core-1.1.0" level="project" />
+    <orderEntry type="library" exported="" name="play-services-measurement-sdk-api-16.4.0" level="project" />
     <orderEntry type="library" exported="" name="runtime-1.1.0" level="project" />
     <orderEntry type="library" exported="" name="1_runtime-1.1.0" level="project" />
-    <orderEntry type="library" exported="" name="firebase-analytics-impl-license-11.8.0" level="project" />
-    <orderEntry type="library" exported="" name="okhttp-3.8.1" level="project" />
-    <orderEntry type="library" exported="" name="support-core-utils-27.1.1" level="project" />
-    <orderEntry type="library" exported="" name="firebase-analytics-impl-11.8.0" level="project" />
-    <orderEntry type="library" exported="" name="common-1.1.0" level="project" />
-    <orderEntry type="library" exported="" name="1_common-1.1.0" level="project" />
-    <orderEntry type="library" exported="" name="firebase-common-11.8.0" level="project" />
-    <orderEntry type="library" exported="" name="multidex-1.0.1" level="project" />
     <orderEntry type="library" exported="" name="support-core-ui-27.1.1" level="project" />
     <orderEntry type="library" exported="" name="bolts-applinks-1.4.0" level="project" />
+    <orderEntry type="library" exported="" name="play-services-measurement-impl-16.4.0" level="project" />
     <orderEntry type="library" exported="" name="support-fragment-27.1.1" level="project" />
-    <orderEntry type="library" exported="" name="firebase-analytics-11.8.0" level="project" />
+    <orderEntry type="library" exported="" name="firebase-analytics-16.4.0" level="project" />
+    <orderEntry type="library" exported="" name="gson-2.2.4" level="project" />
+    <orderEntry type="library" exported="" name="appcompat-v7-27.1.1" level="project" />
+    <orderEntry type="library" exported="" name="support-vector-drawable-27.1.1" level="project" />
+    <orderEntry type="library" exported="" name="firebase-messaging-17.6.0" level="project" />
+    <orderEntry type="library" exported="" name="play-services-stats-16.0.1" level="project" />
+    <orderEntry type="library" exported="" name="firebase-core-16.0.8" level="project" />
+    <orderEntry type="library" exported="" name="firebase-common-16.1.0" level="project" />
+    <orderEntry type="library" exported="" name="play-services-ads-identifier-16.0.0" level="project" />
+    <orderEntry type="library" exported="" name="bolts-tasks-1.4.0" level="project" />
+    <orderEntry type="library" exported="" name="viewmodel-1.1.0" level="project" />
+    <orderEntry type="library" exported="" name="support-media-compat-27.1.1" level="project" />
+    <orderEntry type="library" exported="" name="support-annotations-27.1.1" level="project" />
+    <orderEntry type="library" exported="" name="parseui-login-android-0.0.2" level="project" />
+    <orderEntry type="library" exported="" name="animated-vector-drawable-27.1.1" level="project" />
+    <orderEntry type="library" exported="" name="parse-android-1.16.2" level="project" />
+    <orderEntry type="library" exported="" name="recyclerview-v7-27.1.1" level="project" />
+    <orderEntry type="library" exported="" name="parse-livequery-android-1.0.4" level="project" />
+    <orderEntry type="library" exported="" name="play-services-measurement-sdk-16.4.0" level="project" />
+    <orderEntry type="library" exported="" name="okio-1.13.0" level="project" />
+    <orderEntry type="library" exported="" name="firebase-measurement-connector-17.0.1" level="project" />
+    <orderEntry type="library" exported="" name="firebase-iid-17.1.2" level="project" />
+    <orderEntry type="library" exported="" name="okhttp-3.8.1" level="project" />
+    <orderEntry type="library" exported="" name="support-core-utils-27.1.1" level="project" />
+    <orderEntry type="library" exported="" name="common-1.1.0" level="project" />
+    <orderEntry type="library" exported="" name="1_common-1.1.0" level="project" />
+    <orderEntry type="library" exported="" name="multidex-1.0.1" level="project" />
+    <orderEntry type="library" exported="" name="play-services-measurement-16.4.0" level="project" />
+    <orderEntry type="library" exported="" name="play-services-tasks-16.0.1" level="project" />
   </component>
 </module>

@@ -1,39 +1,37 @@
 {
   "project_info": {
-    "project_number": "712456314512",
-    "firebase_url": "https://otro-proyecto-4484e.firebaseio.com",
-    "project_id": "otro-proyecto-4484e",
-    "storage_bucket": "otro-proyecto-4484e.appspot.com"
+    "project_number": "34634808952",
+    "firebase_url": "https://proyectosms-1c19f.firebaseio.com",
+    "project_id": "proyectosms-1c19f",
+    "storage_bucket": "proyectosms-1c19f.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:712456314512:android:31d0e72be780685a",
+        "mobilesdk_app_id": "1:34634808952:android:31d0e72be780685a",
         "android_client_info": {
           "package_name": "mc.sms"
         }
       },
       "oauth_client": [
         {
-          "client_id": "712456314512-u1cl1pnvl8vpvbn8jj4rrbuvdk8vvmg4.apps.googleusercontent.com",
+          "client_id": "34634808952-js2o3dmuaigr2l42rg189i27rffcevpt.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAYYkptTVNYp91TxkWv8mHp3ZY7tod0d0M"
+          "current_key": "AIzaSyCLfhJJnGy5MbOkgPtQXaPhfbkhpNRnKrw"
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
+          "other_platform_oauth_client": [
+            {
+              "client_id": "34634808952-js2o3dmuaigr2l42rg189i27rffcevpt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
