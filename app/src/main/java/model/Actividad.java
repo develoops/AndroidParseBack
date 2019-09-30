@@ -47,6 +47,8 @@ public class Actividad extends ParseObject {
         return getString("descripcion");
     }
 
+    public String getEncuesta(){return getString("encuesta");}
+
 
 
     public static ParseQuery<Actividad> getQuery() {

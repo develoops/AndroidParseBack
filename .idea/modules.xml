@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/AndroidParseBack.iml" filepath="$PROJECT_DIR$/AndroidParseBack.iml" />
       <module fileurl="file://$PROJECT_DIR$/Example/Example.iml" filepath="$PROJECT_DIR$/Example/Example.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/parse-livequery/parse-livequery.iml" filepath="$PROJECT_DIR$/parse-livequery/parse-livequery.iml" />
     </modules>
   </component>
 </project>

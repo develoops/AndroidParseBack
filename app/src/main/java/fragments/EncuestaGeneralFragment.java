@@ -35,11 +35,11 @@ public class EncuestaGeneralFragment extends Fragment {
 
 
 
-    RelativeLayout seccion,seccion2,seccion3,seccion4,seccion5,seccion6,seccion7,header,header2,header3,header0,header4;
-    RatingBar ratingBar,ratingBar2,ratingBar3,ratingBar4,ratingBar5,ratingBar6,ratingBar7;
-    TextView textView, textView2, textView3, textView4, textView5, textView6, textView7, textFinal,textHeader, textHeader0, textHeader2,textHeader3, textHeader4;
+    RelativeLayout seccion,seccion2,seccion3,header,header2,header3,header0,header4;
+    RatingBar ratingBar,ratingBar2,ratingBar3;
+    TextView textView, textView2, textView3,textFinal,textHeader, textHeader0, textHeader2,textHeader3, textHeader4;
     Button sendButton;
-    EditText editText;
+    EditText editText,editText2,editText3;
     public static List<PreguntaEncuesta> preguntaEncuestas = new ArrayList<>();
     public myApp myapp;
     public static Actividad mApp;
@@ -69,6 +69,9 @@ public class EncuestaGeneralFragment extends Fragment {
         final View RootView = inflater.inflate(R.layout.encuesta_general_layout, container, false);
         sendButton = (Button) RootView.findViewById(R.id.sendButton);
         editText = (EditText) RootView.findViewById(R.id.editTextEncuesta);
+        editText2 = (EditText) RootView.findViewById(R.id.editTextEncuesta2);
+        editText3 = (EditText) RootView.findViewById(R.id.editTextEncuesta3);
+
 
         //header = (RelativeLayout)RootView.findViewById(R.id.header);
         this.myapp = (myApp) getActivity().getApplicationContext();
@@ -86,28 +89,22 @@ public class EncuestaGeneralFragment extends Fragment {
         seccion = (RelativeLayout) RootView.findViewById(R.id.seccion1);
         seccion2 = (RelativeLayout) RootView.findViewById(R.id.seccion2);
         seccion3 = (RelativeLayout) RootView.findViewById(R.id.seccion3);
-        seccion4 = (RelativeLayout) RootView.findViewById(R.id.seccion4);
-        seccion5 = (RelativeLayout) RootView.findViewById(R.id.seccion5);
-        seccion6 = (RelativeLayout) RootView.findViewById(R.id.seccion6);
 
         header0 = (RelativeLayout) RootView.findViewById(R.id.header0);
         header = (RelativeLayout) RootView.findViewById(R.id.header);
         header2 = (RelativeLayout) RootView.findViewById(R.id.header2);
         header3 = (RelativeLayout) RootView.findViewById(R.id.header3);
         header4 = (RelativeLayout) RootView.findViewById(R.id.header4);
+
         textView = (TextView) seccion.findViewById(R.id.textHeader);
         textView2 = (TextView) seccion2.findViewById(R.id.textHeader);
         textView3 = (TextView) seccion3.findViewById(R.id.textHeader);
-        textView4 = (TextView) seccion4.findViewById(R.id.textHeader);
-        textView5 = (TextView) seccion5.findViewById(R.id.textHeader);
-        textView6 = (TextView) seccion6.findViewById(R.id.textHeader);
+
 
         ratingBar = (RatingBar) seccion.findViewById(R.id.ratingBar);
         ratingBar2 = (RatingBar) seccion2.findViewById(R.id.ratingBar);
         ratingBar3 = (RatingBar) seccion3.findViewById(R.id.ratingBar);
-        ratingBar4 = (RatingBar) seccion4.findViewById(R.id.ratingBar);
-        ratingBar5 = (RatingBar) seccion5.findViewById(R.id.ratingBar);
-        ratingBar6 = (RatingBar) seccion6.findViewById(R.id.ratingBar);
+
 
         textFinal = (TextView) RootView.findViewById(R.id.textFinal);
 
@@ -116,10 +113,9 @@ public class EncuestaGeneralFragment extends Fragment {
             textView.setText(preguntaEncuestas.get(0).getPreguntaTexto());
             textView2.setText(preguntaEncuestas.get(1).getPreguntaTexto());
             textView3.setText(preguntaEncuestas.get(2).getPreguntaTexto());
-            textView4.setText(preguntaEncuestas.get(3).getPreguntaTexto());
-            textView5.setText(preguntaEncuestas.get(4).getPreguntaTexto());
-            textView6.setText(preguntaEncuestas.get(5).getPreguntaTexto());
-            textHeader4.setText(preguntaEncuestas.get(6).getPreguntaTexto());
+            textHeader2.setText(preguntaEncuestas.get(3).getPreguntaTexto());
+            textHeader3.setText(preguntaEncuestas.get(4).getPreguntaTexto());
+            textHeader4.setText(preguntaEncuestas.get(5).getPreguntaTexto());
 
             sendButton.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -131,7 +127,6 @@ public class EncuestaGeneralFragment extends Fragment {
                     final RespuestaEncuesta respuestaEncuesta4 = new RespuestaEncuesta();
                     final RespuestaEncuesta respuestaEncuesta5 = new RespuestaEncuesta();
                     final RespuestaEncuesta respuestaEncuesta6 = new RespuestaEncuesta();
-                    final RespuestaEncuesta respuestaEncuesta7 = new RespuestaEncuesta();
 
                     respuestaEncuesta.setUser(ParseUser.getCurrentUser());
                     respuestaEncuesta.setEvent(mApp);
@@ -150,29 +145,20 @@ public class EncuestaGeneralFragment extends Fragment {
 
                     respuestaEncuesta4.setUser(ParseUser.getCurrentUser());
                     respuestaEncuesta4.setEvent(mApp);
-                    respuestaEncuesta4.setValoracion(ratingBar4.getRating());
+                    respuestaEncuesta4.setTexto(editText.getText().toString());
                     respuestaEncuesta4.setPregunta(preguntaEncuestas.get(3));
 
                     respuestaEncuesta5.setUser(ParseUser.getCurrentUser());
                     respuestaEncuesta5.setEvent(mApp);
-                    respuestaEncuesta5.setValoracion(ratingBar5.getRating());
+                    respuestaEncuesta5.setTexto(editText2.getText().toString());
                     respuestaEncuesta5.setPregunta(preguntaEncuestas.get(4));
 
                     respuestaEncuesta6.setUser(ParseUser.getCurrentUser());
                     respuestaEncuesta6.setEvent(mApp);
-                    respuestaEncuesta6.setValoracion(ratingBar6.getRating());
+                    respuestaEncuesta6.setTexto(editText3.getText().toString());
                     respuestaEncuesta6.setPregunta(preguntaEncuestas.get(5));
 
-                    respuestaEncuesta7.setUser(ParseUser.getCurrentUser());
-                    respuestaEncuesta7.setEvent(mApp);
-                    if(editText.getText().toString().equals("si") || editText.getText().toString().equals("Si")){
-                        respuestaEncuesta7.setValoracion(1);
-                    }
-                    else {
-                        respuestaEncuesta7.setValoracion(0);
-                    }
 
-                    respuestaEncuesta7.setPregunta(preguntaEncuestas.get(6));
 
 
                     new Thread(new Runnable() {
@@ -185,7 +171,6 @@ public class EncuestaGeneralFragment extends Fragment {
                             respuestaEncuesta4.saveEventually();
                             respuestaEncuesta5.saveEventually();
                             respuestaEncuesta6.saveEventually();
-                            respuestaEncuesta7.saveEventually();
 
                             myapp.setEncuestaTrue(mApp.getObjectId());
 
@@ -262,23 +247,17 @@ public class EncuestaGeneralFragment extends Fragment {
         textView.setVisibility(View.GONE);
         textView2.setVisibility(View.GONE);
         textView3.setVisibility(View.GONE);
-        textView4.setVisibility(View.GONE);
-        textView5.setVisibility(View.GONE);
-        textView6.setVisibility(View.GONE);
+
 
         ratingBar.setVisibility(View.GONE);
         ratingBar2.setVisibility(View.GONE);
         ratingBar3.setVisibility(View.GONE);
-        ratingBar4.setVisibility(View.GONE);
-        ratingBar5.setVisibility(View.GONE);
-        ratingBar6.setVisibility(View.GONE);
+
 
         seccion.setVisibility(View.GONE);
         seccion2.setVisibility(View.GONE);
         seccion3.setVisibility(View.GONE);
-        seccion4.setVisibility(View.GONE);
-        seccion5.setVisibility(View.GONE);
-        seccion6.setVisibility(View.GONE);
+
         header0.setVisibility(View.GONE);
         header.setVisibility(View.GONE);
         header2.setVisibility(View.GONE);

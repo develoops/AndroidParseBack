@@ -136,7 +136,7 @@ public class NewsFragment extends Fragment {
                 Log.i("HOLA",String.valueOf(keyCode));
                 if (event.getAction() == KeyEvent.ACTION_UP && keyCode == KeyEvent.KEYCODE_BACK){
                     // handle back button's click listener
-                    ((AppCompatActivity)getActivity()).getSupportActionBar().setHomeAsUpIndicator(R.drawable.directorio);
+//                    ((AppCompatActivity)getActivity()).getSupportActionBar().setHomeAsUpIndicator(R.drawable.directorio);
                     getActivity().onBackPressed();
                     return true;
                 }

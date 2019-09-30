@@ -59,6 +59,7 @@ import model.ActFavUser;
 import model.Actividad;
 import model.Persona;
 import model.PersonaRolAct;
+import model.PreguntaEncuesta;
 import model.Rating;
 
 /**
@@ -81,6 +82,8 @@ public class EventDetailFragment2 extends Fragment {
     public static List <PersonaRolAct> roles,roles2 = new ArrayList<>();
    // public static Integer counter=0;
     public myApp myapp;
+    public static List<PreguntaEncuesta> preguntaEncuestas = new ArrayList<>();
+
     public static Actividad mApp;
     GridDocumentsAdapter docsadapter;
 
@@ -335,6 +338,17 @@ public class EventDetailFragment2 extends Fragment {
             adapter2 = new HetpinProgramListViewAdapter(getActivity(),anidateEvents,mApp,true,false);
 
             events_listview.setAdapter(adapter2);
+            ParseQuery<PreguntaEncuesta> preguntaEncuestaParseQuery = ParseQuery.getQuery(PreguntaEncuesta.class);
+            preguntaEncuestaParseQuery.fromLocalDatastore();
+            preguntaEncuestaParseQuery.whereNotEqualTo("tipo","general");
+            preguntaEncuestaParseQuery.addAscendingOrder("posicion");
+            preguntaEncuestaParseQuery.findInBackground(new FindCallback<PreguntaEncuesta>() {
+                @Override
+                public void done(List<PreguntaEncuesta> objects, ParseException e) {
+                    preguntaEncuestas=objects;
+                }
+            });
+
             events_listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -578,6 +592,11 @@ public class EventDetailFragment2 extends Fragment {
         ask.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Fragment fragment = PreguntasListFragment.newInstance(selectedEvent);
+                final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.container, fragment);
+                ft.addToBackStack(null);
+                ft.commit();
 
             }
         });

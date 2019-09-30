@@ -75,6 +75,8 @@ public class myApp extends Application {
         ParseObject.registerSubclass(PersonaRolOrg.class);
         ParseObject.registerSubclass(Rating.class);
         ParseObject.registerSubclass(RespuestaEncuesta.class);
+        Parse.setLogLevel(Parse.LOG_LEVEL_VERBOSE);
+
         Parse.initialize(new Parse.Configuration.Builder(this)
                 .applicationId("4ycbqaeaT2CR9d9k775xsmwLvQBDztYAwU4ydPNd")
                 .clientKey("tLjK4Y8tQmeTEBGjUhVjPk8w2EUW1BraZnkyBvwV")
@@ -135,18 +137,6 @@ public class myApp extends Application {
 
 
 
-        ParsePush.subscribeInBackground("sms", new SaveCallback() {
-            @Override
-            public void done(ParseException e) {
-
-                if (e != null) {
-                    Log.d("com.parse.push", "successfully subscribed to the broadcast channel.");
-                } else {
-                    Log.e("com.parse.push", "failed to subscribe for push", e);
-                }
-
-            }
-        });
 
         //Create image options.
         DisplayImageOptions options = new DisplayImageOptions.Builder()

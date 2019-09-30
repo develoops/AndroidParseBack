@@ -88,10 +88,14 @@ public class MeetingAppViewPagerFragment extends Fragment {
         Titles.add("Patrocinadores");
         Titles.add("Comité Científico");
         Titles.add("Materiales");
+        if(meetingApp.getEncuesta().equals("si")){
+            Titles.add("Encuesta");
+        }
 
 
         setRetainInstance(true);
         ParseQuery<Info> noticias = ParseQuery.getQuery(Info.class);
+        noticias.whereEqualTo("vivo","1");
         noticias.findInBackground(new FindCallback<Info>() {
             @Override
             public void done(List<Info> objects, ParseException e) {

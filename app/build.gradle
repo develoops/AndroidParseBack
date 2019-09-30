@@ -8,8 +8,8 @@ android {
         applicationId "mc.sms"
         minSdkVersion 19
         targetSdkVersion 28
-        versionCode 10
-        versionName "1.7"
+        versionCode 12
+        versionName "1.9"
         multiDexEnabled true
     }
     buildTypes {
@@ -25,7 +25,7 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:27+'
     compile files('libs/universal-image-loader-1.9.3.jar')
     compile files('libs/YouTubeAndroidPlayerApi.jar')
@@ -34,7 +34,6 @@ dependencies {
     compile 'com.parse:parseui-login-android:0.0.2'
     compile 'com.parse:parseui-widget-android:0.0.2'
     compile 'com.parse.bolts:bolts-android:1.+'
-
     compile 'com.parse:parse-android:1.16.2'
     compile 'com.google.firebase:firebase-core:16.0.8'
     compile 'com.google.firebase:firebase-messaging:17.6.0'
@@ -42,6 +41,8 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:27.+'
     compile 'com.parse:parse-livequery-android:1.0.4'
     compile 'com.android.support:support-v4:27.+'
+
+
     //update version to the latest one
     // compile files('libs/Parse-1.9.1/Parse-1.9.1.jar')
     //compile files('libs/Parse-1.9.1/ParseCrashReporting-1.9.1.jar')
@@ -53,8 +54,9 @@ dependencies {
 repositories {
     mavenCentral()
     jcenter()
+    google()
     maven {
-        url "http://maven.google.com"
+        url 'https://jitpack.io'
     }
 }
 configurations.all {

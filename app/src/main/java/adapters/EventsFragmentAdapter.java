@@ -184,6 +184,10 @@ public class EventsFragmentAdapter extends FragmentStatePagerAdapter
             return  DirectiveFragment.newInstance(academic);
         }
 
+        else if(tabUIs.get(position).equals("Encuesta")){
+            return  EncuestaGeneralFragment.newInstance(mApp,pEncuestas);
+        }
+
         else {
             return MoreFragment.newInstance(mApp,media);
         }

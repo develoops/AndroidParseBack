@@ -1,1 +1,1 @@
-include ':app', ':Example', ':parse-livequery'
+include ':app', ':Example'

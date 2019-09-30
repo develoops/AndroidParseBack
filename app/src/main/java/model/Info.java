@@ -28,6 +28,8 @@ public class Info extends ParseObject {
         return getString("titulo");
     }
 
+    public String getVivo(){return getString("vivo");}
+
 
 
 

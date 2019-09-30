@@ -36,6 +36,10 @@ public class RespuestaEncuesta extends ParseObject {
         put("evento", actividad);
     }
 
+    public void setTexto(String texto){
+        put("texto", texto);
+    }
+
 
 
 
