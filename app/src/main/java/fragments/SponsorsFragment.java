@@ -17,10 +17,9 @@ import java.util.Comparator;
 import java.util.List;
 
 import adapters.SponsorsListViewAdapter;
-import mc.sms.R;
+import mc.neuro2019.R;
 import model.Actividad;
 import model.Org;
-import model.PersonaRolOrg;
 
 /**
  * Created by Alvaro on 2/25/15.

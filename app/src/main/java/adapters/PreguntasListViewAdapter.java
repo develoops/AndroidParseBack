@@ -6,25 +6,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.support.v7.widget.RecyclerView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.parse.FindCallback;
 import com.parse.GetCallback;
 import com.parse.ParseException;
-import com.parse.ParseFile;
 import com.parse.ParseQuery;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import mc.sms.R;
-import mc.sms.myApp;
+import mc.neuro2019.R;
+import mc.neuro2019.myApp;
 import model.Actividad;
 import model.Emision;
-import model.Org;
 import utils.CircularTextView;
 
 /**

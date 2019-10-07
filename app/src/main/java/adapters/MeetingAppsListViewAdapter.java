@@ -22,8 +22,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-import mc.sms.R;
-import mc.sms.myApp;
+import mc.neuro2019.R;
+import mc.neuro2019.myApp;
 import model.Actividad;
 
 /**

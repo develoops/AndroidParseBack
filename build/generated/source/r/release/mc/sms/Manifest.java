@@ -5,10 +5,10 @@
  * should not be modified by hand.
  */
 
-package mc.sms;
+package mc.neuro2019;
 
 public final class Manifest {
     public static final class permission {
-        public static final String C2D_MESSAGE="mc.sms.permission.C2D_MESSAGE";
+        public static final String C2D_MESSAGE="mc.neuro2019.permission.C2D_MESSAGE";
     }
 }

@@ -288,7 +288,7 @@
     <string name="action_settings">Configuración</string>
     <string name="alarm">Alarma seteada</string>
     <string name="alarm_cancel">Alarma cancelada</string>
-    <string name="app_name">SMS 2017</string>
+    <string name="app_name">neuro2019 2017</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="cancelled">Evento Favorito cancelado</string>
     <string name="com_parse_ui_confirm_password_input_hint">Re-enter password</string>

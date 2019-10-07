@@ -1,4 +1,4 @@
-package mc.sms;
+package mc.neuro2019;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

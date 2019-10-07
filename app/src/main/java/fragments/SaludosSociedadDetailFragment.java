@@ -2,7 +2,6 @@ package fragments;
 
 import android.app.Activity;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.Toolbar;
@@ -12,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 
-import mc.sms.R;
+import mc.neuro2019.R;
 import model.Media;
 
 /**

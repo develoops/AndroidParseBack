@@ -1,7 +1,6 @@
 package fragments;
 
 
-import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -22,7 +21,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import adapters.DirectiveListViewAdapter3;
-import mc.sms.R;
+import mc.neuro2019.R;
 import model.PersonaRolOrg;
 
 /**

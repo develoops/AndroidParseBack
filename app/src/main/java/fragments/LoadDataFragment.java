@@ -22,8 +22,8 @@ import com.parse.ParseQuery;
 
 import java.util.List;
 
-import mc.sms.R;
-import mc.sms.myApp;
+import mc.neuro2019.R;
+import mc.neuro2019.myApp;
 import model.ActContAct;
 import model.Actividad;
 
@@ -318,7 +318,7 @@ public class LoadDataFragment extends Fragment {
 
 
 							for (Actividad actividad : actividades) {
-								actividad.getParseFileV1().getDataInBackground();
+								//actividad.getParseFileV1().getDataInBackground();
 								ParseQuery<ActContAct> queryCont = ParseQuery.getQuery(ActContAct.class);
 								queryCont.include("contenido.lugar");
 								queryCont.include("contenedor");

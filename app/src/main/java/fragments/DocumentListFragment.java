@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Locale;
 
 import adapters.GridDocumentsAdapter;
-import mc.sms.R;
+import mc.neuro2019.R;
 import model.Media;
 
 /**

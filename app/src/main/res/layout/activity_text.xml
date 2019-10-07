@@ -21,14 +21,12 @@
         android:layout_below="@id/toolbar"
         />
 
-
     <views.CustomViewPager
         android:id="@+id/pager"
         android:layout_below="@id/tabs"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        >
-
-    </views.CustomViewPager>
+        android:layout_height="match_parent"
+        android:layout_width="fill_parent"
+        android:layout_weight="1"
+        ></views.CustomViewPager>
 
 </RelativeLayout>

@@ -12,7 +12,7 @@ import org.json.JSONObject;
 
 import java.util.Iterator;
 
-import mc.sms.MainActivity;
+import mc.neuro2019.MainActivity;
 
 /**
  * Created by alvaro on 05-11-14.

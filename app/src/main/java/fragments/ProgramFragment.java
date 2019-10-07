@@ -33,7 +33,7 @@ import java.util.Map;
 
 import adapters.HetpinProgramListViewAdapter;
 import adapters.PagerViewAdapter;
-import mc.sms.R;
+import mc.neuro2019.R;
 
 import model.ActContAct;
 import model.Actividad;

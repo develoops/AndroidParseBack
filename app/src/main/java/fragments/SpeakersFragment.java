@@ -26,7 +26,7 @@ import java.util.List;
 
 import adapters.SpeakersListViewAdapter;
 
-import mc.sms.R;
+import mc.neuro2019.R;
 
 import model.Actividad;
 

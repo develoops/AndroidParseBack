@@ -23,9 +23,9 @@ import java.util.List;
 
 import adapters.EventsFragmentAdapter;
 import fragments.sliding_tab.SlidingTabLayout;
-import mc.sms.MainActivity;
-import mc.sms.R;
-import mc.sms.myApp;
+import mc.neuro2019.MainActivity;
+import mc.neuro2019.R;
+import mc.neuro2019.myApp;
 import model.Actividad;
 import model.Info;
 
@@ -88,9 +88,6 @@ public class MeetingAppViewPagerFragment extends Fragment {
         Titles.add("Patrocinadores");
         Titles.add("Comité Científico");
         Titles.add("Materiales");
-        if(meetingApp.getEncuesta().equals("si")){
-            Titles.add("Encuesta");
-        }
 
 
         setRetainInstance(true);

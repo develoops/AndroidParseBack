@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="mc.sms"
+    package="mc.neuro2019"
     android:versionCode="3"
     android:versionName="1.2" >
 
@@ -19,10 +19,10 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <permission
-        android:name="mc.sms.permission.C2D_MESSAGE"
+        android:name="mc.neuro2019.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="mc.sms.permission.C2D_MESSAGE" />
+    <uses-permission android:name="mc.neuro2019.permission.C2D_MESSAGE" />
 
     <uses-feature
         android:name="android.hardware.telephony"
@@ -36,7 +36,7 @@
         android:xlargeScreens="true" />
 
     <application
-        android:name="mc.sms.myApp"
+        android:name="mc.neuro2019.myApp"
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:icon="@drawable/ic_launcher"
@@ -44,7 +44,7 @@
         android:largeHeap="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="mc.sms.MainActivity"
+            android:name="mc.neuro2019.MainActivity"
             android:alwaysRetainTaskState="true"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait" >
@@ -78,7 +78,7 @@
                 <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
 
 <!--                   IMPORTANT: Change "com.parse.tutorials.pushnotifications" to match your app's package name. -->
-                <category android:name="mc.sms" />
+                <category android:name="mc.neuro2019" />
             </intent-filter>
         </receiver>
         <receiver
@@ -92,10 +92,10 @@
         </receiver>
 
         <service
-            android:name="mc.sms.ServicioAlarma"
+            android:name="mc.neuro2019.ServicioAlarma"
             android:enabled="true" />
 
-        <receiver android:name="mc.sms.BroadcastAlarma" />
+        <receiver android:name="mc.neuro2019.BroadcastAlarma" />
 
         <meta-data
             android:name="com.parse.push.gcm_sender_id"
@@ -143,7 +143,7 @@
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
                 <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
 
-                <category android:name="mc.sms" />
+                <category android:name="mc.neuro2019" />
             </intent-filter>
         </receiver>
         <!--
@@ -167,7 +167,7 @@
 
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
-            android:authorities="mc.sms.firebaseinitprovider"
+            android:authorities="mc.neuro2019.firebaseinitprovider"
             android:exported="false"
             android:initOrder="100" />
 

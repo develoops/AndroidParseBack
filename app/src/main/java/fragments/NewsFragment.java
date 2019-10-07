@@ -21,8 +21,8 @@ import android.widget.ListView;
 import java.util.List;
 
 import adapters.NewsListViewAdapter;
-import mc.sms.R;
-import mc.sms.myApp;
+import mc.neuro2019.R;
+import mc.neuro2019.myApp;
 import model.Info;
 
 

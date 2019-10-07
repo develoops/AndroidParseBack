@@ -26,8 +26,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.TimeZone;
 
-import mc.sms.R;
-import mc.sms.myApp;
+import mc.neuro2019.R;
+import mc.neuro2019.myApp;
 import model.Actividad;
 
 /**
@@ -530,11 +530,11 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
 
 
             else if (eventType.equals("curso")||
-                    eventType.equals("Curso")||
+                    eventType.equals("Curso precongreso")||
                     eventType.equals("simposio")||
                     eventType.equals("trabajos libres")||
+                    eventType.equals("módulo")||
                     eventType.equals("modulo")||
-                    eventType.equals("Modulo")||
                     eventType.equals("Trabajos Libres")
                     ){
 
@@ -606,7 +606,7 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
 //                    Log.i("LOG","LOG");
 //                }
 
-                    if(eventType.equals("Curso") || eventType.equals("curso")){
+                    if(eventType.equals("Curso precongreso") || eventType.equals("curso")){
                         view.setBackgroundColor(context.getResources().getColor(R.color.curso));
                         holder.relativeLayout.setBackgroundColor(context.getResources().getColor(R.color.curso));
 
@@ -639,7 +639,7 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
                     holder.date.setText(month +" "+day+", "+ year);
                     holder.speakers.setVisibility(View.GONE);
                     holder.date.setVisibility(View.VISIBLE);
-                    if(eventType.equals("Curso") || eventType.equals("curso")){
+                    if(eventType.equals("Curso precongreso") || eventType.equals("curso")){
                         view.setBackgroundColor(context.getResources().getColor(R.color.curso));
                         holder.relativeLayout.setBackgroundColor(context.getResources().getColor(R.color.curso));
 
@@ -669,7 +669,7 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
 
                     //Llamando colores desde res/colors.xml
 
-                    if(eventType.equals("Curso") || eventType.equals("curso")){
+                    if(eventType.equals("Curso precongreso") || eventType.equals("curso")){
                         holder.fl.setBackgroundColor(context.getResources().getColor(R.color.curso));
                         holder.rl.setBackgroundColor(context.getResources().getColor(R.color.curso));
                     }
@@ -799,7 +799,7 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
                     holder.fl.setBackgroundColor(context.getResources().getColor(R.color.brk));
                     holder.rl.setBackgroundColor(context.getResources().getColor(R.color.brk));
                 }
-                else if(eventType.equals("modulo")||eventType.equals("simposio")){
+                else if(eventType.equals("modulo")||eventType.equals("simposio")||eventType.equals("módulo")){
                     holder.fl.setBackgroundColor(context.getResources().getColor(R.color.modulo));
                     holder.rl.setBackgroundColor(context.getResources().getColor(R.color.modulo));
                 }

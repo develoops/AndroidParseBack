@@ -14,7 +14,7 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.parse.ParseFile;
 import com.parse.ParseImageView;
 
-import mc.sms.R;
+import mc.neuro2019.R;
 import model.Org;
 
 /**

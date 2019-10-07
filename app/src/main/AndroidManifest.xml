@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="mc.sms" >
+    package="mc.neuro2019" >
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -11,10 +11,10 @@
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 
-    <permission android:name="mc.sms.permission.C2D_MESSAGE"
+    <permission android:name="mc.neuro2019.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="mc.sms.permission.C2D_MESSAGE" />
+    <uses-permission android:name="mc.neuro2019.permission.C2D_MESSAGE" />
     <uses-feature android:name="android.hardware.telephony"  android:required="false" />
     <supports-screens
         android:anyDensity="true"
@@ -30,10 +30,10 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme"
-        android:name="mc.sms.myApp"
+        android:name="mc.neuro2019.myApp"
         >
         <activity
-            android:name="mc.sms.MainActivity"
+            android:name="mc.neuro2019.MainActivity"
 
             android:alwaysRetainTaskState="true"
             android:configChanges="keyboardHidden|orientation"
@@ -53,7 +53,7 @@
         </activity>
 
         <meta-data android:name="com.parse.push.gcm_sender_id"
-            android:value="id:34634808952" />
+            android:value="id:379650910153" />
 
         <service android:name="com.parse.PushService" />
         <receiver android:name="com.parse.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
@@ -61,7 +61,7 @@
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
                 <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
                 <!--don't forget to change the line below with the package name of your app-->
-                <category android:name="mc.sms" />
+                <category android:name="mc.neuro2019" />
             </intent-filter>
         </receiver>
 
@@ -77,10 +77,10 @@
 
 
         <service
-            android:name="mc.sms.ServicioAlarma"
+            android:name="mc.neuro2019.ServicioAlarma"
             android:enabled="true" />
 
-        <receiver android:name="mc.sms.BroadcastAlarma" />
+        <receiver android:name="mc.neuro2019.BroadcastAlarma" />
 
 
 

@@ -27,7 +27,7 @@ import fragments.SpeakersFragment;
 import fragments.SponsorsFragment;
 
 import fragments.SponsorsFragment2;
-import mc.sms.myApp;
+import mc.neuro2019.myApp;
 import model.Actividad;
 import model.Media;
 import model.Org;
@@ -184,9 +184,9 @@ public class EventsFragmentAdapter extends FragmentStatePagerAdapter
             return  DirectiveFragment.newInstance(academic);
         }
 
-        else if(tabUIs.get(position).equals("Encuesta")){
-            return  EncuestaGeneralFragment.newInstance(mApp,pEncuestas);
-        }
+       // else if(tabUIs.get(position).equals("Encuesta")){
+         //   return  EncuestaGeneralFragment.newInstance(mApp,pEncuestas);
+        //}
 
         else {
             return MoreFragment.newInstance(mApp,media);

@@ -12,7 +12,7 @@ com/google/gson/JsonNull.class
 android/support/v4/net/ConnectivityManagerCompatApi24.class
 android/support/annotation/IdRes.class
 android/support/v4/view/ViewPager$4.class
-mc/sms/R$string.class
+mc/neuro2019/R$string.class
 com/parse/Parse$Configuration.class
 android/support/design/widget/Snackbar$2.class
 android/support/annotation/ColorInt.class
@@ -57,7 +57,7 @@ android/support/v4/view/WindowInsetsCompat.class
 android/support/design/R$anim.class
 android/support/annotation/InterpolatorRes.class
 android/support/v4/view/ViewCompat$LollipopViewCompatImpl.class
-mc/sms/myApp$2.class
+mc/neuro2019/myApp$2.class
 okhttp3/Headers.class
 android/support/design/widget/AppBarLayout$Behavior$1.class
 android/support/v7/widget/RecyclerView.class
@@ -122,7 +122,7 @@ okhttp3/Authenticator.class
 android/support/annotation/MainThread.class
 android/support/v4/app/ServiceCompat$StopForegroundFlags.class
 android/support/design/widget/AppBarLayout$1.class
-mc/sms/myApp.class
+mc/neuro2019/myApp.class
 android/support/annotation/MenuRes.class
 com/parse/ParseRole.class
 com/parse/ParsePin.class
@@ -183,7 +183,7 @@ android/support/v4/media/MediaBrowserCompatApi21.class
 okhttp3/Cache.class
 android/support/v7/app/AppCompatActivity.class
 com/google/android/gms/common/util/zzs.class
-mc/sms/R.class
+mc/neuro2019/R.class
 android/support/v4/net/ConnectivityManagerCompat$BaseConnectivityManagerCompatImpl.class
 android/support/v4/media/session/MediaSessionCompat$Token.class
 android/support/design/widget/CoordinatorLayout$LayoutParams.class
@@ -363,7 +363,7 @@ android/support/annotation/StyleRes.class
 android/support/v4/app/Fragment.class
 android/support/annotation/XmlRes.class
 android/support/design/widget/Snackbar.class
-mc/sms/myApp$1.class
+mc/neuro2019/myApp$1.class
 okhttp3/RequestBody$3.class
 android/support/annotation/ColorLong.class
 android/support/annotation/RequiresApi.class

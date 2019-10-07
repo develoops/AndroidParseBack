@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">SMS 2019</string>
+    <string name="app_name">Neurocirugia Chile</string>
     <string name="start">Cargando..</string>
     <string name="action_settings">Configuración</string>
     <string name="rate">Evaluacion Enviada</string>
@@ -10,7 +10,7 @@
     <string name="alarm">Alarma seteada</string>
     <string name="alarm_cancel">Alarma cancelada</string>
     <string name="Rate">Evaluar</string>
-    <string name="google_project_number">34634808952</string>
+    <string name="google_project_number">379650910153</string>
  <string name="cancelled">Evento Favorito cancelado</string>
 
 </resources>

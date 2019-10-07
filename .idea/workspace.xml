@@ -6,55 +6,11 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="523ba4b6-23b4-4f62-aedd-9604bce2c9cf" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_jars____Users_Alvaro_Downloads_AndroidParseBack_app_libs_YouTubeAndroidPlayerApi_jar_unspecified_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_jars____Users_Alvaro_Downloads_AndroidParseBack_app_libs_universal_image_loader_1_9_3_jar_unspecified_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_common_1_1_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_common_1_1_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_27_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_27_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_design_27_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_multidex_1_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_multidex_instrumentation_1_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_recyclerview_v7_27_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_annotations_27_1_1_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_compat_27_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_ui_27_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_utils_27_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_fragment_27_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_media_compat_27_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_v4_27_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_vector_drawable_27_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_transition_27_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_ads_identifier_16_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_base_16_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_16_2_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_16_4_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_api_16_4_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_base_16_4_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_impl_16_4_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_sdk_16_4_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_sdk_api_16_4_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_stats_16_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_16_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_auto_value_auto_value_annotations_1_6_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_gson_gson_2_2_4_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_analytics_16_4_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_common_16_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_core_16_0_8_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_iid_17_1_2_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_iid_interop_16_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_measurement_connector_17_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_messaging_17_6_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_parse_bolts_bolts_tasks_1_4_0_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileContent/annotation-processors.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileContent/annotation-processors.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterDir="false" />
@@ -70,40 +26,350 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/bolts_android_1_4_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_parse_bolts_bolts_android_1_4_0_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/bolts_applinks_1_4_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_parse_bolts_bolts_applinks_1_4_0_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/gson_2_2_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/okhttp_3_8_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_okhttp_3_8_1_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/okio_1_13_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okio_okio_1_13_0_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/parse_android_1_16_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_parse_parse_android_1_16_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/parse_livequery_android_1_0_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_parse_parse_livequery_android_1_0_4_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/parseui_login_android_0_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_parse_parseui_login_android_0_0_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/parseui_widget_android_0_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_parse_parseui_widget_android_0_0_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/auto_value_annotations_1_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/firebase_analytics_16_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/firebase_common_16_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/firebase_iid_17_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/firebase_iid_interop_16_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/firebase_measurement_connector_17_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/play_services_ads_identifier_16_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/play_services_base_16_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/play_services_basement_16_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/play_services_measurement_16_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/play_services_measurement_api_16_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/play_services_measurement_base_16_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/play_services_measurement_impl_16_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/play_services_measurement_sdk_16_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/play_services_measurement_sdk_api_16_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/play_services_stats_16_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/play_services_tasks_16_0_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Example/Example.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Example/Example.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app-release.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/app-release.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/google-services.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/google-services.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/mcongress/mobicongress/com/cmo/ApplicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/mcongress/mobicongress/com/cmo/ApplicationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/adapters/DirectiveListViewAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/adapters/DirectiveListViewAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/adapters/DirectiveListViewAdapter2.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/adapters/DirectiveListViewAdapter2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/adapters/DirectiveListViewAdapter3.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/adapters/DirectiveListViewAdapter3.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/adapters/EventsFragmentAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/adapters/EventsFragmentAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/adapters/GridDocumentsAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/adapters/GridDocumentsAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/adapters/GridGalleryAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/adapters/GridGalleryAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/adapters/GridImageAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/adapters/GridImageAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/adapters/GridMediaAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/adapters/GridMediaAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/adapters/HetpinProgramListViewAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/adapters/HetpinProgramListViewAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/adapters/MeetingAppsListViewAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/adapters/MeetingAppsListViewAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/adapters/NewsListViewAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/adapters/NewsListViewAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/adapters/PagerFragmentAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/adapters/PagerFragmentAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/adapters/PreguntasListViewAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/adapters/PreguntasListViewAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/adapters/PreguntasParseQueryAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/adapters/PreguntasParseQueryAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/adapters/SocietyLogoAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/adapters/SocietyLogoAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/adapters/SpeakerDetailAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/adapters/SpeakerDetailAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/adapters/SpeakersListViewAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/adapters/SpeakersListViewAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/adapters/SponsorsListViewAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/adapters/SponsorsListViewAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fragments/ChildPagerMeetingsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fragments/ChildPagerMeetingsFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fragments/ChildPagerMeetingsNowFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fragments/ChildPagerMeetingsNowFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fragments/ChildPagerOneDayMeetingsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fragments/ChildPagerOneDayMeetingsFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fragments/CompanyDirectoryFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fragments/CompanyDirectoryFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fragments/CompanyFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fragments/CompanyFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fragments/CurrentEventsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fragments/CurrentEventsFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fragments/DirectiveDetailFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fragments/DirectiveDetailFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fragments/DirectiveFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fragments/DirectiveFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fragments/DocumentDetailFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fragments/DocumentDetailFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fragments/DocumentListFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fragments/DocumentListFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fragments/EncuestaFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fragments/EncuestaFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/fragments/EncuestaGeneralFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fragments/EncuestaGeneralFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fragments/EventDetailFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fragments/EventDetailFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/fragments/EventDetailFragment2.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fragments/EventDetailFragment2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/fragments/EventDetailFragment3.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fragments/EventDetailFragment3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fragments/FavouritesFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fragments/FavouritesFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fragments/LoadDataFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fragments/LoadDataFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/fragments/MeetingAppViewPagerFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fragments/MeetingAppViewPagerFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fragments/MeetingsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fragments/MeetingsFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fragments/MoreCompanyFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fragments/MoreCompanyFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fragments/MoreFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fragments/MoreFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/fragments/NewsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fragments/NewsFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/fragments/PreguntasListFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fragments/PreguntasListFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/mc/sms/myApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/mc/sms/myApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/model/Actividad.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/model/Actividad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/model/Info.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/model/Info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/model/RespuestaEncuesta.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/model/RespuestaEncuesta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fragments/ProgramFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fragments/ProgramFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fragments/SaludosSociedadDetailFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fragments/SaludosSociedadDetailFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fragments/SaludosSociedadFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fragments/SaludosSociedadFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fragments/SearchViewFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fragments/SearchViewFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fragments/SpeakerDetailFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fragments/SpeakerDetailFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fragments/SpeakersFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fragments/SpeakersFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fragments/SplashEventFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fragments/SplashEventFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fragments/SponsorsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fragments/SponsorsFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fragments/SponsorsFragment2.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fragments/SponsorsFragment2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fragments/ViewPagerFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fragments/ViewPagerFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fragments/mCongressFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fragments/mCongressFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/mc/sms/BroadcastAlarma.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/mc/sms/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/mc/neuro2019/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/mc/sms/ServicioAlarma.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/mc/sms/myApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/mc/neuro2019/myApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/utils/Receiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/utils/Receiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/utils/mMapImageView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/utils/mMapImageView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/iconparse.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/iconparse.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/splashsms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_text.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_text.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/encuesta_general_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/encuesta_general_layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/eventdetail_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/eventdetail_layout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/seccion_encuesta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/seccion_encuesta.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/splash_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/splash_layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/attrs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/attrs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/source/buildConfig/androidTest/debug/mc/sms/test/BuildConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/buildConfig/androidTest/debug/mc/sms/test/BuildConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/source/buildConfig/debug/mc/sms/BuildConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/buildConfig/debug/mc/sms/BuildConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/source/buildConfig/release/mc/sms/BuildConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/buildConfig/release/mc/sms/BuildConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/mc/sms/Manifest.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/mc/sms/Manifest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/mc/sms/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/mc/sms/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/source/r/release/mc/sms/Manifest.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/release/mc/sms/Manifest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/source/r/release/mc/sms/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/release/mc/sms/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parse-livequery/parse-livequery.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeReleaseResources/merged.dir/values/values.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeReleaseResources/merged.dir/values/values.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeReleaseResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeReleaseResources/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/manifest/androidTest/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/manifest/androidTest/debug/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/manifests/full/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/manifests/full/release/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/manifests/full/release/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/multi-dex/debug/maindexlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/multi-dex/debug/maindexlist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/multi-dex/release/maindexlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/multi-dex/release/maindexlist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/values/values.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/values/values.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/release/values/values.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/release/values/values.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/outputs/logs/manifest-merger-release-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/outputs/logs/manifest-merger-release-report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/google-services.json" beforeDir="false" afterPath="$PROJECT_DIR$/google-services.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/androidTest/java/mcongress/mobicongress/com/cmo/ApplicationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adapters/ChildPagerMeetingsAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adapters/DirectiveListViewAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adapters/DirectiveListViewAdapter2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adapters/DirectiveListViewAdapter3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adapters/EventsFragmentAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adapters/GridDocumentsAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adapters/GridGalleryAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adapters/GridImageAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adapters/GridMediaAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adapters/HetpinProgramListViewAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adapters/MeetingAppsListViewAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adapters/NewsListViewAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adapters/PagerFragmentAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adapters/PagerViewAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adapters/PreguntasListViewAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adapters/PreguntasParseQueryAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adapters/SocietyLogoAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adapters/SpeakerDetailAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adapters/SpeakersListViewAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adapters/SponsorsListViewAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/ActivitySwipeDetector.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/AudioDetailFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/BadgeView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/ChildPagerMeetingsFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/ChildPagerMeetingsNowFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/ChildPagerOneDayMeetingsFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/CompanyDirectoryFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/CompanyFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/CurrentEventsFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/DirectiveDetailFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/DirectiveFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/DirectiveFragment2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/DocumentDetailFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/DocumentListFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/EncuestaFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/EncuestaGeneralFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/EventDetailFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/EventDetailFragment2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/EventDetailFragment3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/FavouritesFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/ImageListFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/LoadDataFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/MeetingAppViewPagerFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/MeetingsFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/MoreCompanyFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/MoreFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/NewsFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/ParseProxyObject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/PreguntasListFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/ProgramFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/SearchViewFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/SpeakerDetailFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/SpeakersFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/SplashEventFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/SponsorsFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/SwipeDetector.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/SwipeInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/VideoDetailFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/VideoListFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/ViewPagerFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/mCongressFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/sliding_tab/SlidingTabLayout.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fragments/sliding_tab/SlidingTabStrip.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/imageTreatment/FileCache.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/imageTreatment/MemoryCache.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/imageTreatment/RoundedImageView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/imageTreatment/SquareImageView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/imageTreatment/Utils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mc/sms/BroadcastAlarma.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/mc/neuro2019/BroadcastAlarma.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mc/sms/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mc/sms/ServicioAlarma.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/mc/neuro2019/ServicioAlarma.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mc/sms/myApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/ActContAct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/ActFavUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Actividad.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Emision.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Encuesta.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Lugar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Media.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Org.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Persona.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/PersonaRolAct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/PersonaRolOrg.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/PreguntaEncuesta.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Rating.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/RespuestaEncuesta.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/CircularTextView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/MUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Receiver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/TouchImageView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/mMapImageView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/views/CustomViewPager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-hdpi/ic_add_black_24dp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-hdpi/ic_create_black_24dp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-hdpi/ic_refresh_black_24dp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-hdpi/ic_search_black_24dp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-hdpi/ic_send_black_24dp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-ldrtl-hdpi/ic_send_black_24dp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-ldrtl-mdpi/ic_send_black_24dp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-ldrtl-xhdpi/ic_send_black_24dp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-ldrtl-xxhdpi/ic_send_black_24dp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-ldrtl-xxxhdpi/ic_send_black_24dp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-mdpi/ic_add_black_24dp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-mdpi/ic_create_black_24dp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-mdpi/ic_refresh_black_24dp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-mdpi/ic_search_black_24dp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-mdpi/ic_send_black_24dp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-xhdpi/ic_add_black_24dp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-xhdpi/ic_create_black_24dp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-xhdpi/ic_refresh_black_24dp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-xhdpi/ic_search_black_24dp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-xhdpi/ic_send_black_24dp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-xxhdpi/ic_add_black_24dp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-xxhdpi/ic_create_black_24dp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-xxhdpi/ic_refresh_black_24dp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-xxhdpi/ic_search_black_24dp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-xxhdpi/ic_send_black_24dp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-xxxhdpi/ic_add_black_24dp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-xxxhdpi/ic_create_black_24dp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-xxxhdpi/ic_refresh_black_24dp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-xxxhdpi/ic_search_black_24dp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-xxxhdpi/ic_send_black_24dp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/about.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/ads.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/archivo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/atm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/atraccion.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/btn_favorito_marcado.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/btnfavorito.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/cafe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/card_background_border.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/card_background_border_selected.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/circle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/dia_avanza.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/dia_retrocede.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/directiva.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/directorio.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/edit_icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/emm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/favorite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/icon_documento.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/icon_multimedia.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/iconparse.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/more.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/news.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/note.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/preview_icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/program.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/quienessomos.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/redpin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/search.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/shapes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/speaker.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/speaker_nofoto.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/starempty.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/starfull.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/actionbar_events.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_text.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/cell_document.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/cell_event.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/cell_gridgallery.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/cell_gridimage.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/cell_gridmedia.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/cell_media.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/cell_meetingapp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/cell_news.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/cell_pregunta.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/cell_speaker.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/cell_sponsor.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/commercial_map.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/common_list_layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/companyfragment.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/custom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/custom2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/dialog_rate.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/documentdetail.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/documents_gridlayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/documents_layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/documentslistlayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/encuesta_general_layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/encuesta_layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/eventdetail_layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_childpager.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/gallery_layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/hetpin_current_events_fragment.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/hetpin_program_layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/map_box_layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/maptoweb.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/meeting_listview.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/nav_for_day_layou.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/news_layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/oneday_child_pager.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/othertoolbar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/popover_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/preguntaslistlayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/program_layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/search_layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/seccion_encuesta.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/speakerdetail_layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/speakers_layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/splash_layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/sponsors_layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/tab_indicator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/tabhost.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/menu/menu_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/menu/menu_toolbar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/menu/menuprogram.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values-w820dp/dimens.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values/attrs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values/dimens.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values/styles.xml" beforeDir="false" />
     </list>
     <ignored path="AndroidParseBack.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -119,6 +385,7 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="192.168.58.102:5555" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -146,7 +413,36 @@
     <favorites_list name="AndroidParseBack" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/adapters/HetpinProgramListViewAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3864">
+              <caret line="921" column="35" selection-start-line="921" selection-start-column="35" selection-end-line="921" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <provider editor-type-id="android-manifest" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-624">
+              <caret line="30" column="30" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="53" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -166,12 +462,18 @@
       <find>SMS2017</find>
       <find>comite</find>
       <find>SMS2018</find>
+      <find>sms</find>
+      <find>conferencia</find>
     </findStrings>
+    <replaceStrings>
+      <replace>neuro2019</replace>
+    </replaceStrings>
   </component>
   <component name="GenerateSignedApkSettings">
-    <option name="KEY_STORE_PATH" value="$USER_HOME$/Desktop/Otros/sms.jks" />
-    <option name="KEY_ALIAS" value="sms" />
+    <option name="KEY_STORE_PATH" value="$USER_HOME$/Desktop/neuro.jks" />
+    <option name="KEY_ALIAS" value="key0" />
     <option name="REMEMBER_PASSWORDS" value="true" />
+    <option name="BUILD_TARGET_KEY" value="apk" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -179,15 +481,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/fragments/DirectiveFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/eventdetail_layout.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/fragments/SaludosSociedadFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/adapters/GridDocumentsAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/cell_document.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/fragments/SaludosSociedadDetailFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/fragments/LoadDataFragment.java" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/splash_layout.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/splash_layout.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/fragments/DirectiveDetailFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/fragments/SplashEventFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/fragments/SponsorsFragment.java" />
@@ -195,9 +491,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/fragments/SponsorsFragment2.java" />
         <option value="$PROJECT_DIR$/src/main/java/fragments/MeetingAppViewPagerFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/model/Media.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/fragments/ViewPagerFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/adapters/PagerFragmentAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/fragments/MoreFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_text.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/fragments/ProgramFragment.java" />
@@ -206,13 +499,11 @@
         <option value="$PROJECT_DIR$/app/src/main/java/fragments/CurrentEventsFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/fragments/SearchViewFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/fragments/FavouritesFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/mc/sms/myApp.java" />
         <option value="$PROJECT_DIR$/settings.gradle" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/imageTreatment/RoundedImageView.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/adapters/DirectiveListViewAdapter3.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/adapters/GridImageAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/adapters/HetpinProgramListViewAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/adapters/MeetingAppsListViewAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/adapters/PreguntasParseQueryAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/fragments/PreguntasListFragment.java" />
@@ -221,15 +512,26 @@
         <option value="$PROJECT_DIR$/app/src/main/java/fragments/EventDetailFragment3.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/seccion_encuesta.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/model/RespuestaEncuesta.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/encuesta_general_layout.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/adapters/EventsFragmentAdapter.java" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/fragments/EncuestaGeneralFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/model/Actividad.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/model/Info.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/fragments/MeetingAppViewPagerFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/fragments/NewsFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/mc/sms/myApp.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/mc/neuro2019/myApp.java" />
+        <option value="$PROJECT_DIR$/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/splash_layout.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/splash_layout.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/cell_document.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/encuesta_general_layout.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/fragments/LoadDataFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/fragments/MeetingAppViewPagerFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/adapters/EventsFragmentAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/adapters/PagerFragmentAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/fragments/ViewPagerFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/adapters/HetpinProgramListViewAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
       </list>
     </option>
   </component>
@@ -290,6 +592,31 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="AndroidParseBack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AndroidParseBack" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AndroidParseBack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AndroidParseBack" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AndroidParseBack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AndroidParseBack" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="values" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -300,12 +627,13 @@
   <component name="PropertiesComponent">
     <property name="ExportApk.ApkPath" value="$PROJECT_DIR$/app" />
     <property name="ExportApk.BuildType" value="release" />
+    <property name="ExportApk.BuildVariants" value="release" />
     <property name="ExportApk.Flavors" value="" />
     <property name="ExportApk.SignV1" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
-    <property name="device.picker.selection" value="2943ddeb9805" />
+    <property name="device.picker.selection" value="" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Otros/sms.jks" />
     <property name="not.eligible.for.single.variant.sync" value="true" />
     <property name="settings.editor.selected.configurable" value="gradle.compiler" />
@@ -377,6 +705,7 @@
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
@@ -514,15 +843,15 @@
     </configuration>
     <list>
       <item itemvalue="Android App.app" />
-      <item itemvalue="Gradle.AndroidParseBack:app [androidDependencies]" />
       <item itemvalue="Gradle.AndroidParseBack [androidDependencies]" />
       <item itemvalue="Gradle.AndroidParseBack [signingReport]" />
+      <item itemvalue="Gradle.AndroidParseBack:app [androidDependencies]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.AndroidParseBack:app [androidDependencies]" />
         <item itemvalue="Gradle.AndroidParseBack [signingReport]" />
         <item itemvalue="Gradle.AndroidParseBack [androidDependencies]" />
-        <item itemvalue="Gradle.AndroidParseBack:app [androidDependencies]" />
       </list>
     </recent_temporary>
   </component>
@@ -550,74 +879,45 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="Resources Explorer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.38206786" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.42164782" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Captures" order="2" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info id="Build Variants" order="4" side_tool="true" />
-      <window_info id="Image Layers" order="5" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info anchor="bottom" id="Build" visible="true" weight="0.32978722" />
-      <window_info anchor="bottom" id="Android Profiler" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Statistic" />
-      <window_info anchor="bottom" id="Logcat" />
+      <window_info id="Build Variants" order="3" side_tool="true" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Designer" order="7" />
+      <window_info id="Resources Explorer" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6292407" weight="0.32876712" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32826748" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49030694" weight="0.32876712" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.61227787" weight="0.32876712" />
-      <window_info anchor="bottom" id="Android Monitor" order="9" sideWeight="0.8465267" visible="true" weight="0.32876712" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.38772213" side_tool="true" weight="0.32876712" />
-      <window_info anchor="bottom" id="Gradle Console" order="11" sideWeight="0.64781904" side_tool="true" weight="0.32876712" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.35218093" weight="0.32876712" />
-      <window_info anchor="right" id="Device File Explorer" side_tool="true" />
-      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="bottom" id="Android Monitor" order="7" visible="true" weight="0.32876712" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.503231" side_tool="true" weight="0.32876712" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Gradle Console" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49676898" weight="0.32876712" />
+      <window_info anchor="bottom" id="Build" order="13" visible="true" weight="0.32978722" />
+      <window_info anchor="bottom" id="Android Profiler" order="14" />
+      <window_info anchor="bottom" id="Statistic" order="15" />
+      <window_info anchor="bottom" id="Logcat" order="16" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="right" id="Gradle" order="4" weight="0.21082391" />
+      <window_info anchor="right" id="Gradle" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Android Model" order="6" side_tool="true" />
-      <window_info anchor="right" id="Preview" order="7" weight="0.016962843" />
+      <window_info anchor="right" id="Preview" order="6" weight="0.012924071" />
+      <window_info anchor="right" id="Android Model" order="7" side_tool="true" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Device File Explorer" order="9" side_tool="true" />
     </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.38206786" />
-      <window_info id="Structure" order="1" weight="0.25" />
-      <window_info id="Captures" order="2" weight="0.25" />
-      <window_info id="Build Variants" order="3" side_tool="true" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="Image Layers" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6292407" weight="0.32876712" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.38772213" side_tool="true" weight="0.32876712" />
-      <window_info anchor="bottom" id="Android Monitor" order="8" sideWeight="0.8465267" weight="0.32876712" />
-      <window_info anchor="bottom" id="Messages" order="9" sideWeight="0.35218093" weight="0.32876712" />
-      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.61227787" weight="0.32876712" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49030694" weight="0.32876712" />
-      <window_info anchor="bottom" id="Gradle Console" order="12" sideWeight="0.64781904" side_tool="true" visible="true" weight="0.32876712" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Android Model" order="3" side_tool="true" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Gradle" order="5" weight="0.21082391" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="right" id="Preview" order="7" weight="0.016962843" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -660,73 +960,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/adapters/PagerFragmentAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="67" column="51" selection-start-line="67" selection-start-column="51" selection-end-line="67" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fragments/VideoDetailFragment.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fragments/MoreFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fragments/ViewPagerFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="95" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fragments/SearchViewFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fragments/SpeakerDetailFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fragments/FavouritesFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-540">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/model/Lugar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/google-services.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.parse/parse-android/1.16.2/eb7bb4ea800eef891c726e6a57e2d999497d1fe3/parse-android-1.16.2-sources.jar!/com/parse/GcmRegistrar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-346">
-          <caret line="359" selection-start-line="359" selection-end-line="359" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/mcongress/mobicongress/com/cmo/ApplicationTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -745,13 +978,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3315">
           <caret line="229" column="31" selection-start-line="229" selection-start-column="31" selection-end-line="229" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/mc/sms/myApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -811,28 +1037,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/adapters/HetpinProgramListViewAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4425">
-          <caret line="303" column="84" selection-start-line="303" selection-start-column="84" selection-end-line="303" selection-end-column="84" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/adapters/MeetingAppsListViewAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/fragments/EventDetailFragment3.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3330">
           <caret line="96" column="64" selection-start-line="96" selection-start-column="64" selection-end-line="96" selection-end-column="64" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -840,7 +1048,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6315">
           <caret line="781" column="13" selection-start-line="781" selection-start-column="13" selection-end-line="781" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -848,33 +1055,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="162" selection-start-line="162" selection-end-line="162" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/dialog_rate.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-165" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/encuesta_general_layout.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="157" column="36" selection-start-line="157" selection-start-column="35" selection-end-line="157" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/dialog_rate.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/model/RespuestaEncuesta.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="41" selection-start-line="41" selection-end-line="41" />
-          <folding>
-            <element signature="e#765#766#0" expanded="false" />
-            <element signature="e#800#801#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -882,60 +1070,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4620">
           <caret line="117" selection-start-line="117" selection-end-line="117" />
-          <folding>
-            <element signature="e#3125#7547#0" expanded="true" />
-            <element signature="e#4232#5953#0" expanded="true" />
-            <element signature="e#5325#5776#0" expanded="true" />
-            <element signature="e#5775#5776#0" expanded="true" />
-            <element signature="e#5952#5953#0" expanded="true" />
-            <element signature="e#6066#7236#0" expanded="true" />
-            <element signature="e#6610#7061#0" expanded="true" />
-            <element signature="e#7060#7061#0" expanded="true" />
-            <element signature="e#7235#7236#0" expanded="true" />
-            <element signature="e#7546#7547#0" expanded="true" />
-            <element signature="e#8197#8495#0" expanded="true" />
-            <element signature="e#8494#8495#0" expanded="true" />
-            <element signature="e#8575#8832#0" expanded="true" />
-            <element signature="e#8831#8832#0" expanded="true" />
-            <element signature="e#10108#10272#0" expanded="true" />
-            <element signature="e#10271#10272#0" expanded="true" />
-            <element signature="e#11114#12962#0" expanded="true" />
-            <element signature="e#11938#12414#0" expanded="true" />
-            <element signature="e#12413#12414#0" expanded="true" />
-            <element signature="e#12503#12761#0" expanded="true" />
-            <element signature="e#12760#12761#0" expanded="true" />
-            <element signature="e#12961#12962#0" expanded="true" />
-            <element signature="e#13189#13683#0" expanded="true" />
-            <element signature="e#13682#13683#0" expanded="true" />
-            <element signature="e#13821#14105#0" expanded="true" />
-            <element signature="e#14104#14105#0" expanded="true" />
-            <element signature="e#14525#14640#0" expanded="true" />
-            <element signature="e#14639#14640#0" expanded="true" />
-            <element signature="e#15737#16247#0" expanded="true" />
-            <element signature="e#16246#16247#0" expanded="true" />
-            <element signature="e#17922#20949#0" expanded="true" />
-            <element signature="e#18634#19427#0" expanded="true" />
-            <element signature="e#19426#19427#0" expanded="true" />
-            <element signature="e#20042#20841#0" expanded="true" />
-            <element signature="e#20840#20841#0" expanded="true" />
-            <element signature="e#20948#20949#0" expanded="true" />
-            <element signature="e#21205#21925#0" expanded="true" />
-            <element signature="e#21537#21763#0" expanded="true" />
-            <element signature="e#21762#21763#0" expanded="true" />
-            <element signature="e#21924#21925#0" expanded="true" />
-            <element signature="e#22190#22910#0" expanded="true" />
-            <element signature="e#22520#22746#0" expanded="true" />
-            <element signature="e#22745#22746#0" expanded="true" />
-            <element signature="e#22909#22910#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fragments/EncuestaFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3670">
-          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -944,44 +1078,7 @@
         <state relative-caret-position="-436">
           <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fragments/SplashEventFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="221" selection-start-line="221" selection-end-line="221" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/encuesta_general_layout.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2820">
-          <caret line="188" column="49" selection-start-line="188" selection-start-column="49" selection-end-line="188" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/seccion_encuesta.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fragments/EncuestaGeneralFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="39" column="44" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
-          <folding>
-            <element signature="e#6907#7998#0" expanded="true" />
-            <element signature="e#7997#7998#0" expanded="true" />
+            <element signature="imports" />
           </folding>
         </state>
       </provider>
@@ -990,47 +1087,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="49" column="61" selection-start-line="49" selection-start-column="61" selection-end-line="49" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/adapters/EventsFragmentAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="196" column="40" selection-start-line="196" selection-start-column="40" selection-end-line="196" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="62" column="27" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fragments/LoadDataFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1891">
-          <caret line="514" column="26" selection-start-line="514" selection-start-column="26" selection-end-line="514" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/hetpin_program_layout.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/model/Info.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="30" column="53" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1038,22 +1101,164 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1770">
           <caret line="162" selection-start-line="162" selection-end-line="162" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fragments/NewsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="138" column="2" selection-start-line="138" selection-start-column="2" selection-end-line="138" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/views/CustomViewPager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values/strings.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fragments/ChildPagerMeetingsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/mc/neuro2019/myApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4245">
+          <caret line="75" column="68" selection-start-line="75" selection-start-column="68" selection-end-line="75" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/ic_launcher.png" />
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/splash_layout.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/splash_layout.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/encuesta_general_layout.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fragments/EncuestaGeneralFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="68" column="57" selection-start-line="68" selection-start-column="57" selection-end-line="68" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fragments/EncuestaFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/cell_media.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-240">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/encuesta_general_layout.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1440">
-          <caret line="96" column="92" selection-start-line="96" selection-start-column="92" selection-end-line="96" selection-end-column="92" />
+        <state relative-caret-position="486">
+          <caret line="264" column="13" selection-start-line="264" selection-start-column="13" selection-end-line="264" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fragments/DocumentListFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        <state relative-caret-position="-360">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/cell_document.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="54" column="17" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fragments/SplashEventFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="221" selection-start-line="221" selection-end-line="221" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fragments/MeetingsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fragments/LoadDataFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3825">
+          <caret line="315" column="45" lean-forward="true" selection-start-line="315" selection-start-column="45" selection-end-line="315" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fragments/MeetingAppViewPagerFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="90" selection-start-line="90" selection-end-line="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/adapters/MeetingAppsListViewAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/adapters/GridDocumentsAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="86" column="52" selection-start-line="86" selection-start-column="52" selection-end-line="86" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/adapters/EventsFragmentAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2265">
+          <caret line="188" column="10" selection-start-line="188" selection-start-column="10" selection-end-line="188" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/adapters/PagerFragmentAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="64" column="54" selection-start-line="64" selection-start-column="54" selection-end-line="64" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fragments/ViewPagerFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="40" column="10" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
@@ -1064,19 +1269,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fragments/NewsFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/adapters/HetpinProgramListViewAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="138" column="2" selection-start-line="138" selection-start-column="2" selection-end-line="138" selection-end-column="2" />
-          <folding />
+        <state relative-caret-position="3864">
+          <caret line="921" column="35" selection-start-line="921" selection-start-column="35" selection-end-line="921" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fragments/MeetingAppViewPagerFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="97" column="42" selection-start-line="97" selection-start-column="42" selection-end-line="97" selection-end-column="42" />
-          <folding />
+        <state relative-caret-position="-624">
+          <caret line="30" column="30" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="53" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
         </state>
       </provider>
     </entry>

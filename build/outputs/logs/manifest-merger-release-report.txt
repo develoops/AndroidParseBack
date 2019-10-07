@@ -61,14 +61,14 @@ uses-permission#android.permission.READ_PHONE_STATE
 ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:12:5-74
 	android:name
 		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:12:22-72
-permission#mc.sms.permission.C2D_MESSAGE
+permission#mc.neuro2019.permission.C2D_MESSAGE
 ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:14:5-15:47
 MERGED from [com.google.firebase:firebase-iid:10.0.1] /Users/Alvaro/.android/build-cache/694d583b242792b9200d8e63e7688274594f95fa/output/AndroidManifest.xml:24:5-109
 	android:protectionLevel
 		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:15:9-44
 	android:name
 		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:14:17-61
-uses-permission#mc.sms.permission.C2D_MESSAGE
+uses-permission#mc.neuro2019.permission.C2D_MESSAGE
 ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:17:5-69
 MERGED from [com.google.firebase:firebase-iid:10.0.1] /Users/Alvaro/.android/build-cache/694d583b242792b9200d8e63e7688274594f95fa/output/AndroidManifest.xml:26:5-78
 	android:name
@@ -127,7 +127,7 @@ MERGED from [com.parse:parse-android:1.16.3] /Users/Alvaro/.android/build-cache/
 		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:32:9-40
 	android:name
 		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:33:9-36
-activity#mc.sms.MainActivity
+activity#mc.neuro2019.MainActivity
 ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:35:9-54:20
 	android:screenOrientation
 		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:40:13-49
@@ -185,7 +185,7 @@ ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidMan
 		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:69:13-73
 	android:name
 		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:68:19-64
-intent-filter#com.google.android.c2dm.intent.RECEIVE+com.google.android.c2dm.intent.REGISTRATION+mc.sms
+intent-filter#com.google.android.c2dm.intent.RECEIVE+com.google.android.c2dm.intent.REGISTRATION+mc.neuro2019
 ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:70:13-78:29
 action#com.google.android.c2dm.intent.RECEIVE
 ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:71:17-81
@@ -195,7 +195,7 @@ action#com.google.android.c2dm.intent.REGISTRATION
 ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:72:17-86
 	android:name
 		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:72:25-83
-category#mc.sms
+category#mc.neuro2019
 ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:77:17-51
 	android:name
 		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:77:27-48
@@ -219,13 +219,13 @@ action#com.parse.push.intent.OPEN
 ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:84:17-69
 	android:name
 		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:84:25-66
-service#mc.sms.ServicioAlarma
+service#mc.neuro2019.ServicioAlarma
 ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:88:9-90:38
 	android:enabled
 		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:90:13-35
 	android:name
 		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:89:13-49
-receiver#mc.sms.BroadcastAlarma
+receiver#mc.neuro2019.BroadcastAlarma
 ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:92:9-59
 	android:name
 		ADDED from /Users/Alvaro/Downloads/AndroidParseBack copy/app/src/main/AndroidManifest.xml:92:19-56

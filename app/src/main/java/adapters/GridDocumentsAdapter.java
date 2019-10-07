@@ -10,12 +10,10 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.parse.ParseImageView;
-
 import java.util.ArrayList;
 import java.util.List;
 
-import mc.sms.R;
+import mc.neuro2019.R;
 import model.Media;
 
 /**

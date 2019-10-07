@@ -10,57 +10,38 @@ import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.parse.FindCallback;
 import com.parse.GetCallback;
-import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseLiveQueryClient;
-import com.parse.ParseObject;
 import com.parse.ParseQuery;
 //import com.parse.ParseQueryAdapter;
 import com.parse.ParseQueryAdapter;
 import com.parse.ParseUser;
 import com.parse.SubscriptionHandling;
 
-import org.json.JSONObject;
-
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
 import java.util.Random;
 
-import adapters.PreguntasListViewAdapter;
+import mc.neuro2019.R;
 
-import adapters.PreguntasParseQueryAdapter;
-
-import mc.sms.R;
-
-import mc.sms.myApp;
+import mc.neuro2019.myApp;
 import model.Actividad;
 import model.Emision;
-import model.PersonaRolOrg;
 import utils.CircularTextView;
 
 

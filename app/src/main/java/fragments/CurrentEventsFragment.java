@@ -25,8 +25,8 @@ import java.util.Locale;
 
 import adapters.HetpinProgramListViewAdapter;
 
-import mc.sms.R;
-import mc.sms.myApp;
+import mc.neuro2019.R;
+import mc.neuro2019.myApp;
 import model.ActContAct;
 import model.Actividad;
 import model.PersonaRolAct;

@@ -62,7 +62,7 @@ public class PagerFragmentAdapter extends FragmentStatePagerAdapter
         else if(tabUIs.get(position).equals("Sociedad")){
             return CompanyDirectoryFragment.newInstance(LoadDataFragment.com, false);
         }
-        else if(tabUIs.get(position).equals("Directiva SMS")){
+        else if(tabUIs.get(position).equals("Directiva")){
             return DirectiveFragment.newInstance(LoadDataFragment.staff);
         }
         else if(tabUIs.get(position).equals("Saludo")){

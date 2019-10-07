@@ -1,9 +1,7 @@
 package fragments;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -19,10 +17,9 @@ import com.parse.ParseUser;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
-import mc.sms.R;
-import mc.sms.myApp;
+import mc.neuro2019.R;
+import mc.neuro2019.myApp;
 import model.Actividad;
 import model.PreguntaEncuesta;
 import model.RespuestaEncuesta;

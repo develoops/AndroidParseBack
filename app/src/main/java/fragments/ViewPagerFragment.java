@@ -18,7 +18,7 @@ import java.util.Locale;
 
 import adapters.PagerFragmentAdapter;
 import fragments.sliding_tab.SlidingTabLayout;
-import mc.sms.R;
+import mc.neuro2019.R;
 
 /**
  * Created by Alvaro on 3/3/15.
@@ -37,8 +37,8 @@ public class ViewPagerFragment extends Fragment {
         super.onCreate(savedInstanceState);
         Tabs.add("Eventos");
         Tabs.add("Sociedad");
-        Tabs.add("Directiva SMS");
-        Tabs.add("Saludo");
+        Tabs.add("Directiva");
+        //Tabs.add("Saludo");
         setRetainInstance(true);
     }
 
